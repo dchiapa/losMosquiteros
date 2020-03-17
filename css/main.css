@@ -1,4 +1,69 @@
-main
+#ppal, #ppal > h2, #ppal > h3, #buscar > ul, #buscar2
 {
+	text-align: center;
 	width: 100%;
+}
+#ppal
+{
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#ppal > h2
+{
+	font-size: 25px;
+	
+}
+#ppal > h3
+{
+	font-size: 30px;
+}
+#buscar
+{
+	margin-top: 50px;
+	margin-left: 15%;
+	width: 85%;
+}
+#buscar, #buscar > ul, #buscar2
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+#buscar > ul
+{
+	list-style: none;
+	margin: 10px;
+}
+#buscar > ul > button, #buscar2 > button
+{
+	background-color: #765F89;
+	border: 2px solid #0016b0;
+	border-radius: 5px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	height: 38px;
+	margin-right: 5px;
+	padding: 4px 10px;
+}
+#buscar > ul > button:hover, #buscar2 > button:hover
+{
+    color: #765F89;
+    background-color: #ffffff;
+}
+#buscar2 > select, #buscar2 > input, #buscar2 > button
+{
+	margin: 5px 10px;
+}
+#buscar2 > select, #buscar2 > input
+{
+	border: 1px solid #000000;
+	border-radius: 5px;
+	font-size: 20px;
+}
+#buscar2 > input
+{
+	width: 50%;
 }
