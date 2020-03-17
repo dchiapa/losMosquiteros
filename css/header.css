@@ -1,0 +1,47 @@
+*
+{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0; 
+}
+header
+{
+	align-items: center;
+	background-color: #E2D5E7;
+	display: flex;
+	height: 80px;
+	width: 100%;
+}
+header > h1
+{
+	color: #FF0000;
+	margin-left: 5px;
+}
+header > nav
+{
+	position: absolute;
+	right: 5px;
+}
+header > nav > ul
+{
+	line-height: 28px;
+}
+header > nav > ul > li
+{
+	background-color: #FFBADE;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	display: inline-block;
+	list-style: none;
+}
+header > nav > ul > li:hover
+{
+	background-color: #BDFFBA;
+	font-weight: bold;
+}
+header > nav > ul > li > a
+{
+	color: #000000;
+	padding: 20px;
+	text-decoration: none;
+}

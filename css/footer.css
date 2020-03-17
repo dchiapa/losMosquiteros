@@ -1,0 +1,21 @@
+footer
+{
+	align-items: center;
+	background-color: #765F89;
+	bottom: 0;
+	display: flex;
+	height: 60px;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+}
+footer > p, footer > p > a
+{
+	color: #FFFFFF;
+	font-size: 20px;
+	text-decoration: none;
+}
+footer > p > a:hover
+{
+	font-weight: bold;
+}
