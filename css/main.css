@@ -37,21 +37,21 @@
 }
 #buscar > ul > button, #buscar2 > button
 {
-	background-color: #765F89;
-	border: 2px solid #0016b0;
+	background-color: #BCBBFD;
+	border: 1px solid #0016b0;
 	border-radius: 5px;
-	color: #FFFFFF;
+	color: #000000;
 	cursor: pointer;
 	font-size: 20px;
-	font-weight: bold;
 	height: 38px;
 	margin-right: 5px;
 	padding: 4px 10px;
 }
 #buscar > ul > button:hover, #buscar2 > button:hover
 {
-    color: #765F89;
     background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
 }
 #buscar2 > select, #buscar2 > input, #buscar2 > button
 {
