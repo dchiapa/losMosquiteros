@@ -1,41 +1,43 @@
-#ppal, #ppal > h2, #ppal > h3, #buscar > ul, #buscar2
+#ppal, #ppal > h2, #ppal > h3, #buscar > div
 {
 	text-align: center;
 	width: 100%;
 }
 #ppal
 {
-	align-items: center;
+	background-image: url(../img/fondo.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 	display: flex;
 	flex-wrap: wrap;
+	height: 500px;
 	justify-content: center;
+	line-height: 50px;
+	margin: 0;
 }
 #ppal > h2
 {
 	font-size: 25px;
-	
+	height: 25px;
+	line-height: 25px;
+	margin-top: 50px;
 }
 #ppal > h3
 {
-	font-size: 30px;
+	color: #0000FF;
+	font-size: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 70px;
 }
 #buscar
 {
-	margin-top: 50px;
-	margin-left: 15%;
-	width: 85%;
-}
-#buscar, #buscar > ul, #buscar2
-{
 	display: flex;
 	flex-wrap: wrap;
+	margin-top: -300px;
+	width: 85%;
 }
-#buscar > ul
-{
-	list-style: none;
-	margin: 10px;
-}
-#buscar > ul > button, #buscar2 > button
+#buscar > div > button, #buscar2 > button
 {
 	background-color: #BCBBFD;
 	border: 1px solid #0016b0;
@@ -47,7 +49,7 @@
 	margin-right: 5px;
 	padding: 4px 10px;
 }
-#buscar > ul > button:hover, #buscar2 > button:hover
+#buscar > div > button:hover, #buscar2 > button:hover
 {
     background-color: #ffffff;
     color: #000000;

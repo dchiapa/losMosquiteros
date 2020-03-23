@@ -4,12 +4,12 @@
 <main id="ppal">
 	<h2>Propiedades en venta y en alquiler</h2>
 	<h3>El hogar que soñaste a tu alcance</h3>
-	<div id="buscar">
-		<ul>
+	<form action="" method="get" accept-charset="utf-8" id="buscar">
+		<div>
 			<button id="comprar" data-dato="comprar">Compra</button>
 			<button id="alquiler" data-dato="alquiler">Alquiler</button>
 			<button id="temporal" data-dato="temporal">Temporal</button>
-		</ul>
+		<div>
 		<div id="buscar2">
 			<select name="propTipo" id="propTipo">
 				<option value="">Seleccione una opción</option>
@@ -18,7 +18,7 @@
 			<input type="text" name="propUbicacion" placeholder="Ingrese un barrio">
 			<button>Buscar</button>
 		</div>
-	</div>
+	</form> 
 </main>
 <?php
 	include 'html/footer.html';
