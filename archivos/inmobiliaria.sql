@@ -1,17 +1,17 @@
 create database inmobiliaria;
 use inmobiliaria;
 CREATE TABLE `estado` (
-	`idEstado` int NOT NULL PRIMARY KEY,
-    `valorEstado` varchar(30) NOT NULL
+	`idEstado` int (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `valorEstado` varchar(30) NOT NULL UNIQUE
 );
 INSERT INTO `estado` (`idEstado`, `valorEstado`) values
 (1,'venta'),
 (2,'alquiler');
 
-use inmobiliaria;
+
 
 CREATE TABLE `tipo`(
-		`idTipo` int NOT NULL PRIMARY KEY,
+		`idTipo` int (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
         `valorTipo` varchar(30) NOT NULL UNIQUE
         );
 
@@ -26,7 +26,7 @@ INSERT INTO `tipo` (`idTipo`, `valorTipo`) values
 
 
 CREATE TABLE `barrio`(
-		`idBarrio` int NOT NULL PRIMARY KEY,
+		`idBarrio` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
         `valorBarrio` varchar(30) NOT NULL UNIQUE
         );
         
@@ -45,7 +45,7 @@ INSERT INTO `barrio` (`idBarrio`, `valorBarrio`) values
 (12,'General Pacheco');
 
 CREATE TABLE `propiedades`(
-		`idPropiedad` int NOT NULL PRIMARY KEY,
+		`idPropiedad` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
         `idEstado` int (10) NOT NULL,
         `idTipo` int (10) NOT NULL,
         `idBarrio` int (10) NOT NULL,
@@ -112,17 +112,17 @@ INSERT INTO `propiedades` (`idPropiedad`,`idEstado`,`idTipo`,`idBarrio`,`ambient
 
 
 CREATE TABLE `imagenes` (
-  `idImagen` int(20) NOT NULL PRIMARY KEY,
+  `idImagen` int(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `idPropiedad` int (20) NOT NULL,
   `imgNombre` varchar(40) NOT NULL
   );
 
 
 CREATE TABLE `usuarios` (
-  `idUsuario` int(11) NOT NULL PRIMARY KEY,
+  `idUsuario` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `usuNombre` varchar(30) NOT NULL,
   `usuApellido` varchar(30) NOT NULL,
-  `usuEmail` varchar(30) NOT NULL,
+  `usuEmail` varchar(30) NOT NULL UNIQUE,
   `usuPass` varchar(30) NOT NULL,
   `usuEstado` tinyint(1) DEFAULT '0'
   );
