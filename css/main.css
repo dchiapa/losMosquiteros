@@ -1,71 +1,36 @@
-#ppal, #ppal > h2, #ppal > h3, #buscar > div
-{
-	text-align: center;
-	width: 100%;
+#ppal,
+#ppal>h2,
+#ppal>h3 {
+    text-align: center;
+    width: 100%;
 }
-#ppal
-{
-	background-image: url(../img/fondo.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: flex;
-	flex-wrap: wrap;
-	height: 500px;
-	justify-content: center;
-	line-height: 50px;
-	margin: 0;
+
+#ppal {
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    justify-content: center;
+    line-height: 50px;
+    margin: 0;
 }
-#ppal > h2
-{
-	font-size: 25px;
-	height: 25px;
-	line-height: 25px;
-	margin-top: 50px;
+
+#ppal h2 {
+    font-size: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 50px;
 }
-#ppal > h3
-{
-	color: #0000FF;
-	font-size: 40px;
-	height: 40px;
-	line-height: 40px;
-	margin-top: 70px;
+
+#ppal h3 {
+    color: #0000FF;
+    font-size: 40px;
+    height: 40px;
+    line-height: 40px;
 }
-#buscar
-{
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: -300px;
-	width: 85%;
-}
-#buscar > div > button, #buscar2 > button
-{
-	background-color: #BCBBFD;
-	border: 1px solid #0016b0;
-	border-radius: 5px;
-	color: #000000;
-	cursor: pointer;
-	font-size: 20px;
-	height: 38px;
-	margin-right: 5px;
-	padding: 4px 10px;
-}
-#buscar > div > button:hover, #buscar2 > button:hover
-{
-    background-color: #ffffff;
-    color: #000000;
-    font-weight: bold;
-}
-#buscar2 > select, #buscar2 > input, #buscar2 > button
-{
-	margin: 5px 10px;
-}
-#buscar2 > select, #buscar2 > input
-{
-	border: 1px solid #000000;
-	border-radius: 5px;
-	font-size: 20px;
-}
-#buscar2 > input
-{
-	width: 50%;
+
+form {
+    height: auto;
 }

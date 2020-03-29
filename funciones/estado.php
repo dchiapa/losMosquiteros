@@ -2,56 +2,56 @@
 		#################################
 		#### CRUD DE PROPIEDAD ESTADO####
 
-        function listarTipos()
+        function listarEstados()
         {
             $link = conectar();
-            $sql = "SELECT idTipo, valorTipo FROM tipo";
+            $sql = "SELECT idEstado, valorEstado FROM estado";
             $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
             return $resultado;
         }
-        function agregarTipo()
+        function agregarEstado()
         {
-            $valorTipo = $_POST['valorTipo'];
+            $valorEstado = $_POST['valorEstado'];
             $link = conectar();
-            $sql = "INSERT INTO tipo (valorTipo) VALUES ('".$valorTipo."')";
+            $sql = "INSERT INTO estado (valorEstado) VALUES ('".$valorEstado."')";
             $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
             return $resultado;
         }
-        function verTipoPorID()
+        function verEstadoPorID()
         {
-            $idTipo = $_GET['idTipo'];
+            $idEstado = $_GET['idEstado'];
             $link = conectar();
-            $sql = "SELECT idTipo, valorTipo From tipo WHERE idTipo = ". $idTipo;
+            $sql = "SELECT idEstado, valorEstado From estado WHERE idEstado = ". $idEstado;
             $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
             $marca = mysqli_fetch_assoc($resultado);
             return $marca;
         }
-        function modificarTipo()
+        function modificarEstado()
         {
-            $idTipo = $_POST['idTipo'];
-            $valorTipo = $_POST['valorTipo'];
+            $idEstado = $_POST['idEstado'];
+            $valorEstado = $_POST['valorEstado'];
             $link = conectar();
-            $sql = "UPDATE tipo SET valorTipo = '".$valorTipo."' WHERE idTipo = ".$idTipo;
+            $sql = "UPDATE estado SET valorEstado = '".$valorEstado."' WHERE idEstado = ".$idEstado;
             $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
             return $resultado;
         }
-        // 28-03 chequear tipoEnUSO //
-        function tipoEnUso()
+        // 28-03 chequear estadoEnUSO //
+        function estadoEnUso()
         {
-            $idTipo = $_GET['idTipo'];
+            $idEstado = $_GET['idEstado'];
             $link = conectar();
-            $sql = "SELECT valorEstado FROM productos p, tipo m 
-                    WHERE p.idTipo = m.idTipo AND p.idTipo = ".$idTipo;
+            $sql = "SELECT valorEstado FROM productos p, estado m 
+                    WHERE p.idEstado = m.idEstado AND p.idEstado = ".$idEstado;
             $resultado = mysqli_query($link, $sql)
                         or die(mysqli_error($link));
             $cantidad = mysqli_num_rows($resultado);
             return $cantidad;
         }
-        function eliminarTipo()
+        function eliminarEstado()
         {
-            $idTipo = $_POST['idTipo'];
+            $idEstado = $_POST['idEstado'];
             $link = conectar();
-            $sql = "DELETE FROM tipo WHERE idTipo = ".$idTipo;
+            $sql = "DELETE FROM estado WHERE idEstado = ".$idEstado;
             $resultado = mysqli_query($link, $sql) 
                         or die(mysqli_error($link));
             return $resultado;
