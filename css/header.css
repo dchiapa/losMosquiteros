@@ -16,41 +16,37 @@ header {
     width: 100%;
 }
 
-header>img {
+header img {
     height: 100px;
     width: auto;
 }
 
-header>h1 {
+header h1 {
     color: #FF0000;
     margin-left: 20px;
 }
 
-header>nav {
+header nav {
     position: absolute;
     right: 5px;
 }
 
-header>nav>ul {
+header nav ul {
     line-height: 28px;
 }
 
-header>nav>ul>li {
-    background-color: #FFBADE;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    display: inline-block;
-    list-style: none;
+header nav ul .btn-outline-secondary {
+    background-color: #007bff;
 }
 
-header>nav>ul>li:hover {
-    background-color: #BDFFBA;
+header nav ul .btn-outline-secondary:hover {
+    background-color: #cccccc;
+}
+
+header nav ul li:hover {
     font-weight: bold;
 }
 
-header>nav>ul>li>a {
-    color: #000000;
-    font-size: 20px;
-    padding: 10px;
+header nav ul li a:hover {
     text-decoration: none;
 }

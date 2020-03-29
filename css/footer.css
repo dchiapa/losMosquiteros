@@ -1,16 +1,12 @@
 footer {
-    background-color: #765F89;
-}
-
-footer p,
-footer p a {
-    color: #FFFFFF;
+    width: 100%;
 }
 
 footer p a {
-    color: #FFFF00;
+    color: pink;
 }
 
 footer p a:hover {
+    color: pink;
     font-weight: bold;
 }

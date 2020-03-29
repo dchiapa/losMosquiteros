@@ -4,8 +4,9 @@
     $tipos = listarTipos();
 	include 'html/header.html';
 ?>
-<main class="container col-6">
-    <h2>Panel de administración de tipos</h2>
+<main>
+    <div class="col-6 mx-auto">
+    <h2 class="d-block text-center my-5">Panel de administración de tipos</h2>
     <a href="admin.php" class="btn btn-outline-secondary m-2">Volver a principal</a>
     <table class="table table-hover table-border table-striped">
         <thead class="thead-dark">
@@ -37,6 +38,7 @@
         </tbody>
     </table>
     <a href="admin.php" class="btn btn-outline-secondary m-2">Volver a principal</a>
+    </div>
 </main>
 <?php
 	include 'html/footer.html';

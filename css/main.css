@@ -18,19 +18,20 @@
 }
 
 #ppal h2 {
-    font-size: 25px;
-    height: 25px;
-    line-height: 25px;
-    margin-top: 50px;
+    font-size: 30px;
+    margin-top: 20px;
 }
 
 #ppal h3 {
-    color: #0000FF;
+    color: rgb(0, 0, 255);
     font-size: 40px;
-    height: 40px;
-    line-height: 40px;
+    margin-top: -70px;
 }
 
-form {
-    height: auto;
+#admin {
+    margin-bottom: 120px;
+}
+
+#adminEstados {
+    margin-bottom: 3px;
 }
