@@ -35,13 +35,13 @@
             $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
             return $resultado;
         }
-        // 28-03 chequear estadoEnUSO //
+        // 29-03 CHEQUEADO
         function estadoEnUso()
         {
             $idEstado = $_GET['idEstado'];
             $link = conectar();
-            $sql = "SELECT valorEstado FROM productos p, estado m 
-                    WHERE p.idEstado = m.idEstado AND p.idEstado = ".$idEstado;
+            $sql = "SELECT valorEstado FROM propiedades p, estado e 
+                    WHERE p.idEstado = e.idEstado AND p.idEstado = ".$idEstado;
             $resultado = mysqli_query($link, $sql)
                         or die(mysqli_error($link));
             $cantidad = mysqli_num_rows($resultado);
