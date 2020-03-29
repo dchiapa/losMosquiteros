@@ -34,7 +34,7 @@ header > nav > ul
 }
 header > nav > ul > li
 {
-	background-color: #FFBADE;
+	background-color: #40e0d0b6;
 	border: 1px solid #000000;
 	border-radius: 5px;
 	display: inline-block;
@@ -42,7 +42,7 @@ header > nav > ul > li
 }
 header > nav > ul > li:hover
 {
-	background-color: #BDFFBA;
+	background-color: #f1fcfc;
 	font-weight: bold;
 }
 header > nav > ul > li > a
