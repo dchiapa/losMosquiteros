@@ -16,6 +16,7 @@ header > img
 {
 	height: 100px;
 	width: auto;
+	margin-left: 30x;
 }
 header > h1
 {
@@ -52,6 +53,3 @@ header > nav > ul > li > a
 	text-decoration: none;
 }
 
-header > img {
-	margin-left: 200px;
-}
