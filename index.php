@@ -14,7 +14,7 @@
 <?php
    	while ($estado = mysqli_fetch_assoc($estados)) {            	
 ?>
-			<button type="button" value="<?= $estado['idEstado'] ?>" id="<?= $estado['idEstado'] ?>" class=" btnEstado btn btn-info col-2 m-2"><?= $estado['valorEstado'] ?></button>
+			<button type="button" value="<?= $estado['idEstado'] ?>" id="<?= $estado['idEstado'] ?>" class=" btnEstado btn btn-secondary col-2 m-2"><?= $estado['valorEstado'] ?></button>
 <?php 
 	}
 ?>
