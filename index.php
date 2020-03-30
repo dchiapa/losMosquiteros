@@ -14,7 +14,7 @@
 <?php
    	while ($estado = mysqli_fetch_assoc($estados)) {            	
 ?>
-			<button type="button" value="<?= $estado['idEstado'] ?>" data-dato="comprar" class="btn btn-info col-2 m-2"><?= $estado['valorEstado'] ?></button>
+			<button type="button" value="<?= $estado['idEstado'] ?>" id="<?= $estado['idEstado'] ?>" class=" btnEstado btn btn-info col-2 m-2"><?= $estado['valorEstado'] ?></button>
 <?php 
 	}
 ?>
@@ -32,13 +32,14 @@
 ?>
 			</select>
 			<input type="text" name="propUbicacion" placeholder="Ingrese un barrio" class="border border-dark rounded col-6 mx-2">
+			<input type="hidden" id="idEstado" name="idEstado" value="">
 			<button class="btn btn-info col-2">Buscar</button>
 			<div class="col-1"></div>
 		</div>
 		<div class="col-3"></div>
 	</form> 
 	<h3>El hogar que soñaste a tu alcance</h3>
-	<script src="js/botones.js"></script>
+	<script src="js/estado.js"></script>
 </main>
 <?php
 	include 'html/footer.html';
