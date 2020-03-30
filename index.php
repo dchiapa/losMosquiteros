@@ -6,6 +6,7 @@
 	$tipos = listarTipos();
 	$estados = listarEstados();
 	$barrios = listarBarrios();
+	include 'html/header.html';
 ?>
 <body>
 <main id="ppal">
