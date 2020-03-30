@@ -135,6 +135,9 @@ main>div>nav>ul>li>a {
     text-decoration: none;
 }
 
+
+/* //////////////CSS de los botones comprar y alquiler//////// */
+
 form>div>input[type="radio"] {
     display: none;
 }
