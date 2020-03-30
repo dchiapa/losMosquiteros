@@ -4,9 +4,25 @@
 	$tipos = listarTipos();
 	include 'html/header.html';
 ?>
+<body>
+
+
 <main id="ppal">
+	<div id="nav">
+		<img src="img/logofinal.png" alt="Logo de Los mosquiteros">
+		
+		<nav>
+			<ul>
+				<li><a href="">PUBLICAR</a></li>
+				<li><a href="">LOGIN</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	
 	<h2>Propiedades en venta y en alquiler</h2>
 	<h3>El hogar que soñaste a tu alcance</h3>
+
 	<form action="" method="get" accept-charset="utf-8" id="buscar">
 		<div>
 			<button type="button" value="1" data-dato="comprar" class="">Compra</button>
@@ -27,6 +43,7 @@
 			<button>Buscar</button>
 		</div>
 	</form> 
+	
 	<script src="js/botones.js"></script>
 </main>
 <?php
