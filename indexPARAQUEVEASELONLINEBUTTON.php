@@ -8,10 +8,17 @@
 ?>
 <main id="ppal">
 	<h2>Propiedades en venta y en alquiler</h2>
+	<p id="prueba">
+<?php 	
+    if (isset($_GET['miHidden'])){
+		echo "TOCO " . $_GET['miHidden'];
+	}
+?>
+	</p>
 	<form action="" method="get" accept-charset="utf-8" class="container">
 		<div class="row">
 			<div class="col-3"></div>
-			<p id="prueba"></p>
+			<input type="hidden" name="miHidden" value="0">			
 <?php
    	while ($estado = mysqli_fetch_assoc($estados)) {            	
 ?>
@@ -43,11 +50,12 @@
 </main>
 <script>
 function miFuncion(param) {	
-	if (param=="1") {
+	/*if (param=="1") {
 		document.getElementById('prueba').innerHTML="DOS";
 	} else {
 		document.getElementById('prueba').innerHTML="UNO";
-	}
+	}*/
+	document.getElementsByName('miHidden')[0].value=param;
 }
 </script>
 <?php
