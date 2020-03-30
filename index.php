@@ -1,7 +1,9 @@
 <?php
 	require 'funciones/conexion.php';
 	require 'funciones/tipo.php';
+	require 'funciones/estado.php';
 	$tipos = listarTipos();
+	$estados = listarEstados();
 	include 'html/header.html';
 ?>
 <body>
@@ -24,10 +26,20 @@
 	<h3>El hogar que soñaste a tu alcance</h3>
 
 	<form action="" method="get" accept-charset="utf-8" id="buscar">
+	<label> Alquiler
+	<input type="radio" name="" id="btnAlquiler">
+	</label>	
+	<label> Venta
+	<input type="radio" name="" id="btnVenta">
+	</label>
+		
 		<div>
+			
 			<button type="button" value="1" data-dato="comprar" class="">Compra</button>
 			<button type="button" value="2" data-dato="alquiler" class="">Alquiler</button>
 		<div>
+	
+	
 		<div id="buscar2">
 			<select name="propTipo" id="propTipo">
 			<option value=""> Tipo de propiedad</option>

@@ -6,6 +6,7 @@
 #ppal
 {
 	background-image: url(../img/fondo3.jpg);
+	
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
@@ -99,8 +100,10 @@ main > div > nav
 }
 main > div > nav > ul > li
 {
-	background-color: #40e0d0b6;
-	border-radius: 4px;
+	border-color: white;
+	border-style: solid;
+    border-width: 2px;
+	border-radius: 20px;
 	display: inline-block;
 	list-style: none;
 	
@@ -109,6 +112,10 @@ main > div > nav > ul > li
 main > div > nav > ul > li:hover
 {
 	background-color: #00d6d6;
+	border-color: #00d6d6;
+	border-style: solid;
+    border-width: 2px;
+	
 	/*font-weight: bold;*/
 }
 
@@ -120,3 +127,7 @@ main > div > nav > ul > li > a
 	text-decoration: none;
 }
 
+#btnAlquiler{
+	
+	/*-webkit-appearance:none;*/
+}
