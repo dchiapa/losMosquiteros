@@ -17,18 +17,19 @@ function listarPropiedades()
                 FROM propiedades p, estado e, tipo t, barrio b
                 WHERE p.idEstado = e.idEstado
                 AND   p.idTipo= t.idTipo
-                AND   p.idBarrio = b.idBarrio
-                AND   p.idCategoria = c.idCategoria";
+                AND   p.idBarrio = b.idBarrio";
 
 $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
 return $resultado;
 
+ }
 
-function buscarPropiedades();
-
+function buscarPropiedades()
+{
 $idEstado = $_GET['idEstado'];
 $idTipo = $_GET['idTipo'];
 $idBarrio = $_GET['idBarrio'];
 
 $link = conectar();
-$sql = 
+
+}
