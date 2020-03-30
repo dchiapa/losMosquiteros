@@ -1,3 +1,8 @@
+
+body{
+	font-family: 'Poppins', sans-serif;
+}
+
 #ppal, #ppal > h2, #ppal > h3, #buscar > div
 {
 	text-align: center;
@@ -39,7 +44,7 @@
 {
 	display: flex;
 	flex-wrap: wrap;
-	width: 85%;
+	width: 100%;
 }
 #buscar > div > button, #buscar2 > button
 {
@@ -75,6 +80,9 @@
 {
 	width: 40%;
 }
+
+
+
 
 main > div 
 {
@@ -130,4 +138,39 @@ main > div > nav > ul > li > a
 #btnAlquiler{
 	
 	/*-webkit-appearance:none;*/
+}
+
+form > div > input[type="radio"]
+{
+	display: none;
+}
+
+
+
+	
+
+form > div > label
+{
+	color: #0074d9;
+	background-color: white;
+	padding: 0px 10px;
+	display: inline-block;
+	/*position: relative; sacar dps*/
+	cursor: pointer ;
+	border-radius: 3px;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+form > div > label:hover
+{
+	background-color: #daeeff;
+}
+
+
+form > div > input[type="radio"]:checked + label
+{
+	background-color: #0074d9;
+	color: white;
+	padding: 0px 20px;
 }

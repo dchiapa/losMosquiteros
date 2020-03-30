@@ -2,8 +2,10 @@
 	require 'funciones/conexion.php';
 	require 'funciones/tipo.php';
 	require 'funciones/estado.php';
+	require 'funciones/barrio.php';
 	$tipos = listarTipos();
 	$estados = listarEstados();
+	$barrios = listarBarrios();
 	include 'html/header.html';
 ?>
 <body>
@@ -26,33 +28,43 @@
 	<h3>El hogar que soñaste a tu alcance</h3>
 
 	<form action="" method="get" accept-charset="utf-8" id="buscar">
-	<label> Alquiler
-	<input type="radio" name="" id="btnAlquiler">
-	</label>	
-	<label> Venta
-	<input type="radio" name="" id="btnVenta">
-	</label>
+	
 		
 		<div>
+			<input type="radio" id="Compra" name="idEstado" value="1">
+			<label for="Compra" id="labelCompra">Compra</label>
 			
-			<button type="button" value="1" data-dato="comprar" class="">Compra</button>
-			<button type="button" value="2" data-dato="alquiler" class="">Alquiler</button>
-		<div>
+			<input type="radio" id="Alquiler" name="idEstado" value="2">
+			<label for="Alquiler">Alquiler</label>
+		</div>
 	
 	
 		<div id="buscar2">
-			<select name="propTipo" id="propTipo">
-			<option value=""> Tipo de propiedad</option>
-<?php
-   	while ($tipo = mysqli_fetch_assoc($tipos)) {            	
-?>
-            	<option value="<?= $tipo['idTipo'] ?>"><?= $tipo['valorTipo'] ?></option>
-<?php 
-	}
-?>
-			</select>
-			<input type="text" name="propUbicacion" placeholder="Ingrese un barrio">
-			<button>Buscar</button>
+				<select name="idTipo" id="propTipo">
+				<option value=""> Tipo de propiedad</option>
+			<?php
+				while ($tipo = mysqli_fetch_assoc($tipos)) {            	
+			?>
+					<option value="<?= $tipo['idTipo'] ?>"><?= $tipo['valorTipo'] ?></option>
+			<?php 
+				}
+			?>
+				</select>
+
+				
+				
+				<select name="idBarrio" id="propTipo">
+				<option value=""> Barrio</option>
+			<?php
+				while ($barrio = mysqli_fetch_assoc($barrios)) {            	
+			?>
+					<option value="<?= $barrio['idBarrio'] ?>"><?= $barrio['valorBarrio'] ?></option>
+			<?php 
+				}
+			?>
+				</select>
+				
+				<button>Buscar</button>
 		</div>
 	</form> 
 	
