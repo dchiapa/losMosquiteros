@@ -30,7 +30,7 @@
 		<div>
 		<div id="buscar2">
 			<select name="propTipo" id="propTipo">
-			<option value=""> Seleccione una opción</option>
+			<option value=""> Tipo de propiedad</option>
 <?php
    	while ($tipo = mysqli_fetch_assoc($tipos)) {            	
 ?>

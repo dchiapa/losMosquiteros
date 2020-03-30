@@ -19,23 +19,25 @@
 {
 	color: white;
 	font-size: 25px;
-	height: 25px;
+	height: 30px;
 	line-height: 25px;
 	margin-top: 50px;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 #ppal > h3
 {
-	color: #0000FF;
+	color: white;
 	font-size: 40px;
 	height: 40px;
 	line-height: 40px;
-	margin-top: 70px;
+	margin-top: -40px;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+	
 }
 #buscar
 {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: -300px;
 	width: 85%;
 }
 #buscar > div > button, #buscar2 > button
@@ -62,13 +64,15 @@
 }
 #buscar2 > select, #buscar2 > input
 {
-	border: 1px solid #000000;
+	border: none;
 	border-radius: 5px;
 	font-size: 20px;
+	height: 35px;
+	width: 20%;
 }
 #buscar2 > input
 {
-	width: 50%;
+	width: 40%;
 }
 
 main > div 
@@ -96,7 +100,6 @@ main > div > nav
 main > div > nav > ul > li
 {
 	background-color: #40e0d0b6;
-	border: 1px solid #f1fcfc;
 	border-radius: 4px;
 	display: inline-block;
 	list-style: none;
