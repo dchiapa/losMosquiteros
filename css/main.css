@@ -5,12 +5,12 @@
 }
 #ppal
 {
-	background-image: url(../img/fondo1.jpg);
+	background-image: url(../img/fondo3.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
 	flex-wrap: wrap;
-	height: 500px;
+	height: 600px;
 	justify-content: center;
 	line-height: 50px;
 	margin: 0;
