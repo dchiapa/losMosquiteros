@@ -7,7 +7,7 @@
 	$tipos = listarTipos();
 	$estados = listarEstados();
     $barrios = listarBarrios(); 
-    $propiedades = buscarPropiedades();
+    $propiedades = verPropiedadPorID();
 	include 'html/header2.html';
 ?>
 

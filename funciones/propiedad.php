@@ -24,7 +24,7 @@ return $resultado;
 
  }
 
-function buscarPropiedades()
+function verPropiedadPorID()
 {
 $idPropiedad = 1;
 /*$idEstado = $_GET['idEstado'];
