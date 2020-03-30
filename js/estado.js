@@ -8,6 +8,13 @@ for (let i = 0; i < botones.length; i++) {
 }
 
 function botonApretado(e) {
-    boton = e.target.value;
-    input.value = boton;
+    botones = document.getElementsByClassName('activo');
+    for (let i = 0; i < botones.length; i++) {
+        boton = botones[i].classList.replace('btn-secondary', 'btn-info');
+        boton = botones[i].classList.remove('activo');
+    }
+    boton = e.target;
+    boton.classList.add('activo');
+    boton.classList.replace('btn-info', 'btn-secondary');
+    input.value = boton.value;
 }
