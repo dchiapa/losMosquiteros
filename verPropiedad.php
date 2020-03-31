@@ -11,7 +11,7 @@
 	include 'html/header2.html';
 ?>
 
-
+<div id="contenedor">
 <div class="contendorcarousel">
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
@@ -53,6 +53,15 @@
       if ($propiedades['proAntiguedad'] > 0 ){
       ?>
         <h5 class="card-title">Antiguedad: <?= $propiedades['proAntiguedad']; ?> años </h5>  
+    
+    <?php
+    }
+    ?>
+
+    <?php 
+      if ($propiedades['proCocheras'] > 0 ){
+      ?>
+        <h5 class="card-title">Cocheras: <?= $propiedades['proCocheras']; ?></h5>  
     
     <?php
     }
@@ -101,7 +110,7 @@
     <?php 
       if ($propiedades['proQuincho'] == 1 ){
       ?>
-        <h5 class="card-title">Quincho</h5>  
+        <h5 class="card-title">Quincho <i class="fas fa-check-square"></i> </h5>  
     
     <?php
     }
@@ -110,7 +119,7 @@
     <?php 
       if ($propiedades['proParrilla'] == 1 ){
       ?>
-        <h5 class="card-title">Parrilla</h5>  
+        <h5 class="card-title">Parrilla</i></h5>  
     
     <?php
     }
@@ -177,3 +186,9 @@
 <div>
 <img src="" alt="">
 </div>
+</div>
+
+
+<?php
+	include 'html/footer.html';
+?>
