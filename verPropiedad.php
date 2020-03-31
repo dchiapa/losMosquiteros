@@ -42,19 +42,35 @@
 
 <div class="card">
   <h5 class="card-header"><?= $propiedades['proTitulo']; ?></h5>
+  <h5 class="btn btn-primary"><?= $propiedades['valorEstado']; ?></h5>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Dirección: <?= $propiedades['proDireccion']; ?></h5>
+    <h5 class="card-title">Precio: $ <?= $propiedades['proPrecio']; ?></h5>
+    <h5 class="card-title">Ambientes: <?= $propiedades['ambientes']; ?></h5>
+    <p class="card-text">Descripción: <?= $propiedades['proDescripcion']; ?></p>
+    <a href="#" class="btn btn-primary">Contacto</a>
   </div>
 </div>
 
 <div class="card">
-  <h5 class="card-header"><?= $propiedades['proTitulo']; ?></h5>
+  <h5 class="card-header">Adicionales</h5>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+  <h5 class="card-title">Special title treatment</h5>
+   
+    
   </div>
+</div>
+
+<div class="card">
+  <h5 class="card-header">Servicios</h5>
+  <div class="card-body">
+  <h5 class="card-title">Special title treatment</h5>
+   
+    
+  </div>
+</div>
+
+<div>
+<img src="" alt="">
 </div>
 
