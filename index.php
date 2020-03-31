@@ -13,13 +13,13 @@
 			<h1 class="d-none">Los Mosquiteros</h1>
 			<nav>
 			    <ul>
-			        <li class="btn btn-outline-light py-2 px-5"><a href="index.php" class="text-dark">Inicio</a></li>
-			        <li class="btn btn-outline-light py-2 px-5"><a href="" class="text-dark">Publicar</a></li>
-			        <li class="btn btn-outline-light py-2 px-5"><a href="admin.php" class="text-dark">LogIn</a></li>
+			        <li class="d-inline"><a href="index.php" class="btn btn-outline-light py-2 px-5">Inicio</a></li>
+			        <li class="d-inline"><a href="" class="btn btn-outline-light py-2 px-5">Publicar</a></li>
+			        <li class="d-inline"><a href="admin.php" class="btn btn-outline-light py-2 px-5">LogIn</a></li>
 			    </ul>
 			</nav>
 		</header>
-		<h2>Propiedades en venta y en alquiler</h2>
+		<h2 class="text-light">Propiedades en venta y en alquiler</h2>
 		<form action="" method="get" class="container">
 			<div class="row">
 				<div class="col-3"></div>
