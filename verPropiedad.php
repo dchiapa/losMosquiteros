@@ -97,7 +97,52 @@
 <div class="card">
   <h5 class="card-header">Servicios</h5>
   <div class="card-body">
-  <h5 class="card-title">Special title treatment</h5>
+   
+  <?php 
+      if ($propiedades['proLuzEle'] == 1 ){
+      ?>
+        <h5 class="card-title">Luz electrica</h5>  
+    
+    <?php
+    }
+    ?>
+
+    <?php 
+      if ($propiedades['proAguaCorriente'] == 1 ){
+      ?>
+        <h5 class="card-title">Agua corriente</h5>  
+    
+    <?php
+    }
+    ?>
+    
+    <?php 
+      if ($propiedades['proAguaPozo'] == 1 ){
+      ?>
+        <h5 class="card-title">Agua de pozo</h5>  
+    
+    <?php
+    }
+    ?>
+
+    <?php 
+      if ($propiedades['proGasNatural'] == 1 ){
+      ?>
+        <h5 class="card-title">Gas natural</h5>  
+    
+    <?php
+    }
+    ?>
+
+<?php 
+      if ($propiedades['proGasEmbasado'] == 1 ){
+      ?>
+        <h5 class="card-title">Gas Embasado</h5>  
+    
+    <?php
+    }
+    ?>
+   
    
     
   </div>
