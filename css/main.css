@@ -23,24 +23,30 @@ body {
 
 /* ***** Header ***** */
 
-#ppal header {
+header {
+    align-items: center;
     display: flex;
     height: 120px;
-    align-items: center;
     width: 100%;
 }
 
-#ppal header img {
+#admin header,
+#adminEstados header,
+#adminTipos header {
+    background-color: rgb(231, 154, 250);
+}
+
+header img {
     height: 100px;
     width: auto;
 }
 
-#ppal header nav {
+header nav {
     position: absolute;
     right: 5px;
 }
 
-#ppal header nav ul li {
+header nav ul li {
     list-style: none;
 }
 
