@@ -12,7 +12,7 @@
 ?>
 
 
-
+<div class="contendorcarousel">
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -25,7 +25,7 @@
       <img src="img/03.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="img/04.jpg" class="d-block w-100" alt="...">
+      <img src="img/02.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -37,6 +37,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+</div>
 
 
 <div class="card">
@@ -47,3 +48,13 @@
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
+
+<div class="card">
+  <h5 class="card-header"><?= $propiedades['proTitulo']; ?></h5>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
