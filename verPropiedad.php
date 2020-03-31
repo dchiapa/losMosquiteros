@@ -55,9 +55,42 @@
 <div class="card">
   <h5 class="card-header">Adicionales</h5>
   <div class="card-body">
-  <h5 class="card-title">Special title treatment</h5>
-   
     
+    <?php 
+      if ($propiedades['proPileta'] == 1 ){
+      ?>
+        <h5 class="card-title">Pileta</h5>  
+    
+    <?php
+    }
+    ?>
+
+    <?php 
+      if ($propiedades['proJardin'] == 1 ){
+      ?>
+        <h5 class="card-title">Jardin</h5>  
+    
+    <?php
+    }
+    ?>
+    
+    <?php 
+      if ($propiedades['proQuincho'] == 1 ){
+      ?>
+        <h5 class="card-title">Quincho</h5>  
+    
+    <?php
+    }
+    ?>
+
+    <?php 
+      if ($propiedades['proParrilla'] == 1 ){
+      ?>
+        <h5 class="card-title">Parrilla</h5>  
+    
+    <?php
+    }
+    ?>
   </div>
 </div>
 
