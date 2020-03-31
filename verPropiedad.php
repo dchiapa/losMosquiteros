@@ -47,16 +47,40 @@
     <h5 class="card-title">Dirección: <?= $propiedades['proDireccion']; ?></h5>
     <h5 class="card-title">Precio: $ <?= $propiedades['proPrecio']; ?></h5>
     <h5 class="card-title">Ambientes: <?= $propiedades['ambientes']; ?></h5>
+    <h5 class="card-title">Dormitorios: <?= $propiedades['proDormitorios']; ?></h5>
+    <h5 class="card-title">Baños: <?= $propiedades['proBaños']; ?></h5>
+    <?php 
+      if ($propiedades['proAntiguedad'] > 0 ){
+      ?>
+        <h5 class="card-title">Antiguedad: <?= $propiedades['proAntiguedad']; ?> años </h5>  
+    
+    <?php
+    }
+    ?>
     <p class="card-text">Descripción: <?= $propiedades['proDescripcion']; ?></p>
     <a href="#" class="btn btn-primary">Contacto</a>
   </div>
 </div>
 
-<div class="card">
-  <h5 class="card-header">Adicionales</h5>
-  <div class="card-body">
-    
-    <?php 
+
+<div class="row">
+
+  <div class="col-md-3">
+      <div class="card">
+      <h5 class="card-header">Superficie</h5>
+        <div class="card-body">
+          <h5 class="card-title">Total: <?= $propiedades['proSupTotal']; ?> m2</h5>
+          <h5 class="card-title">Cubierta: <?= $propiedades['proSupCubierta']; ?> m2</h5>
+          <h5 class="card-title">Se.cubierta: <?= $propiedades['proSupSemi']; ?> m2</h5>         
+        </div>
+      </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card">
+    <h5 class="card-header">Adicionales</h5>
+      <div class="card-body">
+      <?php 
       if ($propiedades['proPileta'] == 1 ){
       ?>
         <h5 class="card-title">Pileta</h5>  
@@ -91,14 +115,16 @@
     <?php
     }
     ?>
+        
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="card">
-  <h5 class="card-header">Servicios</h5>
-  <div class="card-body">
-   
-  <?php 
+  <div class="col-md-3">
+    <div class="card">
+    <h5 class="card-header">Servicios</h5>
+      <div class="card-body">
+      <?php 
       if ($propiedades['proLuzEle'] == 1 ){
       ?>
         <h5 class="card-title">Luz electrica</h5>  
@@ -134,7 +160,7 @@
     }
     ?>
 
-<?php 
+    <?php 
       if ($propiedades['proGasEmbasado'] == 1 ){
       ?>
         <h5 class="card-title">Gas Embasado</h5>  
@@ -142,13 +168,12 @@
     <?php
     }
     ?>
-   
-   
-    
+        
+      </div>
+    </div>
   </div>
 </div>
 
 <div>
 <img src="" alt="">
 </div>
-
