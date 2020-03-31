@@ -13,9 +13,9 @@
 			<h1 class="">Los Mosquiteros</h1>
 			<nav>
 			    <ul>
-			        <li class="btn btn-outline-secondary"><a href="index.php">Inicio</a></li>
-			        <li class="btn btn-outline-secondary"><a href="">Publicar</a></li>
-			        <li class="btn btn-outline-secondary"><a href="admin.php">LogIn</a></li>
+			        <li class="btn btn-outline-light "><a href="index.php">Inicio</a></li>
+			        <li class="btn btn-outline-light"><a href="">Publicar</a></li>
+			        <li class="btn btn-outline-light"><a href="admin.php">LogIn</a></li>
 			    </ul>
 			</nav>
 		</header>

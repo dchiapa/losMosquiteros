@@ -45,18 +45,6 @@ body {
     right: 5px;
 }
 
-#ppal header nav ul .btn-outline-secondary {
-    background-color: #007bff;
-}
-
-#ppal header nav ul .btn-outline-secondary a {
-    color: #ffffff;
-}
-
-#ppal header nav ul .btn-outline-secondary:hover {
-    background-color: #cccccc;
-}
-
 #ppal header nav ul li:hover {
     font-weight: bold;
 }
