@@ -10,12 +10,12 @@
 	<main id="ppal">
 		<header class="card-header border-0">
 			<img src="img/logo2.jpeg" alt="Logo de Los mosquiteros">
-			<h1 class="">Los Mosquiteros</h1>
+			<h1 class="d-none">Los Mosquiteros</h1>
 			<nav>
 			    <ul>
-			        <li class="btn btn-outline-light "><a href="index.php">Inicio</a></li>
-			        <li class="btn btn-outline-light"><a href="">Publicar</a></li>
-			        <li class="btn btn-outline-light"><a href="admin.php">LogIn</a></li>
+			        <li class="btn btn-outline-light py-2 px-5"><a href="index.php" class="text-dark">Inicio</a></li>
+			        <li class="btn btn-outline-light py-2 px-5"><a href="" class="text-dark">Publicar</a></li>
+			        <li class="btn btn-outline-light py-2 px-5"><a href="admin.php" class="text-dark">LogIn</a></li>
 			    </ul>
 			</nav>
 		</header>
@@ -26,7 +26,7 @@
 <?php
    	while ($estado = mysqli_fetch_assoc($estados)) {            	
 ?>
-				<button type="button" value="<?= $estado['idEstado'] ?>" id="<?= $estado['idEstado'] ?>" class=" btnEstado btn btn-secondary col-2 m-2"><?= $estado['valorEstado'] ?></button>
+				<button type="button" value="<?= $estado['idEstado'] ?>" id="<?= $estado['idEstado'] ?>" class=" btnEstado btn btn-secondary col-2 m-2 py-2 px-5"><?= $estado['valorEstado'] ?></button>
 <?php 
 	}
 ?>
@@ -50,7 +50,7 @@
 			</div>
 			<div class="col-3"></div>
 		</form> 
-		<h3>El hogar que soñaste a tu alcance</h3>
+		<h3 class="text-primary">El hogar que soñaste a tu alcance</h3>
 		<script src="js/estado.js"></script>
 	</main>
 <?php

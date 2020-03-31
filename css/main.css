@@ -35,22 +35,13 @@ body {
     width: auto;
 }
 
-#ppal header h1 {
-    color: rgb(2, 20, 82);
-    margin-left: 20px;
-}
-
 #ppal header nav {
     position: absolute;
     right: 5px;
 }
 
-#ppal header nav ul li:hover {
+#ppal header nav ul li {
     font-weight: bold;
-}
-
-#ppal header nav ul li a:hover {
-    text-decoration: none;
 }
 
 
@@ -58,13 +49,12 @@ body {
 
 #ppal h2 {
     font-size: 30px;
-    margin-top: 20px;
+    text-shadow: 2px 2px 2px #000000;
 }
 
 #ppal h3 {
-    color: rgb(0, 0, 255);
     font-size: 40px;
-    margin-top: -70px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 #admin {
