@@ -1,73 +1,52 @@
-body{
-    font-family: 'Poppins', sans-serif;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body > header > div {
-    width: 100%;
-    height: 100px;
+body {
+    height: auto;
+}
+
+header {
+    align-items: center;
+    background-color: #E2D5E7;
     display: flex;
-    justify-content: space-between;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-    
+    height: 120px;
+    width: 100%;
 }
 
-body > header >div >img {
+header img {
     height: 100px;
     width: auto;
-    margin-top: 10px;
-    margin-left: 30px;
-} 
-
-body > header>div>nav {
-    margin-top: 35px;
-    margin-right: 40px;
-    
 }
 
-body > header>div>nav>ul>li {
-    border-color: white;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 20px;
-    display: inline-block;
-    list-style: none;
+header h1 {
+    color: #FF0000;
+    margin-left: 20px;
 }
 
-body > header >div>nav>ul>li>a {
-    color: #ffffff;
-    background-color: #0074d9;
-    font-size: 20px;
-    padding: 5px 10px;
+header nav {
+    position: absolute;
+    right: 5px;
+}
+
+header nav ul {
+    line-height: 28px;
+}
+
+header nav ul .btn-outline-secondary {
+    background-color: #007bff;
+}
+
+header nav ul .btn-outline-secondary:hover {
+    background-color: #cccccc;
+}
+
+header nav ul li:hover {
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
     text-decoration: none;
-    border-radius: 4px;
-    border-color: #0074d9;
-    border-width: 2px;
-    border-style: solid;
-}
-body > header >div>nav>ul>li>a:hover
-{
-    text-decoration: none;
-    color: #0074d9;
-    background-color: white;
-    border-color: #0074d9;
-    border-width: 2px;
-    border-style: solid;
-}
-
-.contendorcarousel {
-    width: 70%;
-    height: 50%;
-    margin-left:  200px;
-}
-
-.card
-{
-    width: 70%;
-    margin-top: 50px;
-    margin-left:  200px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.btn.btn-primary{
-    border-radius: none important;
 }

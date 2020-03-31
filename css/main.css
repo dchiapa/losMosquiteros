@@ -1,166 +1,37 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
 #ppal,
 #ppal>h2,
-#ppal>h3,
-#buscar div {
+#ppal>h3 {
     text-align: center;
     width: 100%;
 }
 
 #ppal {
-    background-image: url(../img/fondo3.jpg);
+    background-image: url(../img/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
-    height: 600px;
+    height: 500px;
     justify-content: center;
     line-height: 50px;
     margin: 0;
 }
 
-#ppal>h2 {
-    color: white;
-    font-size: 25px;
-    height: 30px;
-    line-height: 25px;
-    margin-top: 50px;
-    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+#ppal h2 {
+    font-size: 30px;
+    margin-top: 20px;
 }
 
-#ppal>h3 {
-    color: white;
+#ppal h3 {
+    color: rgb(0, 0, 255);
     font-size: 40px;
-    height: 40px;
-    line-height: 40px;
-    margin-top: -40px;
-    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    margin-top: -70px;
 }
 
-#buscar {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+#admin {
+    margin-bottom: 120px;
 }
 
-#buscar>div>button,
-#buscar2>button {
-    background-color: #BCBBFD;
-    border: 1px solid #0016b0;
-    border-radius: 5px;
-    color: #000000;
-    cursor: pointer;
-    font-size: 20px;
-    height: 38px;
-    margin-right: 5px;
-    padding: 4px 10px;
-}
-
-#buscar>div>button:hover,
-#buscar2>button:hover {
-    background-color: #ffffff;
-    color: #000000;
-    font-weight: bold;
-}
-
-#buscar2>select,
-#buscar2>input,
-#buscar2>button {
-    margin: 5px 10px;
-}
-
-#buscar2>select,
-#buscar2>input {
-    border: none;
-    border-radius: 5px;
-    font-size: 20px;
-    height: 35px;
-    width: 20%;
-}
-
-#buscar2>input {
-    width: 40%;
-}
-
-main>div {
-    width: 80%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    /*background-color: white;*/
-}
-
-main>div>img {
-    height: 100px;
-    width: auto;
-    margin-top: 15px;
-    margin-left: 30px;
-}
-
-main>div>nav {
-    margin-top: 25px;
-    margin-right: 30px;
-}
-
-main>div>nav>ul>li {
-    border-color: white;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 20px;
-    display: inline-block;
-    list-style: none;
-}
-
-main>div>nav>ul>li:hover {
-    background-color: #00d6d6;
-    border-color: #00d6d6;
-    border-style: solid;
-    border-width: 2px;
-    /*font-weight: bold;*/
-}
-
-main>div>nav>ul>li>a {
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px;
-    text-decoration: none;
-}
-
-
-/* //////////////CSS de los botones comprar y alquiler//////// */
-
-form>div>input[type="radio"] {
-    display: none;
-}
-
-form>div>label {
-    color: #0074d9;
-    background-color: white;
-    padding: 0px 10px;
-    display: inline-block;
-    /*position: relative; sacar dps*/
-    cursor: pointer;
-    border-radius: 3px;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-form>div>label:hover {
-    background-color: #daeeff;
-}
-
-form>div>input[type="radio"]:checked+label {
-    background-color: #0074d9;
-    color: white;
-    padding: 0px 20px;
+#adminEstados {
+    margin-bottom: 3px;
 }
