@@ -46,13 +46,13 @@
   <div class="card-body">
     <h5 class="card-title">Dirección: <?= $propiedades['proDireccion']; ?></h5>
     <h5 class="card-title">Precio: $ <?= $propiedades['proPrecio']; ?></h5>
-    <h5 class="card-title">Ambientes: <?= $propiedades['ambientes']; ?></h5>
-    <h5 class="card-title">Dormitorios: <?= $propiedades['proDormitorios']; ?></h5>
-    <h5 class="card-title">Baños: <?= $propiedades['proBaños']; ?></h5>
+    <h6 class="card-title">Ambientes: <?= $propiedades['ambientes']; ?></h6>
+    <h6 class="card-title">Dormitorios: <?= $propiedades['proDormitorios']; ?></h6>
+    <h6 class="card-title">Baños: <?= $propiedades['proBaños']; ?></h6>
     <?php 
       if ($propiedades['proAntiguedad'] > 0 ){
       ?>
-        <h5 class="card-title">Antiguedad: <?= $propiedades['proAntiguedad']; ?> años </h5>  
+        <h6 class="card-title"><?= $propiedades['proAntiguedad']; ?> años </h6>  
     
     <?php
     }
@@ -61,12 +61,12 @@
     <?php 
       if ($propiedades['proCocheras'] > 0 ){
       ?>
-        <h5 class="card-title">Cocheras: <?= $propiedades['proCocheras']; ?></h5>  
+        <h6 class="card-title">Cocheras: <?= $propiedades['proCocheras']; ?></h6>  
     
     <?php
     }
     ?>
-    <p class="card-text">Descripción: <?= $propiedades['proDescripcion']; ?></p>
+    <h5>Descripción:</h5><p class="card-text"><?= $propiedades['proDescripcion']; ?></p>
     <a href="#" class="btn btn-primary">Contacto</a>
   </div>
 </div>
@@ -78,9 +78,9 @@
       <div class="card">
       <h5 class="card-header">Superficie</h5>
         <div class="card-body">
-          <h5 class="card-title">Total: <?= $propiedades['proSupTotal']; ?> m2</h5>
-          <h5 class="card-title">Cubierta: <?= $propiedades['proSupCubierta']; ?> m2</h5>
-          <h5 class="card-title">Se.cubierta: <?= $propiedades['proSupSemi']; ?> m2</h5>         
+          <h6 class="card-title">Total: <?= $propiedades['proSupTotal']; ?> m2</h6>
+          <h6 class="card-title">Cubierta: <?= $propiedades['proSupCubierta']; ?> m2</h6>
+          <h6 class="card-title">Se.cubierta: <?= $propiedades['proSupSemi']; ?> m2</h6>         
         </div>
       </div>
   </div>
@@ -92,7 +92,7 @@
       <?php 
       if ($propiedades['proPileta'] == 1 ){
       ?>
-        <h5 class="card-title">Pileta</h5>  
+        <h6 class="card-title">Pileta</h6>  
     
     <?php
     }
@@ -101,7 +101,7 @@
     <?php 
       if ($propiedades['proJardin'] == 1 ){
       ?>
-        <h5 class="card-title">Jardin</h5>  
+        <h6 class="card-title">Jardin</h6>  
     
     <?php
     }
@@ -110,7 +110,7 @@
     <?php 
       if ($propiedades['proQuincho'] == 1 ){
       ?>
-        <h5 class="card-title">Quincho <i class="fas fa-check-square"></i> </h5>  
+        <h6 class="card-title">Quincho <i class="fas fa-check-square"></i> </h6>  
     
     <?php
     }
@@ -119,7 +119,7 @@
     <?php 
       if ($propiedades['proParrilla'] == 1 ){
       ?>
-        <h5 class="card-title">Parrilla</i></h5>  
+        <h6 class="card-title">Parrilla</i></h6>  
     
     <?php
     }
@@ -136,7 +136,7 @@
       <?php 
       if ($propiedades['proLuzEle'] == 1 ){
       ?>
-        <h5 class="card-title">Luz electrica</h5>  
+        <h6 class="card-title">Luz electrica</h6>  
     
     <?php
     }
@@ -145,7 +145,7 @@
     <?php 
       if ($propiedades['proAguaCorriente'] == 1 ){
       ?>
-        <h5 class="card-title">Agua corriente</h5>  
+        <h6 class="card-title">Agua corriente</h6>  
     
     <?php
     }
@@ -154,7 +154,7 @@
     <?php 
       if ($propiedades['proAguaPozo'] == 1 ){
       ?>
-        <h5 class="card-title">Agua de pozo</h5>  
+        <h6 class="card-title">Agua de pozo</h6>  
     
     <?php
     }
@@ -163,7 +163,7 @@
     <?php 
       if ($propiedades['proGasNatural'] == 1 ){
       ?>
-        <h5 class="card-title">Gas natural</h5>  
+        <h6 class="card-title">Gas natural</h6>  
     
     <?php
     }
@@ -172,7 +172,7 @@
     <?php 
       if ($propiedades['proGasEmbasado'] == 1 ){
       ?>
-        <h5 class="card-title">Gas Embasado</h5>  
+        <h6 class="card-title">Gas Embasado</h6>  
     
     <?php
     }
