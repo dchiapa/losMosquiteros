@@ -30,6 +30,14 @@
 		$usuario = mysqli_fetch_assoc($resultado);
 		return $usuario;
 	}
+	function verUsuarioPorValor()
+	{
+		$valorUsuario = $_POST['valorUsuario'];
+		$link = conectar();
+		$sql = "SELECT idUsuario, valorUsuario From usuario WHERE valorUsuario = '". $valorUsuario."'";
+		$resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
+		return mysqli_fetch_assoc($resultado);
+	}
 	function modificarUsuario()
 	{
 		$idUsuario = $_POST['idUsuario'];

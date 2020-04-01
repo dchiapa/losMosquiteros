@@ -26,10 +26,9 @@
 	    <div class="container">
             <h1 class="text-center">Agregar barrio</h1>
 <?php 
-if ($existe == false){
+	if ($existe == false){
 ?>
 			<script>
-				console.log('ya Existe usuario');
 				Swal.fire({
             	  title: 'Ya existe el barrio',
             	  type: 'error',
@@ -43,13 +42,13 @@ if ($existe == false){
             	})
 				</script>
 <?php
-}else{
-    $class = 'danger';
-    $mensaje = 'Nose pudo agregar el barrio';
-    if ($chequeo){ 
-    	$class = 'success';
-    	$mensaje = 'Barrio agregado correctamente';
-    }
+	}else{
+	    $class = 'danger';
+	    $mensaje = 'Nose pudo agregar el barrio';
+	    if ($chequeo){ 
+	    	$class = 'success';
+	    	$mensaje = 'Barrio agregado correctamente';
+	    }
 ?>
 			<div class="alert alert-<?= $class; ?>">
 				<?= $mensaje ?>
@@ -57,7 +56,7 @@ if ($existe == false){
 			<a href="adminBarrios.php" class="btn btn-outline-secondary m-2">Volver a barrios</a>
 		</div>
 <?php
-}
+	}
 ?>
 	</main>
 <?php

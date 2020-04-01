@@ -2,7 +2,12 @@
 	require 'funciones/conexion.php';
 	require 'funciones/tipo.php';
 	include 'html/header.html';
-	$chequeo = agregarTipo();
+	$existe = verTipoPorValor();
+	if ($existe == 0 ){
+        $chequeo = agregarTipo();
+    }else {
+		$existe = false;
+	}
 ?>
 <body>
 	<main class="agregar">
@@ -20,18 +25,38 @@
 	    <div class="container">
             <h1>Agregar tipo</h1>
 <?php 
-    $class = 'danger';
-    $mensaje = 'Nose pudo agregar el tipo';
-    if ($chequeo){ 
-    	$class = 'success';
-    	$mensaje = 'Tipo agregado correctamente';
-    }
+	if ($existe == false){
+?>
+			<script>
+				Swal.fire({
+				  title: 'Ya existe el tipo',
+				  type: 'error',
+				  showCancelButton: false,
+				  confirmButtonColor: '#d33',
+				  confirmButtonText: 'Volver al panel'
+				}).then((result) => {
+				  if (result.value) {
+					window.location = 'formAgregarTipo.php'
+				  }
+				})
+			</script>
+<?php
+	}else{
+    	$class = 'danger';
+    	$mensaje = 'Nose pudo agregar el tipo';
+    	if ($chequeo){ 
+    		$class = 'success';
+    		$mensaje = 'Tipo agregado correctamente';
+    	}
 ?>
 			<div class="alert alert-<?= $class; ?>">
 				<?= $mensaje ?>
         	</div>
 			<a href="adminTipos.php" class="btn btn-outline-secondary m-2">Volver a tipos</a>
 		</div>
+<?php
+	}
+?>
 	</main>
 <?php
 	include 'html/footer.html';

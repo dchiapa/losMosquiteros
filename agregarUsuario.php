@@ -2,7 +2,12 @@
 	require 'funciones/conexion.php';
 	require 'funciones/usuarios.php';
 	include 'html/header.html';
-	$chequeo = agregarUsuario();
+	$existe = verTipoPorValor();
+	if ($existe == 0 ){
+        $chequeo = agregarTipo();
+    }else {
+		$existe = false;
+	}
 ?>
 <body>
 	<main class="agregar">
@@ -20,18 +25,38 @@
 	    <div class="col-6 mx-auto text-center">
             <h1 class="d-block text-center my-5" >Agregar usuario</h1>
 <?php 
-    $class = 'danger';
-    $mensaje = 'Nose pudo agregar el usuario';
-    if ($chequeo){ 
-    	$class = 'success';
-    	$mensaje = 'Usuario agregado correctamente.';
-    }
+	if ($existe == false){
+?>
+			<script>
+				Swal.fire({
+				  title: 'Ya existe el usuario',
+				  type: 'error',
+				  showCancelButton: false,
+				  confirmButtonColor: '#d33',
+				  confirmButtonText: 'Volver al panel'
+				}).then((result) => {
+				  if (result.value) {
+					window.location = 'formAgregarUsuario.php'
+				  }
+				})
+			</script>
+<?php
+	}else{
+    	$class = 'danger';
+    	$mensaje = 'Nose pudo agregar el usuario';
+    	if ($chequeo){ 
+    		$class = 'success';
+    		$mensaje = 'Usuario agregado correctamente.';
+    	}
 ?>
 			<div class="alert alert-<?= $class; ?>">
 				<?= $mensaje ?>
 			</div>
 			<a href="adminUsuarios.php" class="btn btn-outline-secondary m-2">Volver a usuarios</a>
 		</div>
+<?php
+	}
+?>		
 	</main>
 <?php
 	include 'html/footer.html';

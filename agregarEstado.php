@@ -2,7 +2,12 @@
 	require 'funciones/conexion.php';
 	require 'funciones/estado.php';
 	include 'html/header.html';
-	$chequeo = agregarEstado();
+	$existe = verEstadoPorValor();
+	if ($existe == 0 ){
+        $chequeo = agregarEstado();
+    }else {
+		$existe = false;
+	}
 ?>
 <body>
 	<main class="agregar">
@@ -19,7 +24,24 @@
 
 	    <div class="container">
             <h1>Agregar estado</h1>
-<?php 
+<?php
+	if ($existe == false){
+?>
+			<script>
+				Swal.fire({
+				  title: 'Ya existe el estado',
+				  type: 'error',
+				  showCancelButton: false,
+				  confirmButtonColor: '#d33',
+				  confirmButtonText: 'Volver al panel'
+				}).then((result) => {
+				  if (result.value) {
+					window.location = 'formAgregarEstado.php'
+				  }
+				})
+			</script>
+<?php
+	}else{
     $class = 'danger';
     $mensaje = 'Nose pudo agregar el estado';
     if ($chequeo){ 
@@ -32,6 +54,9 @@
 			</div>
 			<a href="adminEstados.php" class="btn btn-outline-secondary m-2">Volver a estados</a>
 		</div>
+<?php
+	}
+?>
 	</main>
 <?php
 	include 'html/footer.html';

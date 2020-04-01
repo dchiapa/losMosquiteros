@@ -26,6 +26,14 @@
             $marca = mysqli_fetch_assoc($resultado);
             return $marca;
         }
+        function verEstadoPorValor()
+	    {
+	    	$valorEstado = $_POST['valorEstado'];
+	    	$link = conectar();
+	    	$sql = "SELECT idEstado, valorEstado From estado WHERE valorEstado = '". $valorEstado."'";
+	    	$resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
+	    	return mysqli_fetch_assoc($resultado);
+	    }
         function modificarEstado()
         {
             $idEstado = $_POST['idEstado'];
