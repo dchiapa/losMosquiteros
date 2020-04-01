@@ -40,7 +40,7 @@
                         <th class=" text-center">Servicios</th>
 
         	        	<th colspan="3">
-        	        		<a href="formAgregarUsuario.php" class="btn btn-secondary">Agregar</a>
+        	        		<a href="formAgregarPropiedad.php" class="btn btn-secondary">Agregar</a>
         	    		</th>
         	    	</tr>
                 </thead>
@@ -176,10 +176,10 @@
 
 
                         <td>
-	    		    		<a href="formModificarUsuario.php?idUsuario=<?= $usuario['idUsuario'] ?>" class="btn btn-outline-secondary">Modificar</a>
+	    		    		<a href="formModificarPropiedad.php?idUsuario=<?= $popiedad['idPropiedad'] ?>" class="btn btn-outline-secondary">Modificar</a>
                         </td>
 	    		    	<td>
-	    		    		<a href="formEliminarUsuario.php?idUsuario=<?= $usuario['idUsuario'] ?>" class="btn btn-outline-secondary">Eliminar</a>
+	    		    		<a href="formEliminarPropiedad.php?idUsuario=<?= $propiedad['idPropiedad'] ?>" class="btn btn-outline-secondary">Eliminar</a>
                         </td>
                     </tr>
 <?php
