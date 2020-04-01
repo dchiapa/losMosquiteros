@@ -1,6 +1,5 @@
 <?php
 	require 'funciones/conexion.php';
-	require 'funciones/tipo.php';
 	require 'funciones/barrio.php';
 	$chequeo = agregarBarrio();
 	include 'html/header.html';
