@@ -1,8 +1,8 @@
 <?php
 	require 'funciones/conexion.php';
-    require 'funciones/barrio.php';
+    require 'funciones/estado.php';
     include 'html/header.html';
-    $chequeo = modificarBarrio();
+    $chequeo = modificarEstado();
 ?>
 <body>
 <main class="modificar">
@@ -18,19 +18,19 @@
             </nav>
         </header>
 	    <div class="col-6 mx-auto text-center">
-            <h1>Modificación de barrio</h1>
+            <h1>Modificación de estado</h1>
 <?php 
     $class = 'danger';
-    $mensaje = 'Nose pudo modificar el barrio';
+    $mensaje = 'Nose pudo modificar el estado';
     if ($chequeo){ 
     	$class = 'success';
-    	$mensaje = 'Barrio modificado correctamente';
+    	$mensaje = 'Estado modificado correctamente';
     }
 ?>
 			<div class="alert alert-<?= $class; ?>">
 				<?= $mensaje ?>
 			</div>
-			<a href="adminBarrios.php" class="btn btn-outline-secondary m-2">Volver al panel de Barrios</a>
+			<a href="adminEstados.php" class="btn btn-outline-secondary m-2">Volver al panel de Estados</a>
 		</div>
 	</main>
 <?php

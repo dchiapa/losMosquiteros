@@ -2,10 +2,10 @@
 	require 'funciones/conexion.php';
     require 'funciones/barrio.php';
     include 'html/header.html';
-    $chequeo = modificarBarrio();
+    $chequeo = eliminarBarrio();
 ?>
 <body>
-<main class="modificar">
+<main class="eliminar">
         <header class="card-header border-0">
             <img src="img/logo2.jpeg" alt="Logo de Los mosquiteros">
             <h1 class="d-none">Los Mosquiteros</h1>
@@ -17,20 +17,21 @@
                 </ul>
             </nav>
         </header>
+
 	    <div class="col-6 mx-auto text-center">
-            <h1>Modificación de barrio</h1>
+            <h1 class="d-block text-center my-5">Eliminación de barrio</h1>
 <?php 
     $class = 'danger';
-    $mensaje = 'Nose pudo modificar el barrio';
+    $mensaje = 'Nose pudo eliminar el barrio.';
     if ($chequeo){ 
     	$class = 'success';
-    	$mensaje = 'Barrio modificado correctamente';
+    	$mensaje = 'Barrio eliminado correctamente.';
     }
 ?>
 			<div class="alert alert-<?= $class; ?>">
 				<?= $mensaje ?>
 			</div>
-			<a href="adminBarrios.php" class="btn btn-outline-secondary m-2">Volver al panel de Barrios</a>
+			<a href="adminBarrios.php" class="btn btn-outline-secondary m-2 text-center">Volver a barrios</a>
 		</div>
 	</main>
 <?php
