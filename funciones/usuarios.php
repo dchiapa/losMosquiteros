@@ -27,18 +27,23 @@
 		$link = conectar();
 		$sql = "SELECT usuNombre, usuApellido, usuEmail, usuPass, usuEstado  From usuarios WHERE idUsuario = ". $idUsuario;
 		$resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
-		return $resultado;
+		return mysqli_fetch_assoc($resultado);
 	}
 	function modificarUsuario()
 	{
-		$idUsuario = $_GET['idUsuario'];
+		$idUsuario = $_POST['idUsuario'];
 		$usuNombre = $_POST['usuNombre'];
 		$usuApellido = $_POST['usuApellido'];
 		$usuEmail = $_POST['usuEmail'];
 		$usuPass = $_POST['usuPass'];
 		$usuEstado = $_POST['usuEstado'];
 		$link = conectar();
-		$sql = "UPDATE usuarios SET usuNombre = '".$usuNombre."', usuApellido = '".$usuApellido."', usuEmail = '".$usuEmail."', usuPass = '".$usuPass."', usuEstado = '".$usuEstado."' WHERE idUsuario = ".$idUsuario;
+		$sql = "UPDATE usuarios SET usuNombre = '".$usuNombre."',
+		 							usuApellido = '".$usuApellido."',
+		 							usuEmail = '".$usuEmail."',
+		   							usuPass = '".$usuPass."',
+		  							usuEstado = '".$usuEstado."'
+									 WHERE idUsuario = ".$idUsuario;
 		$resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
 		return $resultado;
 	}
