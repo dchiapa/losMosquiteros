@@ -40,7 +40,7 @@
         {
             $idTipo = $_GET['idTipo'];
             $link = conectar();
-            $sql = "SELECT valorEstado FROM productos p, tipo m 
+            $sql = "SELECT valorTipo FROM propiedades p, tipo m 
                     WHERE p.idTipo = m.idTipo AND p.idTipo = ".$idTipo;
             $resultado = mysqli_query($link, $sql)
                         or die(mysqli_error($link));
