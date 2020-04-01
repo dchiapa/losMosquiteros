@@ -1,7 +1,7 @@
 <?php
 	require 'funciones/conexion.php';
-	require 'funciones/barrio.php';
-	$chequeo = agregarBarrio();
+	require 'funciones/estado.php';
+	$chequeo = agregarEstado();
 	include 'html/header.html';
 ?>
 <body>
@@ -18,19 +18,19 @@
 		</header>
 
 	    <div class="container">
-            <h1>Agregar barrio</h1>
+            <h1>Agregar estado</h1>
 <?php 
     $class = 'danger';
-    $mensaje = 'Nose pudo agregar el barrio';
+    $mensaje = 'Nose pudo agregar el estado';
     if ($chequeo){ 
     	$class = 'success';
-    	$mensaje = 'Barrio agregado correctamente';
+    	$mensaje = 'Estado agregado correctamente';
     }
 ?>
 			<div class="alert alert-<?= $class; ?>">
 				<?= $mensaje ?>
 			</div>
-			<a href="adminBarrios.php" class="btn btn-outline-secondary m-2">Volver a barrios</a>
+			<a href="adminEstados.php" class="btn btn-outline-secondary m-2">Volver a estados</a>
 		</div>
 	</main>
 <?php

@@ -1,7 +1,7 @@
 <?php
     require 'funciones/conexion.php';
-    require 'funciones/tipo.php';
-    $tipos = listarTipos();
+    require 'funciones/Estado.php';
+    $Estados = listarEstados();
 	include 'html/header.html';
 ?>
 <body>
@@ -18,10 +18,10 @@
             </nav>
         </header>
         <div class="col-6 mx-auto">
-            <h2 class="d-block text-center my-5">Agregar tipo</h2>
-            <form action="agregarTipo.php" method="POST">
-                <label>Tipo: </label>
-                <input type="text" name="valorTipo" class="form-control">
+            <h2 class="d-block text-center my-5">Agregar Estado</h2>
+            <form action="agregarEstado.php" method="POST">
+                <label>Estado: </label>
+                <input type="text" name="valorEstado" class="form-control">
                 <button class="btn btn-dark">Agregar</button>
                 <a href="admin.php" class="btn btn-outline-secondary m-2">Volver a principal</a>
             </form>

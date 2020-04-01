@@ -31,9 +31,17 @@ header {
 }
 
 #admin header,
+#adminBarrios header,
 #adminEstados header,
-#adminTipos header {
+#adminTipos header,
+.formAgregar header,
+.agregar {
     background-color: rgb(231, 154, 250);
+}
+
+.formAgregar,
+.agregar {
+    height: 576px;
 }
 
 header img {

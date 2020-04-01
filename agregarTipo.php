@@ -5,7 +5,7 @@
 	include 'html/header.html';
 ?>
 <body>
-	<main>
+	<main class="agregar">
 		<header class="card-header border-0">
 			<img src="img/logo2.jpeg" alt="Logo de Los mosquiteros">
 			<nav>
@@ -30,7 +30,8 @@
 			<div class="alert alert-<?= $class; ?>">
 				<?= $mensaje ?>
         	</div>
-        </div>
+			<a href="adminTipos.php" class="btn btn-outline-secondary m-2">Volver a tipos</a>
+		</div>
 	</main>
 <?php
 	include 'html/footer.html';
