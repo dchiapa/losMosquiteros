@@ -21,7 +21,7 @@
 					<a href="adminBarrios.php" class="list-group-item list-group-item-action text-center">Panel de administración de Barrios</a>
 					<a href="adminEstados.php" class="list-group-item list-group-item-action text-center">Panel de administración de Estados</a>
 					<a href="adminTipos.php" class="list-group-item list-group-item-action text-center">Panel de administración de Tipos</a>
-					<a href="#" class="list-group-item list-group-item-action text-center">Panel de administración de Usuarios</a>
+					<a href="adminUsuarios.php" class="list-group-item list-group-item-action text-center">Panel de administración de Usuarios</a>
 				</div>
 			</div>
 		</div>
