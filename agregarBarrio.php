@@ -2,7 +2,13 @@
 	require 'funciones/conexion.php';
 	require 'funciones/barrio.php';
 	include 'html/header.html';
-	$chequeo = agregarBarrio();
+	$chequeo = verBarrioPorValor();
+	if ($chequeo == 0 ){
+        $chequeo = agregarBarrio();
+    }else {
+		$chequeo = false;
+	}
+	
 ?>
 <body>
 	<main class="agregar">
@@ -20,6 +26,25 @@
 	    <div class="container">
             <h1>Agregar barrio</h1>
 <?php 
+if ($chequeo == false){
+?>
+			<script>
+				console.log('ya Existe usuario');
+				Swal.fire({
+            	  title: 'Ya existe el barrio',
+            	  text: "",
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formAgregarBarrio.php'
+            	  }
+            	})
+				</script>
+<?php
+}
     $class = 'danger';
     $mensaje = 'Nose pudo agregar el barrio';
     if ($chequeo){ 

@@ -32,7 +32,14 @@
 		return mysqli_fetch_assoc($resultado);
 	}
 	
-
+    function verBarrioPorValor()
+	{
+		$valorBarrio = $_POST['valorBarrio'];
+		$link = conectar();
+		$sql = "SELECT idBarrio, valorBarrio From barrio WHERE valorBarrio = '". $valorBarrio."'";
+		$resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
+		return mysqli_fetch_assoc($resultado);
+	}
 
     
     function modificarBarrio()

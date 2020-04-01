@@ -1,8 +1,5 @@
 <?php
-    require 'funciones/conexion.php';
-    require 'funciones/barrio.php';
     include 'html/header.html';
-    $barrios = listarBarrios();
 ?>
 <body>
     <main class="formAgregar">
