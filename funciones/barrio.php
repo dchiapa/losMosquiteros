@@ -29,7 +29,7 @@
 		$link = conectar();
 		$sql = "SELECT idBarrio, valorBarrio From barrio WHERE idBarrio = ". $idBarrio;
 		$resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
-		return $resultado;
+		return mysqli_fetch_assoc($resultado);
 	}
 	
 
