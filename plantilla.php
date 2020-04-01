@@ -2,9 +2,9 @@
 	require 'funciones/conexion.php';
 	require 'funciones/tipo.php';
 	require 'funciones/estado.php';
+	include 'html/header.html';
 	$tipos = listarTipos();
 	$estados = listarEstados();
-	include 'html/header.html';
 ?>
 <body>
 	<main id="ppal">
