@@ -26,7 +26,7 @@
                         <th class=" text-center">Id</th>
         	    		<th class=" text-center">Barrio</th>
         	        	<th colspan="3">
-        	        		<a href="formAgregarEstado.php" class="btn btn-secondary">Agregar</a>
+        	        		<a href="formAgregarBarrio.php" class="btn btn-secondary">Agregar</a>
         	    		</th>
         	    	</tr>
                 </thead>
