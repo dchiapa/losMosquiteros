@@ -1,8 +1,8 @@
 <?php
 	require 'funciones/conexion.php';
 	require 'funciones/estado.php';
-	$chequeo = agregarEstado();
 	include 'html/header.html';
+	$chequeo = agregarEstado();
 ?>
 <body>
 	<main class="agregar">

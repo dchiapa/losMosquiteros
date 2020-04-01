@@ -1,8 +1,8 @@
 <?php
 	require 'funciones/conexion.php';
 	require 'funciones/barrio.php';
-	$chequeo = agregarBarrio();
 	include 'html/header.html';
+	$chequeo = agregarBarrio();
 ?>
 <body>
 	<main class="agregar">

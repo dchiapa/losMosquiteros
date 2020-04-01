@@ -1,8 +1,8 @@
 <?php
     require 'funciones/conexion.php';
     require 'funciones/estado.php';
+    include 'html/header.html';
     $estados = listarEstados();
-	include 'html/header.html';
 ?>
 <body>
     <main id="adminEstados">

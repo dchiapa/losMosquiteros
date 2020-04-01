@@ -1,8 +1,8 @@
 <?php
 	require 'funciones/conexion.php';
     require 'funciones/barrio.php';
+    include 'html/header.html';
     $chequeo = eliminarBarrio();
-	include 'html/header.html';
 ?>
 <body>
 <main id="adminBarrios">

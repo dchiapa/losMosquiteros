@@ -1,8 +1,8 @@
 <?php
     require 'funciones/conexion.php';
     require 'funciones/Estado.php';
+    include 'html/header.html';
     $Estados = listarEstados();
-	include 'html/header.html';
 ?>
 <body>
     <main class="formAgregar">

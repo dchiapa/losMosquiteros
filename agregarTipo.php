@@ -1,8 +1,8 @@
 <?php
 	require 'funciones/conexion.php';
 	require 'funciones/tipo.php';
-	$chequeo = agregarTipo();
 	include 'html/header.html';
+	$chequeo = agregarTipo();
 ?>
 <body>
 	<main class="agregar">

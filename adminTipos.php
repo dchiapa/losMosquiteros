@@ -1,8 +1,8 @@
 <?php
     require 'funciones/conexion.php';
     require 'funciones/tipo.php';
+    include 'html/header.html';
     $tipos = listarTipos();
-	include 'html/header.html';
 ?>
 <body>
     <main id="adminTipos">
