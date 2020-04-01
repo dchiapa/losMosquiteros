@@ -23,7 +23,7 @@
                 <label>Barrio: </label>
                 <input type="text" name="valorBarrio" class="form-control">
                 <button class="btn btn-dark">Agregar</button>
-                <a href="admin.php" class="btn btn-outline-secondary m-2">Volver a principal</a>
+                <a href="adminBarrios.php" class="btn btn-outline-secondary m-2">Volver a panel de administración</a>
             </form>
         </div>
     </main>

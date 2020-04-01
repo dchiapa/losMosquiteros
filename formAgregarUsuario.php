@@ -5,7 +5,7 @@
     $barrios = listarUsuarios();
 ?>
 <body>
-    <main class="formAgregar">
+    <main class="formAgregar Usuario">
         <header class="card-header border-0">
             <img src="img/logo2.jpeg" alt="Logo de Los mosquiteros">
             <h1 class="d-none">Los Mosquiteros</h1>
@@ -31,7 +31,7 @@
                 <label>Estado: </label>
                 <input type="text" name="usuEstado" class="form-control">
                 <button class="btn btn-dark">Agregar</button>
-                <a href="admin.php" class="btn btn-outline-secondary m-2">Volver a principal</a>
+                <a href="adminUsuarios.php" class="btn btn-outline-secondary m-2">Volver a panel de administración</a>
             </form>
         </div>
     </main>

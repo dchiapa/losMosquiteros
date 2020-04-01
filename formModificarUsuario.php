@@ -5,7 +5,7 @@
     $usuario = verUsuarioPorID();
 ?>
 <body>
-    <main class="formModificar">
+    <main class="formModificar Usuario">
         <header class="card-header border-0">
             <img src="img/logo2.jpeg" alt="Logo de Los mosquiteros">
             <h1 class="d-none">Los Mosquiteros</h1>
@@ -41,7 +41,7 @@
                
                
                 <button class="btn btn-dark">Modificar</button>
-                <a href="adminBarrios.php" class="btn btn-outline-secondary m-2">Volver a panel de administración de Barrios</a>
+                <a href="adminUsuarios.php" class="btn btn-outline-secondary m-2">Volver a panel de administración de Usuarios</a>
             </form>
         </div>
     </main>

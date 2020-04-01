@@ -20,13 +20,21 @@ body {
     margin: 0;
 }
 
-.formAgregar,
+#admin {
+    height: 456px;
+}
+
 .agregar,
-.formEliminar,
-.modificar,
 .eliminar,
+.modificar,
+.formAgregar,
+.formEliminar,
 .formModificar {
     height: 576px;
+}
+
+.Usuario {
+    height: 700px;
 }
 
 
@@ -43,10 +51,11 @@ header {
 #adminBarrios header,
 #adminEstados header,
 #adminTipos header,
+#adminUsuarios header,
 .formAgregar header,
 .formEliminar header,
 .agregar header,
-.modificar  header,
+.modificar header,
 .eliminar header,
 .formModificar header {
     background-color: rgb(231, 154, 250);
@@ -92,4 +101,3 @@ header nav ul li {
 .formEliminar form .btn {
     width: 100px;
 }
-

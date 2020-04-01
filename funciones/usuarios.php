@@ -25,9 +25,10 @@
 	{
 		$idUsuario = $_GET['idUsuario'];
 		$link = conectar();
-		$sql = "SELECT usuNombre, usuApellido, usuEmail, usuPass, usuEstado  From usuarios WHERE idUsuario = ". $idUsuario;
+		$sql = "SELECT idUsuario, usuNombre, usuApellido, usuEmail, usuPass, usuEstado  From usuarios WHERE idUsuario = ". $idUsuario;
 		$resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
-		return mysqli_fetch_assoc($resultado);
+		$usuario = mysqli_fetch_assoc($resultado);
+		return $usuario;
 	}
 	function modificarUsuario()
 	{

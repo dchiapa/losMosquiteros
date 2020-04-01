@@ -23,7 +23,7 @@
                 <label>Tipo: </label>
                 <input type="text" name="valorTipo" class="form-control">
                 <button class="btn btn-dark">Agregar</button>
-                <a href="admin.php" class="btn btn-outline-secondary m-2">Volver a principal</a>
+                <a href="adminTipos.php" class="btn btn-outline-secondary m-2">Volver a panel de administración</a>
             </form>
         </div>
     </main>
