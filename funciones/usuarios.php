@@ -49,9 +49,9 @@
 	}
 	function eliminarUsuario()
 	{
-		$usuNombre = $_POST['usuNombre'];
+		$idUsuario = $_POST['idUsuario'];
 		$link = conectar();
-		$sql = "DELETE FROM usuarios WHERE usuNombre = '".$usuNombre."'";
+		$sql = "DELETE FROM usuarios WHERE idUsuario =".$idUsuario;
 		$resultado = mysqli_query($link, $sql) 
 					or die(mysqli_error($link));
 		return $resultado;
