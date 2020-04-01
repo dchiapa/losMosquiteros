@@ -5,7 +5,7 @@
         function listarEstados()
         {
             $link = conectar();
-            $sql = "SELECT idEstado, valorEstado FROM estado";
+            $sql = "SELECT idEstado, valorEstado FROM estado ORDER BY idEstado ASC";
             $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
             return $resultado;
         }

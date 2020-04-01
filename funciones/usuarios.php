@@ -5,7 +5,7 @@
 	function listarUsuarios()
 	{
 		$link = conectar();
-		$sql = "SELECT idUsuario, usuNombre, usuApellido, usuEmail, usuPass, usuEstado  FROM usuarios";
+		$sql = "SELECT idUsuario, usuNombre, usuApellido, usuEmail, usuPass, usuEstado  FROM usuarios ORDER BY idUsuario ASC";
 		$resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
 		return $resultado;
 	}

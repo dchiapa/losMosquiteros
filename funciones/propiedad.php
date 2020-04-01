@@ -17,7 +17,7 @@ function listarPropiedades()
                 FROM propiedades p, estado e, tipo t, barrio b
                 WHERE p.idEstado = e.idEstado
                 AND   p.idTipo= t.idTipo
-                AND   p.idBarrio = b.idBarrio";
+                AND   p.idBarrio = b.idBarrio ORDER BY idPropiedad ASC";
 
 $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
 return $resultado;

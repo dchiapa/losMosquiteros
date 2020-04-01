@@ -5,7 +5,7 @@
     function listarBarrios()
     {
         $link = conectar();
-        $sql = "SELECT idBarrio, valorBarrio FROM barrio";
+        $sql = "SELECT idBarrio, valorBarrio FROM barrio ORDER BY idBarrio ASC";
         $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
         return $resultado;
 	}
@@ -38,7 +38,7 @@
     function modificarBarrio()
 	{
 		$idBarrio= $_POST['idBarrio'];
-		$valorTipo = $_POST['valorBarrio'];
+		$valorBarrio = $_POST['valorBarrio'];
 		$link = conectar();
 		$sql = "UPDATE barrio SET valorBarrio = '".$valorBarrio."' WHERE idBarrio = ".$idBarrio;
 		$resultado = mysqli_query($link, $sql) or die(mysqli_error($link));

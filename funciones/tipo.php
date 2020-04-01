@@ -5,7 +5,7 @@
         function listarTipos()
         {
             $link = conectar();
-            $sql = "SELECT idTipo, valorTipo FROM tipo";
+            $sql = "SELECT idTipo, valorTipo FROM tipo ORDER BY idTipo ASC";
             $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
             return $resultado;
         }
