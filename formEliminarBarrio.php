@@ -38,7 +38,7 @@
             <br>
 
             <form method="post" action="eliminarBarrio.php">
- 	 		<input type="hidden" name="idBarrio" value="<?= $barrio['idBarrio']; ?>">
+ 	 		<input type="hidden" name="valorBarrio" value="<?= $barrio['valorBarrio']; ?>">
  	 		<button class="btn btn-success">Si</button> 
  	 		<a href="adminBarrios.php" class="btn btn-danger">No</a>
 
