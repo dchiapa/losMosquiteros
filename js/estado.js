@@ -30,5 +30,8 @@ function botonApretado(e) {
     boton.classList.add('activo');
     // Reemplaza la clase btn-scondary por btn-success
     boton.classList.replace('btn-secondary', 'btn-success');
+    // En el input de idEstado carga el valor que tiene el boton
     input.value = boton.value;
+    // Con console.log(); podes ver los valores en la consola del browser
+    // Por EJ console.log(input); te va a mostrar el input hidden
 }
