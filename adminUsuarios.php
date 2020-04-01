@@ -46,10 +46,10 @@
                         <td class=" text-center"><?= $usuario['usuPass'] ?></td>
                         <td class=" text-center"><?= $usuario['usuEstado'] ?></td>
                         <td>
-	    		    		<a href="formModificarUsuario.php?idBarrio=<?= $usuario['idUsuario'] ?>" class="btn btn-outline-secondary">Modificar</a>
+	    		    		<a href="formModificarUsuario.php?idUsuario=<?= $usuario['idUsuario'] ?>" class="btn btn-outline-secondary">Modificar</a>
                         </td>
 	    		    	<td>
-	    		    		<a href="formEliminarUsuario.php?idBarrio=<?= $usuario['idUsuario'] ?>" class="btn btn-outline-secondary">Eliminar</a>
+	    		    		<a href="formEliminarUsuario.php?idUsuario=<?= $usuario['idUsuario'] ?>" class="btn btn-outline-secondary">Eliminar</a>
                         </td>
                     </tr>
 <?php
