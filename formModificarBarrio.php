@@ -1,11 +1,11 @@
 <?php
     require 'funciones/conexion.php';
     require 'funciones/barrio.php';
+    include 'html/header.html';
     $barrio = verBarrioPorID();
-	include 'html/header.html';
 ?>
 <body>
-    <main id="adminEstados">
+    <main class="formModificar">
         <header class="card-header border-0">
             <img src="img/logo2.jpeg" alt="Logo de Los mosquiteros">
             <h1 class="d-none">Los Mosquiteros</h1>

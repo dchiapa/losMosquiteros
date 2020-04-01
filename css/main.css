@@ -20,6 +20,13 @@ body {
     margin: 0;
 }
 
+.formAgregar,
+.agregar,
+.formEliminar,
+.formModificar {
+    height: 576px;
+}
+
 
 /* ***** Header ***** */
 
@@ -35,13 +42,9 @@ header {
 #adminEstados header,
 #adminTipos header,
 .formAgregar header,
-.agregar {
+.formEliminar header,
+.formModificar header {
     background-color: rgb(231, 154, 250);
-}
-
-.formAgregar,
-.agregar {
-    height: 576px;
 }
 
 header img {
@@ -79,4 +82,8 @@ header nav ul li {
 
 #adminEstados {
     margin-bottom: 3px;
+}
+
+.formEliminar form .btn {
+    width: 100px;
 }
