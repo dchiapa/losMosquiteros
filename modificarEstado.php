@@ -18,13 +18,13 @@
             </nav>
         </header>
 	    <div class="col-6 mx-auto text-center">
-            <h1>Modificación de estado</h1>
+            <h1 class="d-block text-center my-5">Modificación de estado</h1>
 <?php 
     $class = 'danger';
-    $mensaje = 'Nose pudo modificar el estado';
+    $mensaje = 'Nose pudo modificar el estado.';
     if ($chequeo){ 
     	$class = 'success';
-    	$mensaje = 'Estado modificado correctamente';
+    	$mensaje = 'Estado modificado correctamente.';
     }
 ?>
 			<div class="alert alert-<?= $class; ?>">

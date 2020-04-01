@@ -18,7 +18,7 @@
             </nav>
         </header>
 	    <div class="col-6 mx-auto text-center">
-            <h1>Modificación de barrio</h1>
+            <h1 class="d-block text-center my-5">Modificación de barrio</h1>
 <?php 
     $class = 'danger';
     $mensaje = 'Nose pudo modificar el barrio';
