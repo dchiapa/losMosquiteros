@@ -24,6 +24,7 @@ body {
 .agregar,
 .formEliminar,
 .modificar,
+.eliminar,
 .formModificar {
     height: 576px;
 }
@@ -44,7 +45,9 @@ header {
 #adminTipos header,
 .formAgregar header,
 .formEliminar header,
+.agregar header,
 .modificar  header,
+.eliminar header,
 .formModificar header {
     background-color: rgb(231, 154, 250);
 }
