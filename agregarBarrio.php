@@ -2,11 +2,11 @@
 	require 'funciones/conexion.php';
 	require 'funciones/barrio.php';
 	include 'html/header.html';
-	$chequeo = verBarrioPorValor();
-	if ($chequeo == 0 ){
+	$existe = verBarrioPorValor();
+	if ($existe == 0 ){
         $chequeo = agregarBarrio();
     }else {
-		$chequeo = false;
+		$existe = false;
 	}
 	
 ?>
@@ -24,9 +24,9 @@
 		</header>
 
 	    <div class="container">
-            <h1>Agregar barrio</h1>
+            <h1 class="text-center">Agregar barrio</h1>
 <?php 
-if ($chequeo == false){
+if ($existe == false){
 ?>
 			<script>
 				console.log('ya Existe usuario');
@@ -44,7 +44,7 @@ if ($chequeo == false){
             	})
 				</script>
 <?php
-}
+}else{
     $class = 'danger';
     $mensaje = 'Nose pudo agregar el barrio';
     if ($chequeo){ 
@@ -57,6 +57,9 @@ if ($chequeo == false){
 			</div>
 			<a href="adminBarrios.php" class="btn btn-outline-secondary m-2">Volver a barrios</a>
 		</div>
+<?php
+}
+?>
 	</main>
 <?php
 	include 'html/footer.html';
