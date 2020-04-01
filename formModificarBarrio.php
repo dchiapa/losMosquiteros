@@ -19,7 +19,6 @@
         </header>
         <div class="col-6 mx-auto">
             <h2 class="d-block text-center my-5">Modificar barrio</h2>
-            
             <form action="modificarBarrio.php" method="POST">
                 <label>Barrio: </label>
                 <input type="hidden" name="idBarrio" value="<?= $barrio['idBarrio']; ?>" >

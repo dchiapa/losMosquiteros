@@ -1,8 +1,8 @@
 <?php
 	require 'funciones/conexion.php';
     require 'funciones/barrio.php';
+    include 'html/header.html';
     $chequeo = modificarBarrio();
-	include 'html/header.html';
 ?>
 <body>
 <main id="adminBarrios">
@@ -17,7 +17,6 @@
                 </ul>
             </nav>
         </header>
-
 	    <div class="container">
             <h1>Modificación de barrio</h1>
 <?php 
@@ -31,7 +30,7 @@
 			<div class="alert alert-<?= $class; ?>">
 				<?= $mensaje ?>
 			</div>
-			<a href="adminBarrios.php" class="btn btn-outline-secondary m-2">Volver a barrios</a>
+			<a href="adminBarrios.php" class="btn btn-outline-secondary m-2">Volver al panel de Barrios</a>
 		</div>
 	</main>
 <?php

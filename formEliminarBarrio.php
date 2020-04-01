@@ -29,7 +29,8 @@
             <br>
             <a href="adminBarrios.php" class="btn btn-outline-secondary">Volver al panel de Barrios</a>
 <?php 
-    } 
+    }
+    else{
 ?>
             <div class="alert alert-warning text-center">¿Esta seguro que desea eliminar el barrio "<?= $barrio['valorBarrio']; ?>"?</div>
             <br>
@@ -38,6 +39,9 @@
  	 		    <button class="btn btn-success mx-2">Si</button> 
  	 		    <a href="adminBarrios.php" class="btn btn-danger mx-2">No</a>
             </form>
+<?php 
+    }
+?>
         </div>
     </main>
 <?php

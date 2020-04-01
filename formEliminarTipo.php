@@ -30,6 +30,7 @@
             <a href="adminTipos.php" class="btn btn-outline-secondary">Volver al panel de Tipos</a>
 <?php 
     }
+    else{
 ?>
             <div class="alert alert-warning text-center">¿Esta seguro que desea eliminar el tipo "<?= $tipo['valorTipo']; ?>"?</div>
             <br>
@@ -38,6 +39,9 @@
  	 		    <button class="btn btn-success mx-2">Si</button> 
                 <a href="adminTipos.php" class="btn btn-danger mx-2">No</a>
             </form>
+<?php
+    }
+?>
         </div>
     </main>
 <?php
