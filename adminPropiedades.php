@@ -176,10 +176,10 @@
 
 
                         <td>
-	    		    		<a href="formModificarPropiedad.php?idUsuario=<?= $popiedad['idPropiedad'] ?>" class="btn btn-outline-secondary">Modificar</a>
+	    		    		<a href="formModificarPropiedad.php?idPropiedad=<?= $popiedad['idPropiedad'] ?>" class="btn btn-outline-secondary">Modificar</a>
                         </td>
 	    		    	<td>
-	    		    		<a href="formEliminarPropiedad.php?idUsuario=<?= $propiedad['idPropiedad'] ?>" class="btn btn-outline-secondary">Eliminar</a>
+	    		    		<a href="formEliminarPropiedad.php?idPropiedad=<?= $propiedad['idPropiedad'] ?>" class="btn btn-outline-secondary">Eliminar</a>
                         </td>
                     </tr>
 <?php
@@ -190,14 +190,6 @@
             <a href="admin.php" class="btn btn-outline-secondary m-2">Volver a principal</a>
         </div>
     </main>
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="Descripcion">
-    <p><?= $propiedad['proDescripcion'] ?></p>
-  </div>
-</div>
 
 
 
