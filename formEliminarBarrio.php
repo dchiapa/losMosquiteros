@@ -20,14 +20,14 @@
                 </ul>
             </nav>
         </header>
-        <div class="col-6 mx-auto">
+        <div class="col-6 mx-auto text-center">
             <h2 class="d-block text-center my-5">Eliminación de barrio</h2>
 <?php 
     if($check > 0 ){
 ?>
             <div class="alert alert-danger">No se puede eliminar el barrio seleccionada ya que el mismo esta en uso.</div>
             <br>
-            <a href="adminBarrios.php" class="btn btn-outline-secondary">Volver al panel de Barrios</a>
+            <a href="adminBarrios.php" class="btn btn-outline-secondary ">Volver al panel de Barrios</a>
 <?php 
     }
     else{

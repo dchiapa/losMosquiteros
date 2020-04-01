@@ -18,20 +18,20 @@
             </nav>
         </header>
 
-	    <div class="container">
-            <h1>Eliminación de barrio</h1>
+	    <div class="col-6 mx-auto text-center">
+            <h1 class="d-block text-center my-5">Eliminación de barrio</h1>
 <?php 
     $class = 'danger';
-    $mensaje = 'Nose pudo eliminar el barrio';
+    $mensaje = 'Nose pudo eliminar el barrio.';
     if ($chequeo){ 
     	$class = 'success';
-    	$mensaje = 'Barrio eliminado correctamente';
+    	$mensaje = 'Barrio eliminado correctamente.';
     }
 ?>
 			<div class="alert alert-<?= $class; ?>">
 				<?= $mensaje ?>
 			</div>
-			<a href="adminBarrios.php" class="btn btn-outline-secondary m-2">Volver a barrios</a>
+			<a href="adminBarrios.php" class="btn btn-outline-secondary m-2 text-center">Volver a barrios</a>
 		</div>
 	</main>
 <?php
