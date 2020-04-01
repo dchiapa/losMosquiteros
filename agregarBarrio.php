@@ -32,7 +32,6 @@ if ($existe == false){
 				console.log('ya Existe usuario');
 				Swal.fire({
             	  title: 'Ya existe el barrio',
-            	  text: "",
             	  type: 'error',
             	  showCancelButton: false,
             	  confirmButtonColor: '#d33',
