@@ -4,6 +4,7 @@
     $tipos = listarTipos();
 	include 'html/header.html';
 ?>
+<body>
     <main id="adminTipos">
         <header class="card-header border-0">
             <img src="img/logo2.jpeg" alt="Logo de Los mosquiteros">
