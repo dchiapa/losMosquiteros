@@ -20,7 +20,7 @@
         <div class="col-6 mx-auto">
             <h2 class="d-block text-center my-5">Modificar barrio</h2>
             
-            <form action="agregarBarrio.php" method="POST">
+            <form action="modificarBarrio.php" method="POST">
                 <label>Barrio: </label>
                 <input type="hidden" name="idBarrio" value="<?= $barrio['idBarrio']; ?>" >
                 <input type="text" name="valorBarrio" class="form-control" value="<?= $barrio['valorBarrio']; ?>" required>
