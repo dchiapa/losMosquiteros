@@ -38,12 +38,12 @@
 ?>
 				<div class="propiedad card px-4 mb-4 shadow">
 					<h2 class="text-center"><?= $propiedad['proTitulo'] ?></h2>
-					<div class=" row ">
-						<div class="col-4 card px-4 ">
+					<div class="contenido row">
+						<div class=" imagen col-4 card px-4 ">
 							<img src="img/noDisponible.jpg" alt="">
 						</div>
 						<div class="col-1"></div>
-						<div class=" col-7 card px-4 ">
+						<div class=" datos col-7 card px-4 ">
 							<p><?= $propiedad['proDireccion']?>  - <?= $propiedad['valorBarrio']?></p>
 							<p><?= $propiedad['proDescripcion']?></p>
 							<p>Superficie total: <?= $propiedad['proSupTotal']?>  - Superficie cubierta: <?= $propiedad['proSupCubierta']?> - Ambientes: <?= $propiedad['ambientes']?> - Baños: <?= $propiedad['proBaños']?> - Cocheras: <?= $propiedad['proCocheras']?></p>

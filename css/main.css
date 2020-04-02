@@ -107,7 +107,11 @@ header nav ul li {
     width: 400px;
 }
 
-#listaProp .propiedad>p {
+.propiedad>p {
     font-size: 26px;
     font-weight: bold;
+}
+
+.propiedad .contenido .datos p {
+    font-size: 12px;
 }
