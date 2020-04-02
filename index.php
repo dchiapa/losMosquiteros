@@ -33,7 +33,7 @@
 			</div>
 			<div class="row">
 				<div class="col-1"></div>
-				<select name="propTipo" id="propTipo" class="border border-dark rounded px-2">
+				<select name="idTipo" id="idTipo" class="border border-dark rounded px-2">
 					<option value=""> Seleccione una opción</option>
 <?php
    	while ($tipo = mysqli_fetch_assoc($tipos)) {
