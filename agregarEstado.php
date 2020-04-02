@@ -3,11 +3,10 @@
 	require 'funciones/estado.php';
 	include 'html/header.html';
 	$existe = verEstadoPorValor();
-	if ($existe == 0 ){
+	if ($existe == null ){
         $chequeo = agregarEstado();
-    }else {
-		$existe = false;
-	}
+    }
+
 ?>
 <body>
 	<main class="agregar">
@@ -23,38 +22,60 @@
 		</header>
 
 	    <div class="container">
-            <h1>Agregar estado</h1>
+            <h1 class="text-center">Agregar estado</h1>
 <?php
-	if ($existe == false){
+	if ($existe != null){
 ?>
 			<script>
 				Swal.fire({
-				  title: 'Ya existe el estado',
-				  type: 'error',
-				  showCancelButton: false,
-				  confirmButtonColor: '#d33',
-				  confirmButtonText: 'Volver al panel'
-				}).then((result) => {
-				  if (result.value) {
-					window.location = 'formAgregarEstado.php'
-				  }
-				})
+            	  title: 'Ya existe el estado',
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formAgregarEstado.php'
+            	  }
+            	})
 			</script>
 <?php
 	}else{
-    $class = 'danger';
-    $mensaje = 'Nose pudo agregar el estado';
-    if ($chequeo){ 
-    	$class = 'success';
-    	$mensaje = 'Estado agregado correctamente';
-    }
+	    if ($chequeo){
 ?>
-			<div class="alert alert-<?= $class; ?>">
-				<?= $mensaje ?>
-			</div>
-			<a href="adminEstados.php" class="btn btn-outline-secondary m-2">Volver a estados</a>
-		</div>
+	    	<script>
+				Swal.fire({
+            	  title: 'Estado agregado',
+            	  type: 'success',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#9ee87f',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formAgregarEstado.php'
+            	  }
+            	})
+			</script>
 <?php
+		}
+		else {
+?>
+			<script>
+				Swal.fire({
+            	  title: 'Estado no agregado',
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formAgregarEstado.php'
+            	  }
+            	})
+			</script>
+<?php
+		}
+
 	}
 ?>
 	</main>

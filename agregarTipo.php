@@ -3,11 +3,10 @@
 	require 'funciones/tipo.php';
 	include 'html/header.html';
 	$existe = verTipoPorValor();
-	if ($existe == 0 ){
+	if ($existe == null ){
         $chequeo = agregarTipo();
-    }else {
-		$existe = false;
-	}
+    }
+
 ?>
 <body>
 	<main class="agregar">
@@ -23,38 +22,60 @@
 		</header>
 
 	    <div class="container">
-            <h1>Agregar tipo</h1>
-<?php 
-	if ($existe == false){
+            <h1 class="text-center">Agregar tipo</h1>
+<?php
+	if ($existe != null){
 ?>
 			<script>
 				Swal.fire({
-				  title: 'Ya existe el tipo',
-				  type: 'error',
-				  showCancelButton: false,
-				  confirmButtonColor: '#d33',
-				  confirmButtonText: 'Volver al panel'
-				}).then((result) => {
-				  if (result.value) {
-					window.location = 'formAgregarTipo.php'
-				  }
-				})
+            	  title: 'Ya existe el tipo',
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formAgregarTipo.php'
+            	  }
+            	})
 			</script>
 <?php
 	}else{
-    	$class = 'danger';
-    	$mensaje = 'Nose pudo agregar el tipo';
-    	if ($chequeo){ 
-    		$class = 'success';
-    		$mensaje = 'Tipo agregado correctamente';
-    	}
+	    if ($chequeo){
 ?>
-			<div class="alert alert-<?= $class; ?>">
-				<?= $mensaje ?>
-        	</div>
-			<a href="adminTipos.php" class="btn btn-outline-secondary m-2">Volver a tipos</a>
-		</div>
+	    	<script>
+				Swal.fire({
+            	  title: 'Tipo agregado',
+            	  type: 'success',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#9ee87f',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formAgregarTipo.php'
+            	  }
+            	})
+			</script>
 <?php
+		}
+		else {
+?>
+			<script>
+				Swal.fire({
+            	  title: 'Tipo no agregado',
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formAgregarTipo.php'
+            	  }
+            	})
+			</script>
+<?php
+		}
+
 	}
 ?>
 	</main>

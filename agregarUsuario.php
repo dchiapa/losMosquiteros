@@ -1,13 +1,12 @@
 <?php
 	require 'funciones/conexion.php';
-	require 'funciones/usuarios.php';
+	require 'funciones/usuario.php';
 	include 'html/header.html';
-	$existe = verTipoPorValor();
-	if ($existe == 0 ){
-        $chequeo = agregarTipo();
-    }else {
-		$existe = false;
-	}
+	$existe = verUsuarioPorValor();
+	if ($existe == null ){
+        $chequeo = agregarUsuario();
+    }
+
 ?>
 <body>
 	<main class="agregar">
@@ -22,41 +21,63 @@
 			</nav>
 		</header>
 
-	    <div class="col-6 mx-auto text-center">
-            <h1 class="d-block text-center my-5" >Agregar usuario</h1>
-<?php 
-	if ($existe == false){
+	    <div class="container">
+            <h1 class="text-center">Agregar usuario</h1>
+<?php
+	if ($existe != null){
 ?>
 			<script>
 				Swal.fire({
-				  title: 'Ya existe el usuario',
-				  type: 'error',
-				  showCancelButton: false,
-				  confirmButtonColor: '#d33',
-				  confirmButtonText: 'Volver al panel'
-				}).then((result) => {
-				  if (result.value) {
-					window.location = 'formAgregarUsuario.php'
-				  }
-				})
+            	  title: 'Ya existe el usuario',
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formAgregarUsuario.php'
+            	  }
+            	})
 			</script>
 <?php
 	}else{
-    	$class = 'danger';
-    	$mensaje = 'Nose pudo agregar el usuario';
-    	if ($chequeo){ 
-    		$class = 'success';
-    		$mensaje = 'Usuario agregado correctamente.';
-    	}
+	    if ($chequeo){
 ?>
-			<div class="alert alert-<?= $class; ?>">
-				<?= $mensaje ?>
-			</div>
-			<a href="adminUsuarios.php" class="btn btn-outline-secondary m-2">Volver a usuarios</a>
-		</div>
+	    	<script>
+				Swal.fire({
+            	  title: 'Usuario agregado',
+            	  type: 'success',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#9ee87f',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formAgregarUsuario.php'
+            	  }
+            	})
+			</script>
 <?php
+		}
+		else {
+?>
+			<script>
+				Swal.fire({
+            	  title: 'Usuario no agregado',
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formAgregarUsuario.php'
+            	  }
+            	})
+			</script>
+<?php
+		}
+
 	}
-?>		
+?>
 	</main>
 <?php
 	include 'html/footer.html';

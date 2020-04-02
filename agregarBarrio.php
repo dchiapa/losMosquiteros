@@ -3,12 +3,10 @@
 	require 'funciones/barrio.php';
 	include 'html/header.html';
 	$existe = verBarrioPorValor();
-	if ($existe == 0 ){
+	if ($existe == null ){
         $chequeo = agregarBarrio();
-    }else {
-		$existe = false;
-	}
-	
+    }
+
 ?>
 <body>
 	<main class="agregar">
@@ -25,8 +23,8 @@
 
 	    <div class="container">
             <h1 class="text-center">Agregar barrio</h1>
-<?php 
-	if ($existe == false){
+<?php
+	if ($existe != null){
 ?>
 			<script>
 				Swal.fire({
@@ -40,22 +38,44 @@
             	    window.location = 'formAgregarBarrio.php'
             	  }
             	})
-				</script>
+			</script>
 <?php
 	}else{
-	    $class = 'danger';
-	    $mensaje = 'Nose pudo agregar el barrio';
-	    if ($chequeo){ 
-	    	$class = 'success';
-	    	$mensaje = 'Barrio agregado correctamente';
-	    }
+	    if ($chequeo){
 ?>
-			<div class="alert alert-<?= $class; ?>">
-				<?= $mensaje ?>
-			</div>
-			<a href="adminBarrios.php" class="btn btn-outline-secondary m-2">Volver a barrios</a>
-		</div>
+	    	<script>
+				Swal.fire({
+            	  title: 'Barrio agregado',
+            	  type: 'success',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#9ee87f',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formAgregarBarrio.php'
+            	  }
+            	})
+			</script>
 <?php
+		}
+		else {
+?>
+			<script>
+				Swal.fire({
+            	  title: 'Barrio no agregado',
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formAgregarBarrio.php'
+            	  }
+            	})
+			</script>
+<?php
+		}
+
 	}
 ?>
 	</main>
