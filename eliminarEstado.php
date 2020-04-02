@@ -20,19 +20,41 @@
 
 	    <div class="col-6 mx-auto text-center">
             <h1 class="d-block text-center my-5">Eliminación de estado</h1>
-<?php 
-    $class = 'danger';
-    $mensaje = 'Nose pudo eliminar el Estado.';
-    if ($chequeo){ 
-    	$class = 'success';
-    	$mensaje = 'Estado eliminado correctamente.';
+<?php
+     if ($chequeo){
+?>
+            <script>
+                Swal.fire({
+                  title: 'Estado eliminado',
+                  type: 'success',
+                  showCancelButton: false,
+                  confirmButtonColor: '#9ee87f',
+                  confirmButtonText: 'Volver al panel'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location = 'formEliminarEstado.php'
+                  }
+                })
+            </script>
+<?php
+    }else{
+?>
+            <script>
+                Swal.fire({
+                  title: 'Estado no eliminado',
+                  type: 'error',
+                  showCancelButton: false,
+                  confirmButtonColor: '#d33',
+                  confirmButtonText: 'Volver al panel'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location = 'formEliminarEstado.php'
+                  }
+                })
+            </script>
+<?php
     }
 ?>
-			<div class="alert alert-<?= $class; ?>">
-				<?= $mensaje ?>
-			</div>
-			<a href="adminEstados.php" class="btn btn-outline-secondary m-2 text-center">Volver a Estados</a>
-		</div>
 	</main>
 <?php
 	include 'html/footer.html';

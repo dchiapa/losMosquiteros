@@ -20,19 +20,42 @@
 
 	    <div class="col-6 mx-auto text-center">
             <h1 class="d-block text-center my-5">Eliminación de usuario</h1>
-<?php 
-    $class = 'danger';
-    $mensaje = 'No se pudo eliminar el usuario.';
-    if ($chequeo){ 
-    	$class = 'success';
-    	$mensaje = 'Usuario eliminado correctamente.';
+<?php
+    if ($chequeo){
+?>
+            <script>
+                Swal.fire({
+                  title: 'Usuario eliminado',
+                  type: 'success',
+                  showCancelButton: false,
+                  confirmButtonColor: '#9ee87f',
+                  confirmButtonText: 'Volver al panel'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location = 'formEliminarUsuario.php'
+                  }
+                })
+            </script>
+<?php
+    }else{
+?>
+            <script>
+                Swal.fire({
+                  title: 'Usuario no eliminado',
+                  type: 'error',
+                  showCancelButton: false,
+                  confirmButtonColor: '#d33',
+                  confirmButtonText: 'Volver al panel'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location = 'formEliminarUsuario.php'
+                  }
+                })
+            </script>
+<?php
     }
 ?>
-			<div class="alert alert-<?= $class; ?>">
-				<?= $mensaje ?>
-			</div>
-			<a href="adminUsuarios.php" class="btn btn-outline-secondary m-2 text-center">Volver a usuarios</a>
-		</div>
+        </div>
 	</main>
 <?php
 	include 'html/footer.html';

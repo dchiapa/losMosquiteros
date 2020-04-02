@@ -20,19 +20,41 @@
 
 	    <div class="col-6 mx-auto text-center">
             <h1 class="d-block text-center my-5">Eliminación de barrio</h1>
-<?php 
-    $class = 'danger';
-    $mensaje = 'Nose pudo eliminar el barrio.';
-    if ($chequeo){ 
-    	$class = 'success';
-    	$mensaje = 'Barrio eliminado correctamente.';
-    }
+<?php
+    if ($chequeo){
 ?>
-			<div class="alert alert-<?= $class; ?>">
-				<?= $mensaje ?>
-			</div>
-			<a href="adminBarrios.php" class="btn btn-outline-secondary m-2 text-center">Volver a barrios</a>
-		</div>
+	    	<script>
+				Swal.fire({
+            	  title: 'Barrio eliminado',
+            	  type: 'success',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#9ee87f',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formEliminarBarrio.php'
+            	  }
+            	})
+			</script>
+<?php
+	}else{
+?>
+			<script>
+				Swal.fire({
+            	  title: 'Barrio no eliminado',
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formEliminarBarrio.php'
+            	  }
+            	})
+			</script>
+<?php
+	}
+?>
 	</main>
 <?php
 	include 'html/footer.html';

@@ -20,20 +20,42 @@
 
 	    <div class="container">
             <h1>Eliminación de tipo</h1>
-<?php 
-    $class = 'danger';
-    $mensaje = 'Nose pudo eliminar el tipo';
-    if ($chequeo){ 
-    	$class = 'success';
-    	$mensaje = 'Tipo eliminado correctamente';
+<?php
+    if ($chequeo){
+?>
+            <script>
+                Swal.fire({
+                  title: 'Tipo eliminado',
+                  type: 'success',
+                  showCancelButton: false,
+                  confirmButtonColor: '#9ee87f',
+                  confirmButtonText: 'Volver al panel'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location = 'formEliminarTipo.php'
+                  }
+                })
+            </script>
+<?php
+    }else{
+?>
+            <script>
+                Swal.fire({
+                  title: 'Tipo no eliminado',
+                  type: 'error',
+                  showCancelButton: false,
+                  confirmButtonColor: '#d33',
+                  confirmButtonText: 'Volver al panel'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location = 'formEliminarTipo.php'
+                  }
+                })
+            </script>
+<?php
     }
 ?>
-			<div class="alert alert-<?= $class; ?>">
-				<?= $mensaje ?>
-			</div>
-			<a href="adminTipos.php" class="btn btn-outline-secondary m-2">Volver a tipos</a>
-		</div>
-	</main>
+</main>
 <?php
 	include 'html/footer.html';
 ?>
