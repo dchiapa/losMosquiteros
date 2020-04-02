@@ -61,16 +61,50 @@
         $proSupSemi = $_POST['proSupSemi'];
         $proAntiguedad = $_POST['proAntiguedad'];
         $proCocheras = $_POST['proCocheras'];
-        $proPileta = $_POST['proPileta'];
-        $proQuincho = $_POST['proQuincho'];
-        $proParrilla = $_POST['proParrilla'];
-        $proJardin = $_POST['proJardin'];
-        $proLuzEle = $_POST['proLuzElec'];
-        $proAguaCorriente = $_POST['proAguaCorriente'];
-        $proAguaPozo = $_POST['proAguaPozo'];
-        $proGasNatural = $_POST['proGasNatural'];
-        $proGasEmbasado = $_POST['proGasEmbasado'];
-        $proCloacas = $_POST['proCloacas'];
+        $proPileta = 0;
+        if( isset( $_POST['proPileta'] ) ){
+            $proPileta = $_POST['proPileta'];
+        }
+        $proQuincho = 0;
+        if( isset( $_POST['proQuincho'] ) ){
+            $proQuincho = $_POST['proQuincho'];
+        }
+        $proParrilla = 0;
+        if( isset( $_POST['proParrilla'] ) ){
+            $proParrilla = $_POST['proParrilla'];
+        }
+        $proJardin = 0;
+        if( isset( $_POST['proJardin'] ) ){
+            $proJardin = $_POST['proJardin'];
+        }
+        $proLuzEle = 0;
+        if( isset( $_POST['proLuzEle'] ) ){
+            $proLuzEle = $_POST['proLuzEle'];
+        }
+        $proAguaCorriente = 0;
+        if( isset( $_POST['proAguaCorriente'] ) ){
+            $proAguaCorriente = $_POST['proAguaCorriente'];
+        }
+        $proAguaPozo = 0;
+        if( isset( $_POST['proAguaPozo'] ) ){
+            $proAguaPozo = $_POST['proAguaPozo'];
+        }
+        $proGasNatural = 0;
+        if( isset( $_POST['proGasNatural'] ) ){
+            $proGasNatural = $_POST['proGasNatural'];
+        }
+        $proGasEmbasado = 0;
+        if( isset( $_POST['proGasEmbasado'] ) ){
+            $proGasEmbasado = $_POST['proGasEmbasado'];
+        }
+        $proGasEmbasado = 0;
+        if( isset( $_POST['proGasEmbasado'] ) ){
+            $proGasEmbasado = $_POST['proGasEmbasado'];
+        }
+        $proCloacas = 0;
+        if( isset( $_POST['proCloacas'] ) ){
+            $proCloacas = $_POST['proCloacas'];
+        }
         $idImagenPrincipal = 'noDisponible.jpg';
 
 
@@ -145,7 +179,7 @@
 					or die(mysqli_error($link));
 		return $resultado;
 	}
-
+// para agregar a la funcion agregarPropiedad en los tinyint
     function prueba(){
 
         $proPileta = 0;
