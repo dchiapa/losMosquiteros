@@ -75,11 +75,12 @@
         $proAguaPozo = $_POST['proAguaPozo'];
         $proGasNatural = $_POST['proGasNatural'];
         $proGasEmbasado = $_POST['proGasEmbasado'];
-        $proClocas = $_POST['proClocas'];
+        $proCloacas = $_POST['proClocas'];
+        $idImagenPrincipal = 'noDisponible.jpg';
 
 
 		$link = conectar();
-		$sql ="INSERT INTO productos
+		$sql ="INSERT INTO propiedades
                       VALUES
                         ( DEFAULT,
                         ".$idEstado.",
@@ -106,7 +107,8 @@
                         ".$proAguaPozo.",
                         ".$proGasNatural.",
                         ".$proGasEmbasado.",
-                        ".$proClocas."
+                        ".$proCloacas.",
+                        '".$idImagenPrincipal."'
                         )";
 
         $resultado = mysqli_query($link, $sql)
@@ -137,4 +139,15 @@
         return mysqli_fetch_assoc($resultado);
     }
 
+    function prueba(){
+
+        $proPileta = 0;
+
+        if( isset( $_POST['proPileta'] ) ){
+            $proPileta = $_POST['proPileta'];
+        }
+
+        return $proPileta;
+
+    }
 ?>
