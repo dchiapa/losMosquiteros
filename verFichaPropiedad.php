@@ -69,7 +69,7 @@
                 </div>
             </div>
 
-            <div class="dropdown">
+            <div class="dropdown mx-auto col-3">
                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Adicionales </button>
                                     <div class="dropdown-menu" aria-labelledby="Descripcion" id="descri">
                                     <?php
@@ -160,12 +160,13 @@
                                     </div>
                             </div>           
                  </div>                   
-               
+          
 	    	<a href="formModificarPropiedad.php?idPropiedad=<?= $propiedad['idPropiedad'] ?>" class="btn btn-outline-secondary">Modificar</a>                
 	    		    	
 	    	<a href="formEliminarPropiedad.php?idPropiedad=<?= $propiedad['idPropiedad'] ?>" class="btn btn-outline-secondary">Eliminar</a>
                            
             <a href="adminPropiedades.php" class="btn btn-outline-secondary m-2">Volver a principal</a>
+         
         </div>
     </main>
 
