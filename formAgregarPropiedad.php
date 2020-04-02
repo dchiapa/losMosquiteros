@@ -78,15 +78,15 @@
                 <label>Baños: </label>
                 <input type="number" name="proBaños" class="form-control">
                 <label>Superficie Total: </label>
-                <input type="number" name="proSupTotal" class="form-control">
+                <input type="number" name="proSupTotal" class="form-control" value="0">
                 <label>Superficie Cubierta: </label>
-                <input type="number" name="proSupCubierta" class="form-control">
+                <input type="number" name="proSupCubierta" class="form-control" value="0">
                 <label>Superficie Semicubierta: </label>
-                <input type="number" name="proSupSemi" class="form-control">
+                <input type="number" name="proSupSemi" class="form-control" value="0">
                 <label>Antiguedad: </label>
-                <input type="number" name="proAntiguedad" class="form-control">
+                <input type="number" name="proAntiguedad" class="form-control" value="0">
                 <label>Cocheras: </label>
-                <input type="number" name="proCocheras" class="form-control">
+                <input type="number" name="proCocheras" class="form-control" value="0">
 
                 <br>
                 <h2>Adicionales</h2>
