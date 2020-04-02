@@ -32,7 +32,7 @@
                   confirmButtonText: 'Volver al panel'
                 }).then((result) => {
                   if (result.value) {
-                    window.location = 'formEliminarTipo.php'
+                    window.location = 'adminTipos.php'
                   }
                 })
             </script>

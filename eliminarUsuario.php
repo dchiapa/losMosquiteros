@@ -32,7 +32,7 @@
                   confirmButtonText: 'Volver al panel'
                 }).then((result) => {
                   if (result.value) {
-                    window.location = 'formEliminarUsuario.php'
+                    window.location = 'adminUsuarios.php'
                   }
                 })
             </script>
