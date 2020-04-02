@@ -10,7 +10,6 @@
 	$estado = verEstadoPorID();
 	$barrio = verBarrioPorID();
 	$propiedades = buscarPropiedades();
-	$imagenes = listarImagenes();
 ?>
 <body>
 	<main id="listaProp">
@@ -45,15 +44,13 @@
 							<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   								<div class="carousel-inner">
 <?php
-		while($imagen = mysqli_fetch_assoc($imagenes)){
-			while($imagen['idPropiedad'] = $propiedad['idPropiedad'] ){
+		// Ver como agregar imagenes
 ?>
   								  <div class="carousel-item active">
-  									<img src="img/<?= $imagen['imgNombre'] ?>" class="d-block w-100" alt="<?= $tipo ?> en <?= $estado ?>">
+  									<img src="img/01.jpg" class="d-block w-100" alt="<?= $tipo ?> en <?= $estado ?>">
   								  </div>
 <?php
-			}
-		}
+
 ?>
 								</div>
  								<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
