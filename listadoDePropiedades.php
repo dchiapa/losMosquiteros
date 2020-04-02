@@ -2,11 +2,13 @@
 	require 'funciones/conexion.php';
 	require 'funciones/tipo.php';
 	require 'funciones/estado.php';
+	require 'funciones/barrio.php';
 	require 'funciones/propiedad.php';
 	include 'html/header.html';
 	$tipo = verTipoPorID();
 	$estado = verEstadoPorID();
-	$propiedades = listarPropiedades();
+	$barrio = verBarrioPorValor();
+	$propiedades = buscarPropiedades($barrio);
 ?>
 <body>
 	<main id="listaProp">

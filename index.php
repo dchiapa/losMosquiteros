@@ -43,7 +43,7 @@
 	}
 ?>
 				</select>
-				<input type="text" name="propUbicacion" placeholder="Ingrese un barrio" class="border border-dark rounded col-6 mx-2">
+				<input type="text" name="valorBarrio" placeholder="Ingrese un barrio" class="border border-dark rounded col-6 mx-2">
 				<input type="hidden" id="idEstado" name="idEstado" value="">
 				<button class="btn btn-info col-2">Buscar</button>
 				<div class="col-1"></div>
