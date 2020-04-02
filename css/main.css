@@ -106,3 +106,8 @@ header nav ul li {
 #ppal form #idBarrio {
     width: 400px;
 }
+
+#listaProp .propiedad>p {
+    font-size: 26px;
+    font-weight: bold;
+}
