@@ -26,7 +26,7 @@ return $resultado;
 
 function verPropiedadPorID()
 {
-$idPropiedad = 1;
+$idPropiedad =$_GET['idPropiedad'];
 /*$idEstado = $_GET['idEstado'];
 $idTipo = $_GET['idTipo'];
 $idBarrio = $_GET['idBarrio'];
@@ -45,7 +45,7 @@ $sql = "SELECT idPropiedad,
                 WHERE p.idEstado = e.idEstado
                 AND   p.idTipo= t.idTipo
                 AND   p.idBarrio = b.idBarrio
-                AND   idPropiedad = ".$idPropiedad = 1;
+                AND   idPropiedad = ".$idPropiedad;
 
 $resultado = mysqli_query($link, $sql)
                         or die(mysqli_error($link));
