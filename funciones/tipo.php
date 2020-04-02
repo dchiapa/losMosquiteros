@@ -40,7 +40,7 @@
     	$valorTipo = $_POST['valorTipo'];
     	$link = conectar();
     	$sql = "SELECT idTipo, valorTipo From tipo
-                WHERE valorTipo = ". $valorTipo;
+                WHERE valorTipo = '". $valorTipo."'";
         $resultado = mysqli_query($link, $sql)
                 or die(mysqli_error($link));
         $tipo = mysqli_fetch_assoc($resultado);

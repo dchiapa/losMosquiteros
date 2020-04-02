@@ -23,8 +23,7 @@
 		$link = conectar();
 		$sql = "INSERT INTO usuarios (usuNombre, usuApellido,
 					usuEmail, usuPass, usuEstado)
-				VALUES ('".$usuNombre."', '".$usuApellido."', '".
-					$usuEmail."', '".$usuPass."', '".$usuEstado."')";
+				VALUES ('".$usuNombre."', '".$usuApellido."', '".$usuEmail."', '".$usuPass."', '".$usuEstado."')";
 		$resultado = mysqli_query($link, $sql)
 					or die(mysqli_error($link));
 		return $resultado;
@@ -47,7 +46,7 @@
 		$usuEmail= $_POST['usuEmail'];
 		$link = conectar();
 		$sql = "SELECT idUsuario, usuNombre From usuarios
-				WHERE usuEmail = ". $usuEmail;
+				WHERE usuEmail = '".$usuEmail."'";
 		$resultado = mysqli_query($link, $sql)
 			or die(mysqli_error($link));
 		return mysqli_fetch_assoc($resultado);
@@ -78,7 +77,7 @@
 		$idUsuario = $_POST['idUsuario'];
 		$link = conectar();
 		$sql = "DELETE FROM usuarios
-				WHERE idUsuario =".$idUsuario;
+				WHERE idUsuario = ".$idUsuario;
 		$resultado = mysqli_query($link, $sql)
 					or die(mysqli_error($link));
 		return $resultado;

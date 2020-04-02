@@ -40,7 +40,7 @@
 		$valorEstado = $_POST['valorEstado'];
 		$link = conectar();
 		$sql = "SELECT idEstado, valorEstado From estado
-                WHERE valorEstado = ".$valorEstado;
+                WHERE valorEstado = '".$valorEstado."'";
         $resultado = mysqli_query($link, $sql)
                     or die(mysqli_error($link));
         $estado = mysqli_fetch_assoc($resultado);
@@ -74,10 +74,10 @@
 
     function eliminarEstado()
     {
-        $valorEstado = $_POST['valorEstado'];
+        $idEstado = $_POST['idEstado'];
         $link = conectar();
         $sql = "DELETE FROM estado
-                WHERE valorEstado = ".$valorEstado;
+                WHERE idEstado = ".$idEstado;
         $resultado = mysqli_query($link, $sql)
                     or die(mysqli_error($link));
         return $resultado;

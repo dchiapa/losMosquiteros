@@ -17,9 +17,9 @@
     	$valorBarrio = $_POST['valorBarrio'];
     	$link = conectar();
     	$sql = "INSERT INTO barrio (valorBarrio)
-				VALUES ('".	$valorBarrio."')";
+				VALUES ('".$valorBarrio."')";
 		$resultado = mysqli_query($link, $sql)
-				or die(mysqli_error($link));
+			or die(mysqli_error($link));
     	return $resultado;
 	}
 
@@ -40,9 +40,8 @@
 		$valorBarrio = $_POST['valorBarrio'];
 		$link = conectar();
 		$sql = "SELECT idBarrio, valorBarrio From barrio
-				WHERE valorBarrio = ".$valorBarrio;
-		$resultado = mysqli_query($link, $sql)
-					or die(mysqli_error($link));
+				WHERE valorBarrio = '".$valorBarrio."'";
+		$resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
 		$barrio = mysqli_fetch_assoc($resultado);
 		return $barrio;
 	}
@@ -74,10 +73,10 @@
 
     function eliminarBarrio()
 	{
-		$valorBarrio = $_POST['valorBarrio'];
+		$idBarrio = $_POST['idBarrio'];
 		$link = conectar();
 		$sql = "DELETE FROM barrio
-				WHERE valorBarrio = ".$valorBarrio;
+				WHERE idBarrio = ".$idBarrio;
 		$resultado = mysqli_query($link, $sql)
 					or die(mysqli_error($link));
 		return $resultado;

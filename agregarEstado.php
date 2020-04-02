@@ -52,7 +52,7 @@
             	  confirmButtonText: 'Volver al panel'
             	}).then((result) => {
             	  if (result.value) {
-            	    window.location = 'formAgregarEstado.php'
+            	    window.location = 'adminEstados.php'
             	  }
             	})
 			</script>
