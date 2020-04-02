@@ -31,7 +31,7 @@
                   confirmButtonText: 'Volver al panel'
                 }).then((result) => {
                   if (result.value) {
-                    window.location = 'formModificarEstado.php'
+                    window.location = 'adminEstados.php'
                   }
                 })
             </script>

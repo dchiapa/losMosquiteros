@@ -31,7 +31,7 @@
                   confirmButtonText: 'Volver al panel'
                 }).then((result) => {
                   if (result.value) {
-                    window.location = 'formModificarBarrio.php'
+                    window.location = 'adminBarrios.php'
                   }
                 })
             </script>
