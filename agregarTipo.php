@@ -35,7 +35,7 @@
             	  confirmButtonText: 'Volver al panel'
             	}).then((result) => {
             	  if (result.value) {
-            	    window.location = 'formAgregarTipo.php'
+            	    window.location = 'adminTipos.php'
             	  }
             	})
 			</script>

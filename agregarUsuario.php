@@ -35,7 +35,7 @@
             	  confirmButtonText: 'Volver al panel'
             	}).then((result) => {
             	  if (result.value) {
-            	    window.location = 'formAgregarUsuario.php'
+            	    window.location = 'adminUsuarios.php'
             	  }
             	})
 			</script>

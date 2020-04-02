@@ -52,7 +52,7 @@
             	  confirmButtonText: 'Volver al panel'
             	}).then((result) => {
             	  if (result.value) {
-            	    window.location = 'formAgregarBarrio.php'
+            	    window.location = 'adminBarrios.php'
             	  }
             	})
 			</script>
