@@ -46,12 +46,13 @@
   								<div class="carousel-inner">
 <?php
 		while($imagen = mysqli_fetch_assoc($imagenes)){
-			while($imagen['idPropiedad'] = $propiedad['idPropiedad'] )
+			while($imagen['idPropiedad'] = $propiedad['idPropiedad'] ){
 ?>
   								  <div class="carousel-item active">
   									<img src="img/<?= $imagen['imgNombre'] ?>" class="d-block w-100" alt="<?= $tipo ?> en <?= $estado ?>">
   								  </div>
 <?php
+			}
 		}
 ?>
 								</div>
