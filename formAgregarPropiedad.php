@@ -6,7 +6,7 @@
     include 'html/header.html';
     $estados = listarEstados();
     $tipos = listarTipos();
-    $Barrios = listarBarrios();
+    $barrios = listarBarrios();
 ?>
 <body>
     <main class="formAgregar Propiedad">
@@ -68,7 +68,7 @@
                 <label>Título: </label>
                 <input type="text" name="proTitulo" class="form-control">
                 <label>Dirección: </label>
-                <input type="text" name="proDirección" class="form-control">
+                <input type="text" name="proDireccion" class="form-control">
                 <label>Precio: </label>
                 <input type="number" name="proPrecio" class="form-control">
                 <label>Descripción: </label>
@@ -125,10 +125,10 @@
                 <br>
 
                 <button class="btn btn-dark">Agregar</button>
-                <a href="adminUsuarios.php" class="btn btn-outline-secondary m-2">Volver a panel de administración</a>
+                <a href="adminPropiedades.php" class="btn btn-outline-secondary m-2">Volver a panel de administración</a>
             </form>
         </div>
     </main>
 <?php
-	include 'html/footer.html';
+//	include 'html/footer.html';
 ?>

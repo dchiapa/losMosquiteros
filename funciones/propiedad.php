@@ -25,7 +25,7 @@
 
     function agregarPropiedad()
 	{
-		$iEstado = $_POST['idEstado'];
+		$idEstado = $_POST['idEstado'];
 		$idTipo = $_POST['idTipo'];
 		$idBarrio = $_POST['idBarrio'];
         $ambientes = $_POST['ambientes'];
@@ -49,11 +49,11 @@
         $proAguaPozo = $_POST['proAguaPozo'];
         $proGasNatural = $_POST['proGasNatural'];
         $proGasEmbasado = $_POST['proGasEmbasado'];
-        $proClocas = $_POST['proClocas'];
+        $proCloacas = $_POST['proCloacas'];
         
 
 		$link = conectar();
-		$sql ="INSERT INTO productos
+		$sql ="INSERT INTO propiedades
                       VALUES
                         ( DEFAULT, 
                         ".$idEstado.",
@@ -80,7 +80,7 @@
                         ".$proAguaPozo.",
                         ".$proGasNatural.",
                         ".$proGasEmbasado.",
-                        ".$proClocas."        
+                        ".$proCloacas."       
                         )";
         
         $resultado = mysqli_query($link, $sql)
@@ -111,4 +111,15 @@
         return mysqli_fetch_assoc($resultado);
     }
 
+    function prueba(){
+
+        $proPileta = 0;
+        
+        if( isset( $_POST['proPileta'] ) ){ 
+            $proPileta = $_POST['proPileta'];
+        }
+              
+        return $proPileta;
+
+    }
 ?>
