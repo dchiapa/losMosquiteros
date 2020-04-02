@@ -2,7 +2,10 @@
 	require 'funciones/conexion.php';
     require 'funciones/estado.php';
     include 'html/header.html';
-    $chequeo = modificarEstado();
+    $existe = verEstadoPorValor();
+    if ($existe == null ){
+          $chequeo = modificarEstado();
+      }
 ?>
 <body>
 <main class="modificar">
@@ -20,41 +23,60 @@
 	    <div class="col-6 mx-auto text-center">
             <h1 class="d-block text-center my-5">Modificación de estado</h1>
 <?php
-    if ($chequeo){
+	if ($existe != null){
 ?>
-            <script>
-                Swal.fire({
-                  title: 'Estado modificado',
-                  type: 'success',
-                  showCancelButton: false,
-                  confirmButtonColor: '#9ee87f',
-                  confirmButtonText: 'Volver al panel'
-                }).then((result) => {
-                  if (result.value) {
-                    window.location = 'adminEstados.php'
-                  }
-                })
-            </script>
+			<script>
+				Swal.fire({
+            	  title: 'Ya existe el estado',
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'adminEstados.php'
+            	  }
+            	})
+			</script>
 <?php
-    }else{
+	}else{
+	    if ($chequeo){
 ?>
-            <script>
-                Swal.fire({
-                  title: 'Estado no modificado',
-                  type: 'error',
-                  showCancelButton: false,
-                  confirmButtonColor: '#d33',
-                  confirmButtonText: 'Volver al panel'
-                }).then((result) => {
-                  if (result.value) {
-                    window.location = 'formModificarEstado.php'
-                  }
-                })
-            </script>
+	    	<script>
+				Swal.fire({
+            	  title: 'Estado modificado',
+            	  type: 'success',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#9ee87f',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'adminEstados.php'
+            	  }
+            	})
+			</script>
 <?php
-    }
+		}
+		else {
 ?>
-        </div>
+			<script>
+				Swal.fire({
+            	  title: 'Estado no modificado',
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formModificarBarrio.php'
+            	  }
+            	})
+			</script>
+<?php
+		}
+
+	}
+?>
 	</main>
 <?php
 	include 'html/footer.html';
