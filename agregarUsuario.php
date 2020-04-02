@@ -1,6 +1,6 @@
 <?php
 	require 'funciones/conexion.php';
-	require 'funciones/usuario.php';
+	require 'funciones/usuarios.php';
 	include 'html/header.html';
 	$existe = verUsuarioPorValor();
 	if ($existe == null ){

@@ -32,9 +32,9 @@
 	}
 	function verUsuarioPorValor()
 	{
-		$valorUsuario = $_POST['valorUsuario'];
+		$usuEmail= $_POST['usuEmail'];
 		$link = conectar();
-		$sql = "SELECT idUsuario, valorUsuario From usuario WHERE valorUsuario = '". $valorUsuario."'";
+		$sql = "SELECT idUsuario, usuNombre From usuarios WHERE usuEmail = '". $usuEmail."'";
 		$resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
 		return mysqli_fetch_assoc($resultado);
 	}
