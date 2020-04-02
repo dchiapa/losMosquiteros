@@ -66,17 +66,17 @@
                 <label>Ambientes: </label>
                 <input type="number" name="ambientes" class="form-control" required>
                 <label>Título: </label>
-                <input type="text" name="proTitulo" class="form-control">
+                <input type="text" name="proTitulo" class="form-control" required>
                 <label>Dirección: </label>
-                <input type="text" name="proDireccion" class="form-control">
+                <input type="text" name="proDireccion" class="form-control" required>
                 <label>Precio: </label>
-                <input type="number" name="proPrecio" class="form-control">
+                <input type="number" name="proPrecio" class="form-control" required>
                 <label>Descripción: </label>
-                <textarea name="proDescripcion" class="form-control"></textarea>
+                <textarea name="proDescripcion" class="form-control" required></textarea>
                 <label>Dormitorios: </label>
-                <input type="number" name="proDormitorios" class="form-control">
+                <input type="number" name="proDormitorios" class="form-control" required>
                 <label>Baños: </label>
-                <input type="number" name="proBaños" class="form-control">
+                <input type="number" name="proBaños" class="form-control" required>
                 <label>Superficie Total: </label>
                 <input type="number" name="proSupTotal" class="form-control" value="0">
                 <label>Superficie Cubierta: </label>
