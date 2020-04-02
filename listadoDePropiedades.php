@@ -2,12 +2,14 @@
 	require 'funciones/conexion.php';
 	require 'funciones/tipo.php';
 	require 'funciones/estado.php';
+	require 'funciones/propiedad.php';
 	include 'html/header.html';
 	$tipo = verTipoPorID();
 	$estado = verEstadoPorID();
+	$propiedades = listarPropiedades();
 ?>
 <body>
-	<main id="ppal">
+	<main id="listaProp">
 		<header class="card-header border-0">
 			<img src="img/logo2.jpeg" alt="Logo de Los mosquiteros">
 			<h1 class="d-none">Los Mosquiteros</h1>
@@ -19,9 +21,9 @@
 			    </ul>
 			</nav>
 		</header>
-        <div class="row mx-auto">
+        <div class="row mx-auto pt-2">
             <aside class="col-3 mx-auto">
-                <div class="card px-4">
+                <div class="card px-4 shadow">
 					<h2>Filtros activos</h2>
 					<p class=" btn btn-primary "><?= $tipo['valorTipo'] ?></p>
 					<p class=" btn btn-primary "><?= $estado['valorEstado'] ?></p>
@@ -29,14 +31,23 @@
                 </div>
 			</aside>
 			<section class="col-9">
-				<div class="card px-4 my-1">
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, nostrum quasi. Ullam vel nulla, debitis quaerat officia assumenda tempore saepe recusandae maiores eum delectus labore quos ab possimus fuga similique.</p>
+<?php
+	while ($propiedad = mysqli_fetch_assoc($propiedades)) {
+?>
+				<div class="card px-4 mb-4 shadow">
+					<h2><?= $propiedad['proTitulo'] ?></h2>
+					<p><?= $propiedad['proDireccion']?>  - <?= $propiedad['valorBarrio']?></p>
+					<p><?= $propiedad['proDescripcion']?></p>
+					<p>Superficie total: <?= $propiedad['proSupTotal']?>  - Superficie cubierta: <?= $propiedad['proSupCubierta']?> - Ambientes: <?= $propiedad['ambientes']?> - Baños: <?= $propiedad['proBaños']?> - Cocheras: <?= $propiedad['proCocheras']?></p>
+					<p >$ <?= $propiedad['proPrecio']?></p>
 					<a href="#" class="btn btn-info my-2">Ver propiedad</a>
 				</div>
-				<div class="card px-4">
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, nostrum quasi. Ullam vel nulla, debitis quaerat officia assumenda tempore saepe recusandae maiores eum delectus labore quos ab possimus fuga similique.</p>
-					<a href="#" class="btn btn-info my-2">Ver propiedad</a>
-				</div>
+
+<?php
+	}
+?>
+
+
 			</section>
         </div>
 	</main>

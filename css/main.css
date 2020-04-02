@@ -38,7 +38,6 @@ body {
 }
 
 
-
 /* ***** Header ***** */
 
 header {
@@ -53,6 +52,7 @@ header {
 #adminEstados header,
 #adminTipos header,
 #adminUsuarios header,
+#listaProp header,
 .formAgregar header,
 .formEliminar header,
 .agregar header,
@@ -102,4 +102,3 @@ header nav ul li {
 .formEliminar form .btn {
     width: 100px;
 }
-
