@@ -23,6 +23,71 @@
         return $resultado;
     }
 
+    function agregarPropiedad()
+	{
+		$iEstado = $_POST['idEstado'];
+		$idTipo = $_POST['idTipo'];
+		$idBarrio = $_POST['idBarrio'];
+        $ambientes = $_POST['ambientes'];
+        $proTitulo = $_POST['proTitulo'];
+		$proDireccion = $_POST['proDireccion'];
+		$proPrecio = $_POST['proPrecio'];
+        $proDescripcion = $_POST['proDescripcion'];
+        $proDormitorios = $_POST['proDormitorios'];
+        $proBaños = $_POST['proBaños'];
+        $proSupTotal = $_POST['proSupTotal'];
+        $proSupCubierta = $_POST['proSupCubierta'];
+        $proSupSemi = $_POST['proSupSemi'];
+        $proAntiguedad = $_POST['proAntiguedad'];
+        $proCocheras = $_POST['proCocheras'];
+        $proPileta = $_POST['proPileta'];
+        $proQuincho = $_POST['proQuincho'];
+        $proParrilla = $_POST['proParrilla'];
+        $proJardin = $_POST['proJardin'];
+        $proLuzEle = $_POST['proLuzElec'];
+        $proAguaCorriente = $_POST['proAguaCorriente'];
+        $proAguaPozo = $_POST['proAguaPozo'];
+        $proGasNatural = $_POST['proGasNatural'];
+        $proGasEmbasado = $_POST['proGasEmbasado'];
+        $proClocas = $_POST['proClocas'];
+        
+
+		$link = conectar();
+		$sql ="INSERT INTO productos
+                      VALUES
+                        ( DEFAULT, 
+                        ".$idEstado.",
+                        ".$idTipo.",
+                        ".$idBarrio.",
+                        ".$ambientes.",
+                        '".$proTitulo."',
+                        '".$proDireccion."',
+                        ".$proPrecio.",
+                        '".$proDescripcion."',
+                        ".$proDormitorios.",
+                        ".$proBaños.",
+                        ".$proSupTotal.",
+                        ".$proSupCubierta.",
+                        ".$proSupSemi.",
+                        ".$proAntiguedad.",
+                        ".$proCocheras.",
+                        ".$proPileta.",
+                        ".$proQuincho.",
+                        ".$proParrilla.",
+                        ".$proJardin.",
+                        ".$proLuzEle.",
+                        ".$proAguaCorriente.",
+                        ".$proAguaPozo.",
+                        ".$proGasNatural.",
+                        ".$proGasEmbasado.",
+                        ".$proClocas."        
+                        )";
+        
+        $resultado = mysqli_query($link, $sql)
+					or die(mysqli_error($link));
+		return $resultado;
+	}
+
     function verPropiedadPorID()
     {
         $idPropiedad =$_GET['idPropiedad'];
