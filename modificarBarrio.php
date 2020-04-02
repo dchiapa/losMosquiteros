@@ -2,7 +2,10 @@
 	require 'funciones/conexion.php';
     require 'funciones/barrio.php';
     include 'html/header.html';
-    $chequeo = modificarBarrio();
+    $existe = verBarrioPorValor();
+	if ($existe == null ){
+        $chequeo = modificarBarrio();
+    }
 ?>
 <body>
 <main class="modificar">
@@ -19,42 +22,62 @@
         </header>
 	    <div class="col-6 mx-auto text-center">
             <h1 class="d-block text-center my-5">Modificación de barrio</h1>
+
 <?php
-    if ($chequeo){
+	if ($existe != null){
 ?>
-            <script>
-                Swal.fire({
-                  title: 'Barrio modificado',
-                  type: 'success',
-                  showCancelButton: false,
-                  confirmButtonColor: '#9ee87f',
-                  confirmButtonText: 'Volver al panel'
-                }).then((result) => {
-                  if (result.value) {
-                    window.location = 'adminBarrios.php'
-                  }
-                })
-            </script>
+			<script>
+				Swal.fire({
+            	  title: 'Ya existe el barrio',
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'adminBarrios.php'
+            	  }
+            	})
+			</script>
 <?php
-    }else{
+	}else{
+	    if ($chequeo){
 ?>
-            <script>
-                Swal.fire({
-                  title: 'Barrio no modificado',
-                  type: 'error',
-                  showCancelButton: false,
-                  confirmButtonColor: '#d33',
-                  confirmButtonText: 'Volver al panel'
-                }).then((result) => {
-                  if (result.value) {
-                    window.location = 'formModificarBarrio.php'
-                  }
-                })
-            </script>
+	    	<script>
+				Swal.fire({
+            	  title: 'Barrio modificado',
+            	  type: 'success',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#9ee87f',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'adminBarrios.php'
+            	  }
+            	})
+			</script>
 <?php
-    }
+		}
+		else {
 ?>
-        </div>
+			<script>
+				Swal.fire({
+            	  title: 'Barrio no modificado',
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'formModificarBarrio.php'
+            	  }
+            	})
+			</script>
+<?php
+		}
+
+	}
+?>
 	</main>
 <?php
 	include 'html/footer.html';
