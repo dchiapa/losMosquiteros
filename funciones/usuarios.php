@@ -46,15 +46,10 @@
 	{
 		$usuEmail= $_POST['usuEmail'];
 		$link = conectar();
-<<<<<<< HEAD
-		$sql = "SELECT idUsuario, usuNombre From usuarios WHERE usuEmail = '". $usuEmail."'";
-		$resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
-=======
-		$sql = "SELECT idUsuario, valorUsuario From usuario
-				WHERE valorUsuario = ". $valorUsuario;
+		$sql = "SELECT idUsuario, usuNombre From usuarios
+				WHERE usuEmail = ". $usuEmail;
 		$resultado = mysqli_query($link, $sql)
-					or die(mysqli_error($link));
->>>>>>> 43bbdf64b3cf48464004a49cb90d322007b4508f
+			or die(mysqli_error($link));
 		return mysqli_fetch_assoc($resultado);
 	}
 
