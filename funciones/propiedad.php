@@ -134,6 +134,18 @@
         return mysqli_fetch_assoc($resultado);
     }
 
+
+    function eliminarPropiedad()
+	{
+		$idPropiedad = $_POST['idPropiedad'];
+		$link = conectar();
+		$sql = "DELETE FROM propiedades
+				WHERE idPropiedad = ".$idPropiedad;
+		$resultado = mysqli_query($link, $sql)
+					or die(mysqli_error($link));
+		return $resultado;
+	}
+
     function prueba(){
 
         $proPileta = 0;
