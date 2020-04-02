@@ -50,6 +50,7 @@
         $proGasNatural = $_POST['proGasNatural'];
         $proGasEmbasado = $_POST['proGasEmbasado'];
         $proCloacas = $_POST['proCloacas'];
+        $idImagenPrincipal = 'noDisponible.jpg';
         
 
 		$link = conectar();
@@ -80,7 +81,8 @@
                         ".$proAguaPozo.",
                         ".$proGasNatural.",
                         ".$proGasEmbasado.",
-                        ".$proCloacas."       
+                        ".$proCloacas.",        
+                        '".$idImagenPrincipal."'
                         )";
         
         $resultado = mysqli_query($link, $sql)
