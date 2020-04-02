@@ -19,19 +19,42 @@
         </header>
 	    <div class="col-6 mx-auto text-center">
             <h1 class="d-block text-center my-5">Modificación de barrio</h1>
-<?php 
-    $class = 'danger';
-    $mensaje = 'Nose pudo modificar el barrio';
-    if ($chequeo){ 
-    	$class = 'success';
-    	$mensaje = 'Barrio modificado correctamente';
+<?php
+    if ($chequeo){
+?>
+            <script>
+                Swal.fire({
+                  title: 'Barrio modificado',
+                  type: 'success',
+                  showCancelButton: false,
+                  confirmButtonColor: '#9ee87f',
+                  confirmButtonText: 'Volver al panel'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location = 'formModificarBarrio.php'
+                  }
+                })
+            </script>
+<?php
+    }else{
+?>
+            <script>
+                Swal.fire({
+                  title: 'Barrio no modificado',
+                  type: 'error',
+                  showCancelButton: false,
+                  confirmButtonColor: '#d33',
+                  confirmButtonText: 'Volver al panel'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location = 'formModificarBarrio.php'
+                  }
+                })
+            </script>
+<?php
     }
 ?>
-			<div class="alert alert-<?= $class; ?>">
-				<?= $mensaje ?>
-			</div>
-			<a href="adminBarrios.php" class="btn btn-outline-secondary m-2">Volver al panel de Barrios</a>
-		</div>
+        </div>
 	</main>
 <?php
 	include 'html/footer.html';

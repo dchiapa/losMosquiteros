@@ -19,19 +19,42 @@
         </header>
 	    <div class="container">
             <h1>Modificación de tipo</h1>
-<?php 
-    $class = 'danger';
-    $mensaje = 'Nose pudo modificar el tipo';
-    if ($chequeo){ 
-    	$class = 'success';
-    	$mensaje = 'Tipo modificado correctamente';
+<?php
+    if ($chequeo){
+?>
+            <script>
+                Swal.fire({
+                  title: 'Tipo modificado',
+                  type: 'success',
+                  showCancelButton: false,
+                  confirmButtonColor: '#9ee87f',
+                  confirmButtonText: 'Volver al panel'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location = 'formModificarTipo.php'
+                  }
+                })
+            </script>
+<?php
+    }else{
+?>
+            <script>
+                Swal.fire({
+                  title: 'Tipo no modificado',
+                  type: 'error',
+                  showCancelButton: false,
+                  confirmButtonColor: '#d33',
+                  confirmButtonText: 'Volver al panel'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location = 'formModificarTipo.php'
+                  }
+                })
+            </script>
+<?php
     }
 ?>
-			<div class="alert alert-<?= $class; ?>">
-				<?= $mensaje ?>
-			</div>
-			<a href="adminTipos.php" class="btn btn-outline-secondary m-2">Volver al panel de Tipos</a>
-		</div>
+        </div>
 	</main>
 <?php
 	include 'html/footer.html';
