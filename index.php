@@ -2,8 +2,10 @@
 	require 'funciones/conexion.php';
 	require 'funciones/tipo.php';
 	require 'funciones/estado.php';
+	require 'funciones/barrio.php';
 	$tipos = listarTipos();
 	$estados = listarEstados();
+	$barrios = listarBarrios();
 	include 'html/header.html';
 ?>
 <body>
@@ -30,10 +32,11 @@
 <?php
 	}
 ?>
+				<div class="col-3"></div>
 			</div>
 			<div class="row">
-				<div class="col-1"></div>
-				<select name="idTipo" id="idTipo" class="border border-dark rounded px-2">
+				<div class="col-2"></div>
+				<select name="idTipo" id="idTipo" class="border border-dark rounded p-2 mx-2">
 					<option value=""> Seleccione una opción</option>
 <?php
    	while ($tipo = mysqli_fetch_assoc($tipos)) {
@@ -43,12 +46,20 @@
 	}
 ?>
 				</select>
-				<input type="text" name="valorBarrio" placeholder="Ingrese un barrio" class="border border-dark rounded col-6 mx-2">
+				<select name="idBarrio" id="idBarrio" class="border border-dark rounded py-2 mx-2">
+					<option value=""> Seleccione una opción</option>
+<?php
+   	while ($barrio = mysqli_fetch_assoc($barrios)) {
+?>
+    				<option value="<?= $barrio['idBarrio'] ?>"><?= $barrio['valorBarrio'] ?></option>
+<?php
+	}
+?>
+				</select>
 				<input type="hidden" id="idEstado" name="idEstado" value="">
 				<button class="btn btn-info col-2">Buscar</button>
-				<div class="col-1"></div>
+				<div class="col-2"></div>
 			</div>
-			<div class="col-3"></div>
 		</form>
 		<h3 class="text-primary">El hogar que soñaste a tu alcance</h3>
 		<script src="js/estado.js"></script>

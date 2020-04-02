@@ -24,26 +24,22 @@
         return $resultado;
     }
 
-    function buscarPropiedades($barrio)
+    function buscarPropiedades()
     {
-        $idBarrio = $barrio;
+        $idBarrio = $_GET['idBarrio'];
         $idEstado = $_GET['idEstado'];
         $idTipo = $_GET['idTipo'];
         $link = conectar();
-        $sql = "SELECT idPropiedad, p.idEstado, e.valorEstado,
-                    p.idTipo, t.valorTipo, p.idBarrio, b.valorBarrio,
-                    ambientes, proTitulo, proDireccion, proPrecio,
-                    proDescripcion, proDormitorios, proBaños,
-                    proSupTotal, proSupCubierta, proSupSemi,
-                    proAntiguedad, proCocheras, proPileta,
-                    proQuincho, proParrilla, proJardin, proLuzEle,
-                    proAguaCorriente, proAguaPozo, proGasNatural,
-                    proGasEmbasado, proCloacas
-                FROM propiedades p, estado e, tipo t, barrio b
-                WHERE p.idEstado = ".$idEstado."
-                AND   p.idTipo = ".$idTipo."
-                AND   p.idBarrio = ".$idBarrio." ORDER BY idPropiedad
-                ASC";
+        $sql = "SELECT idPropiedad, p.idBarrio, p.idEstado, p.idTipo, b.valorBarrio, e.valorEstado, t.valorTipo
+        ambientes, proTitulo, proDireccion, proPrecio,
+        proDescripcion, proDormitorios, proBaños,
+        proSupTotal, proSupCubierta, proSupSemi,
+        proAntiguedad, proCocheras, proPileta,
+        proQuincho, proParrilla, proJardin, proLuzEle,
+        proAguaCorriente, proAguaPozo, proGasNatural,
+        proGasEmbasado, proCloacas  FROM barrio b, estado e, propiedades p, tipo t
+        WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo
+        AND p.idBarrio = ".$idBarrio." AND p.idEstado = ".$idEstado." AND p.idTipo = ".$idTipo." ORDER BY idPropiedad ASC";
         $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
         return $resultado;
     }

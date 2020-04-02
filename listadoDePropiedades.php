@@ -7,8 +7,8 @@
 	include 'html/header.html';
 	$tipo = verTipoPorID();
 	$estado = verEstadoPorID();
-	$barrio = verBarrioPorValor();
-	$propiedades = buscarPropiedades($barrio);
+	$barrio = verBarrioPorID();
+	$propiedades = buscarPropiedades();
 ?>
 <body>
 	<main id="listaProp">
