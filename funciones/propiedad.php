@@ -53,8 +53,7 @@
 		$idEstado = $_POST['idEstado'];
 		$idTipo = $_POST['idTipo'];
 		$idBarrio = $_POST['idBarrio'];
-        $ambientes = $_POST['ambientes
-        '];
+        $ambientes = $_POST['ambientes'];
         $proTitulo = $_POST['proTitulo'];
 		$proDireccion = $_POST['proDireccion'];
 		$proPrecio = $_POST['proPrecio'];
@@ -75,7 +74,7 @@
         $proAguaPozo = $_POST['proAguaPozo'];
         $proGasNatural = $_POST['proGasNatural'];
         $proGasEmbasado = $_POST['proGasEmbasado'];
-        $proCloacas = $_POST['proClocas'];
+        $proCloacas = $_POST['proCloacas'];
         $idImagenPrincipal = 'noDisponible.jpg';
 
 
