@@ -20,9 +20,9 @@
 				<div class="list-group col-6 mx-auto">
 					<a href="adminBarrios.php" class="list-group-item list-group-item-action text-center">Panel de administración de Barrios</a>
 					<a href="adminEstados.php" class="list-group-item list-group-item-action text-center">Panel de administración de Estados</a>
+					<a href="adminPropiedades.php" class="list-group-item list-group-item-action text-center">Panel de administración de Propiedades</a>
 					<a href="adminTipos.php" class="list-group-item list-group-item-action text-center">Panel de administración de Tipos</a>
 					<a href="adminUsuarios.php" class="list-group-item list-group-item-action text-center">Panel de administración de Usuarios</a>
-					<a href="adminPropiedades.php" class="list-group-item list-group-item-action text-center">Panel de administración de Propiedades</a>
 				</div>
 			</div>
 		</div>
