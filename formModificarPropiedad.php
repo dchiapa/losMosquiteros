@@ -29,7 +29,7 @@
         <div class="col-6 mx-auto">
             <h2 class="d-block text-center my-5">Modificar propiedad</h2>
             <form action="modificarPropiedad.php" method="POST">
-                 
+            <input type="hidden" name="idPropiedad" value="<?= $propiedad['idPropiedad']; ?>" >    
            
                 <label>Estado: </label>
                 <select name="idEstado" class="form-control" required>

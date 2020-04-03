@@ -193,6 +193,108 @@
         return mysqli_fetch_assoc($resultado);
     }
 
+    function modificarPropiedad()
+	{   
+        $idPropiedad  = $_POST['idPropiedad'];
+		$idEstado = $_POST['idEstado'];
+		$idTipo = $_POST['idTipo'];
+		$idBarrio = $_POST['idBarrio'];
+        $ambientes = $_POST['ambientes'];
+        $proTitulo = $_POST['proTitulo'];
+		$proDireccion = $_POST['proDireccion'];
+		$proPrecio = $_POST['proPrecio'];
+        $proDescripcion = $_POST['proDescripcion'];
+        $proDormitorios = $_POST['proDormitorios'];
+        $proBaños = $_POST['proBaños'];
+        $proSupTotal = $_POST['proSupTotal'];
+        $proSupCubierta = $_POST['proSupCubierta'];
+        $proSupSemi = $_POST['proSupSemi'];
+        $proAntiguedad = $_POST['proAntiguedad'];
+        $proCocheras = $_POST['proCocheras'];
+        $proPileta = 0;
+        if( isset( $_POST['proPileta'] ) ){
+            $proPileta = $_POST['proPileta'];
+        }
+        $proQuincho = 0;
+        if( isset( $_POST['proQuincho'] ) ){
+            $proQuincho = $_POST['proQuincho'];
+        }
+        $proParrilla = 0;
+        if( isset( $_POST['proParrilla'] ) ){
+            $proParrilla = $_POST['proParrilla'];
+        }
+        $proJardin = 0;
+        if( isset( $_POST['proJardin'] ) ){
+            $proJardin = $_POST['proJardin'];
+        }
+        $proLuzEle = 0;
+        if( isset( $_POST['proLuzEle'] ) ){
+            $proLuzEle = $_POST['proLuzEle'];
+        }
+        $proAguaCorriente = 0;
+        if( isset( $_POST['proAguaCorriente'] ) ){
+            $proAguaCorriente = $_POST['proAguaCorriente'];
+        }
+        $proAguaPozo = 0;
+        if( isset( $_POST['proAguaPozo'] ) ){
+            $proAguaPozo = $_POST['proAguaPozo'];
+        }
+        $proGasNatural = 0;
+        if( isset( $_POST['proGasNatural'] ) ){
+            $proGasNatural = $_POST['proGasNatural'];
+        }
+        $proGasEmbasado = 0;
+        if( isset( $_POST['proGasEmbasado'] ) ){
+            $proGasEmbasado = $_POST['proGasEmbasado'];
+        }
+        $proGasEmbasado = 0;
+        if( isset( $_POST['proGasEmbasado'] ) ){
+            $proGasEmbasado = $_POST['proGasEmbasado'];
+        }
+        $proCloacas = 0;
+        if( isset( $_POST['proCloacas'] ) ){
+            $proCloacas = $_POST['proCloacas'];
+        }
+        $idImagenPrincipal = 'noDisponible.jpg';
+
+
+		$link = conectar();
+		$sql ="UPDATE propiedades SET                     
+                        
+                    idEstado = ".$idEstado.",
+                        idTipo = ".$idTipo.",
+                        idBarrio = ".$idBarrio.",
+                        ambientes = ".$ambientes.",
+                        proTitulo = '".$proTitulo."',
+                        proDireccion = '".$proDireccion."',
+                        proPrecio = ".$proPrecio.",
+                        proDescripcion = '".$proDescripcion."',
+                        proDormitorios = ".$proDormitorios.",
+                        proBaños = ".$proBaños.",
+                        proSupTotal = ".$proSupTotal.",
+                        proSupCubierta = ".$proSupCubierta.",
+                        proSupSemi = ".$proSupSemi.",
+                        proAntiguedad = ".$proAntiguedad.",
+                        proCocheras = ".$proCocheras.",
+                        proPileta = ".$proPileta.",
+                        proQuincho = ".$proQuincho.",
+                        proParrilla = ".$proParrilla.",
+                        proJardin = ".$proJardin.",
+                        proLuzEle = ".$proLuzEle.",
+                        proAguaCorriente = ".$proAguaCorriente.",
+                        proAguaPozo = ".$proAguaPozo.",
+                        proGasNatural = ".$proGasNatural.",
+                        proGasEmbasado = ".$proGasEmbasado.",
+                        proCloacas = ".$proCloacas.",
+                        idImagenPrincipal = '".$idImagenPrincipal."'
+                        WHERE idPropiedad = ".$idPropiedad;
+
+        $resultado = mysqli_query($link, $sql)
+					or die(mysqli_error($link));
+		return $resultado;
+    }
+    
+
 
     function eliminarPropiedad()
 	{
@@ -203,4 +305,6 @@
 		$resultado = mysqli_query($link, $sql)
 					or die(mysqli_error($link));
 		return $resultado;
-	}
+    }
+    
+
