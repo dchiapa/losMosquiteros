@@ -14,7 +14,7 @@
     	        </ul>
     	    </nav>
     	</header>
-		<div class="col-6 mx-auto">
+		<div class="col-12 mx-auto">
 			<h2 class="d-block text-center my-5">Panel de administración</h2>
 			<div class="row">
 				<div class="list-group col-6 mx-auto">
