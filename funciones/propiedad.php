@@ -179,16 +179,3 @@
 					or die(mysqli_error($link));
 		return $resultado;
 	}
-// para agregar a la funcion agregarPropiedad en los tinyint
-    function prueba(){
-
-        $proPileta = 0;
-
-        if( isset( $_POST['proPileta'] ) ){
-            $proPileta = $_POST['proPileta'];
-        }
-
-        return $proPileta;
-
-    }
-?>
