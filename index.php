@@ -37,7 +37,7 @@
 			<div class="row">
 				<div class="col-2"></div>
 				<select name="idTipo" id="idTipo" class="border border-dark rounded p-2 mx-2">
-					<option value=""> Seleccione una opción</option>
+					<option value="0"> Seleccione una opción</option>
 <?php
    	while ($tipo = mysqli_fetch_assoc($tipos)) {
 ?>
@@ -47,7 +47,7 @@
 ?>
 				</select>
 				<select name="idBarrio" id="idBarrio" class="border border-dark rounded py-2 mx-2">
-					<option value=""> Seleccione una opción</option>
+					<option value="0"> Seleccione una opción</option>
 <?php
    	while ($barrio = mysqli_fetch_assoc($barrios)) {
 ?>
@@ -56,7 +56,7 @@
 	}
 ?>
 				</select>
-				<input type="hidden" id="idEstado" name="idEstado" value="">
+				<input type="hidden" id="idEstado" name="idEstado" value="0">
 				<button class="btn btn-info col-2">Buscar</button>
 				<div class="col-2"></div>
 			</div>
