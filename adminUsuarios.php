@@ -17,47 +17,51 @@
                 </ul>
             </nav>
         </header>
-        <div class="col-6 mx-auto">
+        <div class="col-12 mx-auto">
             <h2 class="d-block text-center my-5">Panel de administración de Usuarios</h2>
-            <a href="admin.php" class="btn btn-outline-secondary m-2">Volver a principal</a>
-            <table class="table table-hover table-border table-striped">
-                <thead class="thead-dark">
-        	    	<tr>
-                        <th class=" text-center">Id</th>
-                        <th class=" text-center">Nombre</th>
-                        <th class=" text-center">Apellido</th>
-                        <th class=" text-center">Email</th>
-                        <th class=" text-center">Contraseña</th>
-                        <th class=" text-center">Estado</th>
-        	        	<th colspan="3">
-        	        		<a href="formAgregarUsuario.php" class="btn btn-secondary">Agregar</a>
-        	    		</th>
-        	    	</tr>
-                </thead>
-                <tbody>
+            <div class="row mx-auto">
+                <div class="col-10 mx-auto">
+                    <a href="admin.php" class="btn btn-outline-secondary m-2">Volver a principal</a>
+                    <table class="table table-hover table-border table-striped">
+                        <thead class="thead-dark">
+        	            	<tr>
+                                <th class=" text-center">Id</th>
+                                <th class=" text-center">Nombre</th>
+                                <th class=" text-center">Apellido</th>
+                                <th class=" text-center">Email</th>
+                                <th class=" text-center">Contraseña</th>
+                                <th class=" text-center">Estado</th>
+        	                	<th colspan="3">
+        	                		<a href="formAgregarUsuario.php" class="btn btn-secondary">Agregar</a>
+        	            		</th>
+        	            	</tr>
+                        </thead>
+                        <tbody>
 <?php
     while($usuario = mysqli_fetch_assoc($usuarios)){
 ?>
-                    <tr>
-                        <td class=" text-center"><?= $usuario['idUsuario'] ?></td>
-                        <td class=" text-center"><?= $usuario['usuNombre'] ?></td>
-                        <td class=" text-center"><?= $usuario['usuApellido'] ?></td>
-                        <td class=" text-center"><?= $usuario['usuEmail'] ?></td>
-                        <td class=" text-center"><?= $usuario['usuPass'] ?></td>
-                        <td class=" text-center"><?= $usuario['usuEstado'] ?></td>
-                        <td>
-	    		    		<a href="formModificarUsuario.php?idUsuario=<?= $usuario['idUsuario'] ?>" class="btn btn-outline-secondary">Modificar</a>
-                        </td>
-	    		    	<td>
-	    		    		<a href="formEliminarUsuario.php?idUsuario=<?= $usuario['idUsuario'] ?>" class="btn btn-outline-secondary">Eliminar</a>
-                        </td>
-                    </tr>
+                            <tr>
+                                <td class=" text-center"><?= $usuario['idUsuario'] ?></td>
+                                <td class=" text-center"><?= $usuario['usuNombre'] ?></td>
+                                <td class=" text-center"><?= $usuario['usuApellido'] ?></td>
+                                <td class=" text-center"><?= $usuario['usuEmail'] ?></td>
+                                <td class=" text-center"><?= $usuario['usuPass'] ?></td>
+                                <td class=" text-center"><?= $usuario['usuEstado'] ?></td>
+                                <td>
+	    	        	    		<a href="formModificarUsuario.php?idUsuario=<?= $usuario['idUsuario'] ?>" class="btn btn-outline-secondary">Modificar</a>
+                                </td>
+	    	        	    	<td>
+	    	        	    		<a href="formEliminarUsuario.php?idUsuario=<?= $usuario['idUsuario'] ?>" class="btn btn-outline-secondary">Eliminar</a>
+                                </td>
+                            </tr>
 <?php
     }
 ?>
-                </tbody>
-            </table>
-            <a href="admin.php" class="btn btn-outline-secondary m-2">Volver a principal</a>
+                        </tbody>
+                    </table>
+                    <a href="admin.php" class="btn btn-outline-secondary m-2">Volver a principal</a>
+                </div>
+            </div>
         </div>
     </main>
 <?php
