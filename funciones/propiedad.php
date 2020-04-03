@@ -29,41 +29,39 @@
         $idBarrio = $_GET['idBarrio'];
         $idEstado = $_GET['idEstado'];
         $idTipo = $_GET['idTipo'];
-        $buscar = " WHERE ";
-        $and = [' AND ', ' AND '];
-        $buscaBarrio = 'p.idBarrio = b.idBarrio AND p.idBarrio = '.$idBarrio;
-        $buscaEstado = 'p.idEstado = e.idEstado AND p.idEstado = '.$idEstado;
-        $buscaTipo = 'p.idTipo = t.idTipo AND p.idTipo = '.$idTipo;
-
+        $buscar = "WHERE p.idBarrio = b.idBarrio AND p.idBarrio =  $idBarrio AND p.idEstado = e.idEstado AND p.idEstado = $idEstado AND p.idTipo = t.idTipo AND  p.idTipo = $idTipo ";
         if ($idBarrio == 0) {
-            $buscaBarrio = '';
-            $and = ['', 'AND'];
+            $buscar = "WHERE p.idEstado = e.idEstado AND p.idEstado = $idEstado AND p.idTipo = t.idTipo AND  p.idTipo = $idTipo ";
         }
         if ($idEstado == 0) {
-            $buscaEstado = '';
-            $and = ['AND', ''];
+            $buscar = " WHERE p.idBarrio = b.idBarrio AND  p.idBarrio = $idBarrio AND p.idTipo = t.idTipo AND  p.idTipo =  $idTipo ";
         }
         if ($idTipo == 0) {
-            $buscaTipo = '';
+            $buscar = " WHERE p.idBarrio = b.idBarrio AND  p.idBarrio = $idBarrio AND p.idEstado = e.idEstado AND p.idEstado =  $idEstado ";
         }
-
-        if ($idBarrio == 0 && $idEstado == 0 || $idEstado == 0 && $idTipo == 0 ){
-            $and = ['', ''];
+        if ($idBarrio == 0 && $idEstado == 0 ){
+            $buscar = " WHERE p.idTipo = t.idTipo AND  p.idTipo = $idTipo ";
+        }
+        if( $idEstado == 0 && $idTipo == 0 ){
+            $buscar = " WHERE p.idBarrio = b.idBarrio AND  p.idBarrio = $idBarrio";
+        }
+        if( $idBarrio == 0 && $idTipo == 0 ){
+            $buscar = " WHERE p.idEstado = e.idEstado AND p.idEstado = $idEstado";
         }
         if($idBarrio == 0 && $idEstado == 0 && $idTipo == 0 ){
             $buscar = '';
-            $and = ['', ''];
         }
         $link = conectar();
-        $sql = "SELECT idPropiedad, p.idEstado, valorEstado,
-        p.idTipo, valorTipo, p.idBarrio, valorBarrio,
-        ambientes, proTitulo,  proDireccion, proPrecio,
-        proDescripcion, proDormitorios, proBaños,
-        proSupTotal, proSupCubierta, proSupSemi,
-        proAntiguedad, proCocheras, proPileta,
-        proQuincho,proParrilla, proJardin, proLuzEle,
-        proAguaCorriente,proAguaPozo, proGasNatural,
-        proGasEmbasado,proCloacas FROM barrio b, estado e, propiedades p, tipo t".$buscar.$buscaBarrio.$buscaEstado.$buscaTipo."
+        $sql = "SELECT idPropiedad, p.idBarrio, b.valorBarrio,
+		            p.idEstado, e.valorEstado, p.idTipo, t.valorTipo,
+                    ambientes, proTitulo,  proDireccion, proPrecio,
+                    proDescripcion, proDormitorios, proBaños,
+                    proSupTotal, proSupCubierta, proSupSemi,
+                    proAntiguedad, proCocheras, proPileta,
+                    proQuincho,proParrilla, proJardin, proLuzEle,
+                    proAguaCorriente,proAguaPozo, proGasNatural,
+                    proGasEmbasado,proCloacas
+                FROM propiedades p, barrio b, estado e, tipo t ".$buscar."
          ORDER BY idPropiedad ASC";
         $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
         return $resultado;
