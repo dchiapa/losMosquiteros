@@ -29,27 +29,27 @@
         $idBarrio = $_GET['idBarrio'];
         $idEstado = $_GET['idEstado'];
         $idTipo = $_GET['idTipo'];
-        $buscar = "WHERE p.idBarrio = b.idBarrio AND p.idBarrio =  $idBarrio AND p.idEstado = e.idEstado AND p.idEstado = $idEstado AND p.idTipo = t.idTipo AND  p.idTipo = $idTipo ";
+        $buscar = "WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idBarrio =  $idBarrio AND p.idEstado = $idEstado AND p.idTipo = $idTipo ";
         if ($idBarrio == 0) {
-            $buscar = "WHERE p.idEstado = e.idEstado AND p.idEstado = $idEstado AND p.idTipo = t.idTipo AND  p.idTipo = $idTipo ";
+            $buscar = "WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idEstado = $idEstado AND p.idTipo = $idTipo ";
         }
         if ($idEstado == 0) {
-            $buscar = " WHERE p.idBarrio = b.idBarrio AND  p.idBarrio = $idBarrio AND p.idTipo = t.idTipo AND  p.idTipo =  $idTipo ";
+            $buscar = " WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idBarrio = $idBarrio AND p.idTipo = $idTipo ";
         }
         if ($idTipo == 0) {
-            $buscar = " WHERE p.idBarrio = b.idBarrio AND  p.idBarrio = $idBarrio AND p.idEstado = e.idEstado AND p.idEstado =  $idEstado ";
+            $buscar = " WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idBarrio = $idBarrio AND p.idEstado = $idEstado ";
         }
         if ($idBarrio == 0 && $idEstado == 0 ){
-            $buscar = " WHERE p.idTipo = t.idTipo AND  p.idTipo = $idTipo ";
+            $buscar = " WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idTipo = $idTipo ";
         }
         if( $idEstado == 0 && $idTipo == 0 ){
-            $buscar = " WHERE p.idBarrio = b.idBarrio AND  p.idBarrio = $idBarrio";
+            $buscar = " WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idBarrio = $idBarrio";
         }
         if( $idBarrio == 0 && $idTipo == 0 ){
-            $buscar = " WHERE p.idEstado = e.idEstado AND p.idEstado = $idEstado";
+            $buscar = " WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idEstado = $idEstado";
         }
         if($idBarrio == 0 && $idEstado == 0 && $idTipo == 0 ){
-            $buscar = '';
+            $buscar = 'WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo ';
         }
         $link = conectar();
         $sql = "SELECT idPropiedad, p.idBarrio, b.valorBarrio,
@@ -192,7 +192,7 @@
     }
 
     function modificarPropiedad()
-	{   
+	{
         $idPropiedad  = $_POST['idPropiedad'];
 		$idEstado = $_POST['idEstado'];
 		$idTipo = $_POST['idTipo'];
@@ -257,8 +257,8 @@
 
 
 		$link = conectar();
-		$sql ="UPDATE propiedades SET                     
-                        
+		$sql ="UPDATE propiedades SET
+
                     idEstado = ".$idEstado.",
                         idTipo = ".$idTipo.",
                         idBarrio = ".$idBarrio.",
@@ -291,7 +291,7 @@
 					or die(mysqli_error($link));
 		return $resultado;
     }
-    
+
 
 
     function eliminarPropiedad()
@@ -304,5 +304,5 @@
 					or die(mysqli_error($link));
 		return $resultado;
     }
-    
+
 
