@@ -92,12 +92,12 @@
         $usuEmail = $_POST['usuEmail'];
         $usuPass = $_POST['usuPass'];
         $link = conectar();
-        $sql = "SELECT 1
+        $sql = "SELECT usuEmail, usuEstado, usuTipo
                     FROM usuarios
                     WHERE usuEmail = '".$usuEmail."'
                      AND  usuPass  = '".$usuPass."'";
         $resultado = mysqli_query($link, $sql)
-                                or die( mysqli_error($link) );
+                    or die( mysqli_error($link) );
 		
 		$tipoUsuario = mysqli_fetch_assoc($resultado);
         $cantidad = mysqli_num_rows($resultado);
@@ -108,7 +108,7 @@
             header('location: formLogin.php?error=1');
         }
         else{
-            if($tipoUSuario['usuTipo'] == 'admin'){
+            if($tipoUsuario['usuTipo'] == 'admin'){
 				$_SESSION['loginAdmin'] = 1;
 
 				header('location: admin.php');
