@@ -24,17 +24,18 @@ body {
     height: 456px;
 }
 
+#listaProp,
 .agregar,
 .eliminar,
 .modificar,
 .formAgregar,
 .formEliminar,
 .formModificar {
-    height: 576px;
+    min-height: 576px;
 }
 
 .Usuario {
-    height: 700px;
+    min-height: 700px;
 }
 
 

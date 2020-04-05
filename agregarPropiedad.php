@@ -55,7 +55,7 @@
             	})
 			</script>
 <?php
-		}	
+		}
 ?>
 	</main>
 <?php

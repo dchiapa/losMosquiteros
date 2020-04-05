@@ -28,41 +28,41 @@
                 <select name="idEstado" class="form-control" required>
                     <option value="">Seleccione un estado</option>
 
-                    <?php 
+                    <?php
                         while ($estado = mysqli_fetch_assoc($estados)) {
-                     ?>            
+                     ?>
                         <option value="<?= $estado['idEstado']; ?>"> <?= $estado['valorEstado']; ?></option>
-                    <?php 
+                    <?php
                      }
                     ?>
                 </select>
-         
+
                 <label>Tipo: </label>
                 <select name="idTipo" class="form-control" required>
                     <option value="">Seleccione un tipo</option>
 
-                    <?php 
+                    <?php
                         while ($tipo = mysqli_fetch_assoc($tipos)) {
-                     ?>            
+                     ?>
                         <option value="<?= $tipo['idTipo']; ?>"> <?= $tipo['valorTipo']; ?></option>
-                    <?php 
+                    <?php
                      }
                     ?>
                 </select>
-                
+
                 <label>Barrio: </label>
                 <select name="idBarrio" class="form-control" required>
                     <option value="">Seleccione un barrio</option>
 
-                    <?php 
+                    <?php
                         while ($barrio = mysqli_fetch_assoc($barrios)) {
-                     ?>            
+                     ?>
                         <option value="<?= $barrio['idBarrio']; ?>"> <?= $barrio['valorBarrio']; ?></option>
-                    <?php 
+                    <?php
                      }
                     ?>
                 </select>
-                              
+
                 <label>Ambientes: </label>
                 <input type="number" name="ambientes" class="form-control" required>
                 <label>Título: </label>
@@ -130,5 +130,5 @@
         </div>
     </main>
 <?php
-//	include 'html/footer.html';
+    include 'html/footer.html';
 ?>
