@@ -12,11 +12,11 @@
 			    <ul>
 			        <li class="d-inline"><a href="index.php" class="btn btn-outline-light py-2 px-5">Inicio</a></li>
 			        <li class="d-inline"><a href="" class="btn btn-outline-light py-2 px-5">Publicar</a></li>
-			        <li class="d-inline"><a href="admin.php" class="btn btn-outline-light py-2 px-5">LogIn</a></li>
+			       
 			    </ul>
 			</nav>
 		</header>
-        <form>
+        <form action="login.php" method="POST">
   
   <div class="form-group">
       <h2 class="">Saludo</h2>
@@ -24,19 +24,38 @@
         <div class="input-group-prepend">
           <div class="contenedorLogo"><img src="img/logoEmail.png" alt="" class="logoPass"></div>
         </div>
-        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+        <input type="text" name= "usuEmail"class="form-control" id="inlineFormInputGroup" >
       </div>
    
     <div class="input-group mb-2">
         <div class="input-group-prepend">
           <div class="contenedorLogo"><img src="img/logoPass.png" alt="" class="logoPass"></div>
         </div>
-        <input type="password" class="form-control" id="inlineFormInputGroup" placeholder="">
+        <input type="password" name="usuPass"class="form-control" id="inlineFormInputGroup" >
       </div>
     
     <button type="submit" class="btn btn-primary">login</button>
     
 </form>
+
+<?php
+    if ( isset( $_GET['error'] ) ){
+?>
+
+<script>
+        Swal.fire(
+  'Usuario y/o contraseña incorrectos!',
+  'Se encuentra registrado?',
+  'error'
+)
+
+</script>
+
+       
+<?php
+    }
+?>
+
 
 
 	</main>
