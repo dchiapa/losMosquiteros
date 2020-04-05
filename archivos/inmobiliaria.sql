@@ -124,13 +124,14 @@ CREATE TABLE `usuarios` (
   `usuApellido` varchar(30) NOT NULL,
   `usuEmail` varchar(30) NOT NULL UNIQUE,
   `usuPass` varchar(30) NOT NULL,
-  `usuEstado` tinyint(1) DEFAULT '0'
+  `usuEstado` tinyint(1) DEFAULT '0',
+  `usuTipo` varchar(30) NOT NULL
   );
   
-  INSERT INTO `usuarios` (`idUsuario`, `usuNombre`, `usuApellido`, `usuEmail`, `usuPass`, `usuEstado`) VALUES
-(1, 'fernando', 'pereyra', 'ferfit16@gmail.com', 'nohayclave', 1),
-(2, 'gustavo', 'magliano', 'gustmag@yahoo.com', '1234', 1),
-(3, 'diego', 'chiapa', 'diegochiapa@gmail.com', 'abcd', 1);
+  INSERT INTO `usuarios` (`idUsuario`, `usuNombre`, `usuApellido`, `usuEmail`, `usuPass`, `usuEstado`, `usuTipo`) VALUES
+(1, 'fernando', 'pereyra', 'ferfit16@gmail.com', 'nohayclave', 1,'admin'),
+(2, 'gustavo', 'magliano', 'gustmag@yahoo.com', '1234', 1,'invitado'),
+(3, 'diego', 'chiapa', 'diegochiapa@gmail.com', 'abcd', 1,'admin');
 
 
 ALTER TABLE `propiedades`

@@ -98,18 +98,28 @@
                      AND  usuPass  = '".$usuPass."'";
         $resultado = mysqli_query($link, $sql)
                                 or die( mysqli_error($link) );
-        
+		
+		$tipoUsuario = mysqli_fetch_assoc($resultado);
         $cantidad = mysqli_num_rows($resultado);
+
 
         if( $cantidad == 0 ){ // no hay coincidencia
             //redirección a formLogin
             header('location: formLogin.php?error=1');
         }
         else{
-            ##rutina de autenticación
-            //???
+            if($tipoUSuario['usuTipo'] == 'admin'){
+				$_SESSION['loginAdmin'] = 1;
 
-            //redirección a admin
-            header('location: admin.php');
+				header('location: admin.php');
+			} else {
+				$_SESSION['loginInvitado'] = 2;
+
+				header('location: admin.php');
+
+			}
+
+            
+            
         }
     }
