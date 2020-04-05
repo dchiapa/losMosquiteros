@@ -62,7 +62,7 @@
                     proAguaCorriente,proAguaPozo, proGasNatural,
                     proGasEmbasado,proCloacas
                 FROM propiedades p, barrio b, estado e, tipo t ".$buscar."
-         ORDER BY idPropiedad ASC";
+         ORDER BY b.valorBarrio ASC";
         $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
         return $resultado;
     }
