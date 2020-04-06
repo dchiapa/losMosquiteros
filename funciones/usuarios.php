@@ -104,7 +104,9 @@
 
 
         if( $cantidad == 0 ){ // no hay coincidencia
-            //redirección a formLogin
+			//redirección a formLogin
+			session_unset();
+			session_destroy();
             header('location: formLogin.php?error=1');
         }
         else{
@@ -123,3 +125,17 @@
             
         }
     }
+
+function autenticarAdmin()
+{
+	if(!isset($_SESSION['loginAdmin'])) {
+		header('location: formLogin.php?error=2');
+	}
+}
+
+function autenticarInvitado()
+{
+	if(!isset($_SESSION['loginInvitado'])) {
+		header('location: formLogin.php?error=2');
+	}
+}
