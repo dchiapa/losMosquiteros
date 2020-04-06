@@ -87,7 +87,7 @@
         ###################################
 		############ LOGIN ################
 
-		function loginAdmin()
+		function login()
     {
         $usuEmail = $_POST['usuEmail'];
         $usuPass = $_POST['usuPass'];
@@ -97,7 +97,7 @@
                     WHERE usuEmail = '".$usuEmail."'
                      AND  usuPass  = '".$usuPass."'";
         $resultado = mysqli_query($link, $sql)
-                    or die( mysqli_error($link) );
+                    or die(mysqli_error($link) );
 		
 		$tipoUsuario = mysqli_fetch_assoc($resultado);
         $cantidad = mysqli_num_rows($resultado);
@@ -129,18 +129,14 @@
 function autenticarAdmin()
 {
 	if(!isset($_SESSION['loginAdmin'])) {
-		header('location: formLogin.php?errorAut=2');
+		header('location: formLogin.php?errorAut=1');
 	}
 }
 
 function autenticarInvitado()
 {
-	$admin = $_SESSION['loginAdmin'] ;
-	$invitado = $_SESSION['loginInvitado'];
-
-	
-	if (!isset($admin, $invitado)) {
-		header('location: formLogin.php?errorAut=2');
+	if (!isset($_SESSION['loginAdmin']) || !isset($_SESSION['loginInvitado'])) {
+		header('location: formLogin.php?errorAut=1');
 	}
 }
 

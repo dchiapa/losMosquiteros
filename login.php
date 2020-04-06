@@ -3,7 +3,7 @@
     require 'funciones/conexion.php';
     require 'funciones/usuarios.php';
     include 'html/header.html';
-    loginAdmin();
+    login();
 
 ?>
 <body>

@@ -40,7 +40,7 @@
 </form>
 
 <?php
-    if ( isset( $_GET['error']) ){
+    if (isset($_GET['error'])){
 ?>
 
 <script>
@@ -55,10 +55,7 @@
        
 <?php
     }
-?>
-
-<?php
-    if ( isset( $_GET['errorAut']) ){
+    if (isset($_GET['errorAut'])){
 ?>
 
 <script>
