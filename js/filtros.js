@@ -1,7 +1,8 @@
 document.getElementById('btnLimpiar').addEventListener('click', limpiarFiltros);
+document.getElementById('ub-btn').addEventListener('click', extender);
 let botones = document.getElementsByClassName('btnFiltro');
 let valores = '';
-let boton;
+let boton, padre;
 let url;
 
 for (let i = 0; i < botones.length; i++) {
@@ -28,4 +29,18 @@ function botonApretado(e) {
 function limpiarFiltros(){
     url = 'listadoDePropiedades.php?idBarrio=0&idEstado=0&idTipo=0';
     location.href = url;
+}
+function extender(e){
+    padre = e.target.parentNode
+    if(e.target.textContent == '▼'){
+        e.target.textContent = '▲';
+        padre.lastChild.previousSibling.classList.replace('d-none', 'd-inline');
+    }
+    else{
+        e.target.textContent = '▼';
+        padre.lastChild.previousSibling.classList.replace('d-inline', 'd-none');
+    }
+    
+
+     console.log(padre.lastChild.previousSibling)
 }
