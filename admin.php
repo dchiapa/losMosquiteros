@@ -1,7 +1,7 @@
 <?php
 	require 'config/config.php';
 	require 'funciones/usuarios.php';
-	autenticarAdmin();
+	autenticarInvitado();
 	
 	include 'html/header.html';
 ?>
