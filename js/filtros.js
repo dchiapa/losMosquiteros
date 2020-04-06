@@ -11,8 +11,19 @@ for (let i = 0; i < botones.length; i++) {
 function botonApretado(e) {
     boton = e.target;
     boton.value = 0;
-    url = 'listadoDePropiedades.php?idBarrio=' + botones[0].value + '&idEstado=' + botones[1].value + '&idTipo=' + botones[2].value ;
-    location.href = url;
+    if((botones[0] !== undefined) && (botones[1] !== undefined) && (botones[2] !== undefined))
+    {
+        url = 'listadoDePropiedades.php?idBarrio=' + botones[0].value + '&idEstado=' + botones[1].value + '&idTipo=' + botones[2].value ;
+    }else if((botones[0] !== undefined) && (botones[1] !== undefined) && (botones[2] == undefined))
+    {
+        url = 'listadoDePropiedades.php?idBarrio=' + botones[0].value + '&idEstado=' + botones[1].value + '&idTipo=0';
+    }else if((botones[0] !== undefined) && (botones[1] == undefined) && (botones[2] == undefined))
+    {
+        url = 'listadoDePropiedades.php?idBarrio=' + botones[0].value + '&idEstado=0&idTipo=0';
+    }else{
+        url = 'listadoDePropiedades.php?idBarrio=0&idEstado=0&idTipo=0';
+    }
+     location.href = url;
 }
 function limpiarFiltros(){
     url = 'listadoDePropiedades.php?idBarrio=0&idEstado=0&idTipo=0';
