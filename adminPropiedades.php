@@ -1,5 +1,6 @@
 <?php
     require 'funciones/conexion.php';
+    require 'config/config.php';
     require 'funciones/propiedad.php';
     include 'html/header.html';
     $propiedades = listarPropiedades();

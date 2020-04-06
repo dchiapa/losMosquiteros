@@ -40,7 +40,7 @@
 </form>
 
 <?php
-    if ( isset( $_GET['error'] ) ){
+    if ( isset( $_GET['error']) ){
 ?>
 
 <script>
@@ -57,6 +57,23 @@
     }
 ?>
 
+<?php
+    if ( isset( $_GET['errorAut']) ){
+?>
+
+<script>
+        Swal.fire(
+  'Usted no posee permiso para ingresar!',
+  'Se encuentra registrado?',
+  'error'
+)
+
+</script>
+
+       
+<?php
+    }
+?>
 
 
 	</main>
