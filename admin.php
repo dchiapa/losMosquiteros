@@ -1,4 +1,8 @@
 <?php
+	require 'config/config.php';
+	require 'funciones/usuarios.php';
+	autenticar();
+	
 	include 'html/header.html';
 ?>
 <body>
