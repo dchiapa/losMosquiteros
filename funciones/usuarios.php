@@ -135,8 +135,11 @@ function autenticarAdmin()
 
 function autenticarInvitado()
 {
+	$admin = $_SESSION['loginAdmin'] ;
+	$invitado = $_SESSION['loginInvitado'];
+
 	
-	if (!isset($_SESSION['loginAdmin'], $_SESSION['loginInvitado'])) {
+	if (!isset($admin, $invitado)) {
 		header('location: formLogin.php?errorAut=2');
 	}
 }
