@@ -26,12 +26,15 @@
     function verEstadoPorID()
     {
         $idEstado = $_GET['idEstado'];
-        $link = conectar();
-        $sql = "SELECT idEstado, valorEstado From estado
-                WHERE idEstado = ".$idEstado;
-        $resultado = mysqli_query($link, $sql)
-                    or die(mysqli_error($link));
-        $estado = mysqli_fetch_assoc($resultado);
+        $estado = '';
+        if ($idEstado != 0) {
+            $link = conectar();
+            $sql = "SELECT idEstado, valorEstado From estado
+                    WHERE idEstado = ".$idEstado;
+            $resultado = mysqli_query($link, $sql)
+            or die(mysqli_error($link));
+            $estado = mysqli_fetch_assoc($resultado);
+        }
         return $estado;
     }
 
