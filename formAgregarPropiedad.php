@@ -1,8 +1,8 @@
 <?php
     require 'funciones/conexion.php';
-    require 'funciones/Estado.php';
-    require 'funciones/Tipo.php';
-    require 'funciones/Barrio.php';
+    require 'funciones/estado.php';
+    require 'funciones/tipo.php';
+    require 'funciones/barrio.php';
     include 'html/header.html';
     $estados = listarEstados();
     $tipos = listarTipos();

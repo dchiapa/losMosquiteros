@@ -1,6 +1,6 @@
 <?php
     require 'funciones/conexion.php';
-    require 'funciones/Estado.php';
+    require 'funciones/estado.php';
     include 'html/header.html';
     $Estados = listarEstados();
 ?>
