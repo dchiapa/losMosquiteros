@@ -48,10 +48,19 @@
 ?>
                     	<button class=" btn btn-danger my-2 w-100" id="btnLimpiar">Limpiar</button>
                 	</div>
-				
 					<hr>
 					<div id="filtros">
-						<h5>Ubicación</h2>
+						<div id="ub">
+							<h5 class="ub-tit d-inline mr-5 cerrado">Ubicación</h5>
+							<p id="ub-btn" class=" d-inline ml-5 " value="0"> ▼ </p>
+							<div id="ud-opciones" class="d-none">
+								<ul>
+									<li>item 1</li>
+									<li>item 2</li>
+									<li>item 3</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</aside>

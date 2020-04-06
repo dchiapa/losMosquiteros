@@ -129,14 +129,14 @@
 function autenticarAdmin()
 {
 	if(!isset($_SESSION['loginAdmin'])) {
-		header('location: formLogin.php?errorAut=1');
+		header('location: formLogin.php?errorAut=2');
 	}
 }
 
 function autenticarInvitado()
 {
-	if (!isset($_SESSION['loginAdmin']) || !isset($_SESSION['loginInvitado'])) {
-		header('location: formLogin.php?errorAut=1');
+	if (!isset($_SESSION['loginAdmin']) && !isset($_SESSION['loginInvitado'])){
+		header('location: formLogin.php?errorAut=2');
 	}
 }
 
