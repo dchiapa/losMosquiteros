@@ -26,11 +26,26 @@
 		</header>
         <div class="row mx-auto pt-2">
             <aside class="col-3 mx-auto">
-                <div class="card px-4 shadow">
-					<h2>Filtros activos</h2>
-					<p class=" btn btn-primary "><?= $tipo['valorTipo'] ?></p>
-					<p class=" btn btn-primary "><?= $estado['valorEstado'] ?></p>
-                    <p class=" btn btn-danger ">Limpiar</p>
+                <div class="card px-4 mx-auto shadow">
+					<h2 class="text-center">Filtros activos</h2>
+<?php
+	if($barrio != ''){
+?>
+					<button class=" btn btn-primary btnFiltro my-2" id="idBarrio" value="<?= $barrio['idBarrio'] ?>"><?= $barrio['valorBarrio'] ?></button>
+<?php
+	}
+	if($estado != ''){
+?>
+					<button class=" btn btn-primary btnFiltro my-2" id="idEstado" value="<?= $estado['idEstado'] ?>"><?= $estado['valorEstado'] ?></button>
+<?php
+}
+	if($tipo != ''){
+?>
+					<button class=" btn btn-primary btnFiltro my-2" id="idTipo" value="<?= $tipo['idTipo'] ?>"><?= $tipo['valorTipo'] ?></button>
+<?php
+}
+?>
+                    <button class=" btn btn-danger my-2" id="btnLimpiar">Limpiar</button>
                 </div>
 			</aside>
 			<section class="col-9">
@@ -81,6 +96,7 @@
 
 			</section>
         </div>
+		<script src="js/filtros.js"></script>
 	</main>
 <?php
 	include 'html/footer.html';

@@ -26,12 +26,15 @@
 	function verBarrioPorID()
 	{
 		$idBarrio = $_GET['idBarrio'];
-		$link = conectar();
-		$sql = "SELECT idBarrio, valorBarrio From barrio
-				WHERE idBarrio = ".$idBarrio;
-		$resultado = mysqli_query($link, $sql)
-					or die(mysqli_error($link));
-		$barrio = mysqli_fetch_assoc($resultado);
+		$barrio = '';
+		if ($idBarrio != 0) {
+			$link = conectar();
+			$sql = "SELECT idBarrio, valorBarrio From barrio
+					WHERE idBarrio = ".$idBarrio;
+			$resultado = mysqli_query($link, $sql)
+						or die(mysqli_error($link));
+			$barrio = mysqli_fetch_assoc($resultado);
+		}
 		return $barrio;
 	}
 
