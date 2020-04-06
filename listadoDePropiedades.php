@@ -26,27 +26,34 @@
 		</header>
         <div class="row mx-auto pt-2">
             <aside class="col-3 mx-auto">
-                <div class="card px-4 mx-auto shadow">
-					<h2 class="text-center">Filtros activos</h2>
+                <div class=" card px-4 mx-auto shadow">
+					<div class="filtrosActivos">
+						<h2 class="text-center">Filtros activos</h2>
 <?php
 	if($barrio != ''){
 ?>
-					<button class=" btn btn-primary btnFiltro my-2" id="idBarrio" value="<?= $barrio['idBarrio'] ?>"><?= $barrio['valorBarrio'] ?></button>
+						<button class=" btnFiltro btn btn-primary my-2 w-100" id="idBarrio" value="<?= $barrio['idBarrio'] ?>"><?= $barrio['valorBarrio'] ?></button>
 <?php
 	}
 	if($estado != ''){
 ?>
-					<button class=" btn btn-primary btnFiltro my-2" id="idEstado" value="<?= $estado['idEstado'] ?>"><?= $estado['valorEstado'] ?></button>
+						<button class=" btnFiltro btn btn-primary my-2 w-100" id="idEstado" value="<?= $estado['idEstado'] ?>"><?= $estado['valorEstado'] ?></button>
 <?php
 }
 	if($tipo != ''){
 ?>
-					<button class=" btn btn-primary btnFiltro my-2" id="idTipo" value="<?= $tipo['idTipo'] ?>"><?= $tipo['valorTipo'] ?></button>
+						<button class=" btnFiltro btn btn-primary my-2 w-100" id="idTipo" value="<?= $tipo['idTipo'] ?>"><?= $tipo['valorTipo'] ?></button>
 <?php
 }
 ?>
-                    <button class=" btn btn-danger my-2" id="btnLimpiar">Limpiar</button>
-                </div>
+                    	<button class=" btn btn-danger my-2 w-100" id="btnLimpiar">Limpiar</button>
+                	</div>
+				
+					<hr>
+					<div id="filtros">
+						<h5>Ubicación</h2>
+					</div>
+				</div>
 			</aside>
 			<section class="col-9">
 <?php
