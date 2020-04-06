@@ -1,6 +1,8 @@
 <?php
     require 'funciones/conexion.php';
+    require 'config/config.php';
     require 'funciones/usuarios.php';
+    autenticarAdmin();
     include 'html/header.html';
     $usuarios = listarUsuarios();
 ?>

@@ -1,5 +1,8 @@
 <?php
     require 'funciones/conexion.php';
+    require 'config/config.php';
+    require 'funciones/usuarios.php';
+    autenticarAdmin();
     require 'funciones/estado.php';
     include 'html/header.html';
     $estados = listarEstados();
