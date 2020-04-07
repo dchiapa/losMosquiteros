@@ -23,7 +23,7 @@
         </header>
         <div class="col-6 mx-auto">
             <h2 class="d-block text-center my-5">Agregar propiedad</h2>
-            <form action="agregarPropiedad.php" method="POST">
+            <form action="agregarPropiedad.php" method="POST" enctype="multipart/form-data">
                 <label>Estado: </label>
                 <select name="idEstado" class="form-control" required>
                     <option value="">Seleccione un estado</option>
@@ -122,6 +122,10 @@
                 <br>
                 <label>Cloacas: </label>
                 <input type="checkbox" name="proCloacas" value="1">
+                <br>
+                <br>
+                <label>Imagenes:</label> 
+                <input type="file" name="idImagenPrincipal" class="form-control">
                 <br>
 
                 <button class="btn btn-dark">Agregar</button>
