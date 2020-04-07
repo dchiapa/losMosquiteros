@@ -1,6 +1,8 @@
 <?php
     require 'funciones/conexion.php';
     require 'config/config.php';
+    require 'funciones/usuarios.php';
+	$usuario = autenticarInvitado();
     require 'funciones/propiedad.php';
     include 'html/header.html';
     $propiedades = listarPropiedades();
