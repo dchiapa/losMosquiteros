@@ -1,5 +1,8 @@
 <?php
     require 'funciones/conexion.php';
+    require 'config/config.php';
+	require 'funciones/usuarios.php';
+	$usuario = autenticarAdmin();
     require 'funciones/Estado.php';
     include 'html/header.html';
     $estado = verEstadoPorID();
