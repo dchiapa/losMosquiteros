@@ -1,4 +1,7 @@
 <?php
+    require 'config/config.php';
+	require 'funciones/usuarios.php';
+	$usuario = autenticarAdmin();
     include 'html/header.html';
 ?>
 <body>
