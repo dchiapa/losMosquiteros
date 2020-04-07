@@ -305,4 +305,13 @@
 		return $resultado;
     }
 
-
+    ###################################
+    ###########   FILTROS   ###########
+    function listarAmbientes()
+    {
+        $link = conectar();
+        $sql = "SELECT DISTINCT ambientes FROM propiedades ORDER BY ambientes ASC";
+        $resultado = mysqli_query($link, $sql)
+					or die(mysqli_error($link));
+		return $resultado;
+    }

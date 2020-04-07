@@ -12,6 +12,7 @@
 	$tipos = listarTipos();
 	$estados = listarEstados();
 	$barrios = listarBarrios();
+	$ambientes = listarAmbientes();
 	$propiedades = buscarPropiedades();
 ?>
 <body>
