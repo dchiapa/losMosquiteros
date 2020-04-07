@@ -5,8 +5,8 @@
 	
 ?>
 <body>
-	<main id="login">
-		<header class="card-header border-0 mb-5">
+	<main id="ppal">
+		<header class="card-header border-0">
 			<img src="img/logo2.jpeg" alt="Logo de Los mosquiteros">
 			<h1 class="d-none">Los Mosquiteros</h1>
 			<nav>
@@ -18,15 +18,15 @@
 			</nav>
 		</header>
     <form action="login.php" method="POST">
-      <div class=" card form-group col-4 mx-auto mt-5">
+      <div class=" card form-group mx-auto">
         <h2 class="text-center">Saludo</h2>
-        <div class="input-group mb-4">
+        <div class="input-group mb-2">
           <div class="input-group-prepend">
             <div class="contenedorLogo"><img src="img/logoEmail.png" alt="" class="logoPass"></div>
           </div>
           <input type="text" name= "usuEmail"class="form-control" id="inlineFormInputGroup" >
         </div>
-        <div class="input-group mb-4">
+        <div class="input-group mb-2">
           <div class="input-group-prepend">
             <div class="contenedorLogo"><img src="img/logoPass.png" alt="" class="logoPass"></div>
           </div>
