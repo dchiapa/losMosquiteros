@@ -1,21 +1,18 @@
 let ambientes = document.getElementsByClassName('ambientes');
 let input = document.getElementById('ambientes');
 let ambiente;
-let mensaje = '';
+
 for (let i = 0; i < ambientes.length; i++) {
     ambiente = ambientes[i].addEventListener('click', seleccionAmbientes);
 }
 
 function seleccionAmbientes(e) {
-    ambiente = e.target;
-    if (ambiente.checked) {
-        
-        mensaje = mensaje + ambiente.value + ',';
-    }else{
-        mensaje.replace(ambiente.value, '0');
+    for (let i = 0; i < ambientes.length; i++) {
+        ambiente = ambientes[i].classList.replace('btn-success', 'btn-secondary');
     }
-    
-    input.value = mensaje;
-console.log(input);    
+    ambiente = e.target;
+    ambiente.classList.replace('btn-secondary', 'btn-success');
+    input.value = ambiente.firstChild.data;
+    console.log(input);
 }
 

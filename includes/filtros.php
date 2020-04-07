@@ -77,14 +77,13 @@
 <?php
 	while ($ambiente = mysqli_fetch_assoc($ambientes)) {
 ?>					
-				<div class="d-inline mx-3">
-					<input type="checkbox" name="ambientes" class="ambientes" value="<?= $ambiente['ambientes'] ?>">
-					<label for="ambientes"><?= $ambiente['ambientes'] ?></label>
+				<div class="d-inline mx-2">
+					<label class="ambientes btn btn-secondary  mx"data-amb="<?= $ambiente['ambientes'] ?>"><?= $ambiente['ambientes'] ?></label>	
 				</div>
 <?php
 	}
 ?>				
-				<input type="hidden" id="ambientes">
+				<input type="hidden" id="ambientes" name="ambientes" value="0">
 			</div>
 			<hr>
 			<button class="btn btn-danger w-100">Buscar</button>
