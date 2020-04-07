@@ -1,7 +1,7 @@
 <?php
 	require 'funciones/conexion.php';
     require 'funciones/barrio.php';
-    include 'html/header.html';
+    include 'includes/header.html';
     $existe = verBarrioPorValor();
 	if ($existe == null ){
         $chequeo = modificarBarrio();
@@ -80,5 +80,5 @@
 ?>
 	</main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

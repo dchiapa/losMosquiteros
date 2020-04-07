@@ -33,7 +33,9 @@ body {
 .formModificar {
     min-height: 576px;
 }
-
+#login{
+    min-height: 560px;
+}
 .Usuario {
     min-height: 700px;
 }
@@ -55,6 +57,7 @@ header {
 #adminUsuarios header,
 #adminPropiedades header,
 #listaProp header,
+#login header,
 .formAgregar header,
 .formEliminar header,
 .agregar header,

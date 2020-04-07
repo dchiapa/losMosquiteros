@@ -1,7 +1,7 @@
 <?php
     require 'funciones/conexion.php';
     require 'funciones/tipo.php';
-    include 'html/header.html';
+    include 'includes/header.html';
     $check = tipoEnUso();
     if ($check == 0 ){
         $tipo = verTipoPorID();
@@ -45,7 +45,7 @@
         </div>
     </main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>
 
 

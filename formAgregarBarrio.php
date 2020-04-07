@@ -1,5 +1,5 @@
 <?php
-    include 'html/header.html';
+    include 'includes/header.html';
 ?>
 <body>
     <main class="formAgregar">
@@ -25,5 +25,5 @@
         </div>
     </main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

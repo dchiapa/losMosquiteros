@@ -1,7 +1,7 @@
 <?php
 	require 'funciones/conexion.php';
     require 'funciones/usuarios.php';
-    include 'html/header.html';
+    include 'includes/header.html';
     $chequeo = eliminarUsuario();
 ?>
 <body>
@@ -58,5 +58,5 @@
         </div>
 	</main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

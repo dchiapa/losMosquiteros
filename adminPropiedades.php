@@ -2,7 +2,7 @@
     require 'funciones/conexion.php';
     require 'config/config.php';
     require 'funciones/propiedad.php';
-    include 'html/header.html';
+    include 'includes/header.html';
     $propiedades = listarPropiedades();
 ?>
 <body>
@@ -75,11 +75,6 @@
             </div>
         </div>
     </main>
-
-
-
-
-
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

@@ -4,7 +4,7 @@
     require 'funciones/tipo.php';
     require 'funciones/barrio.php';
     require 'funciones/propiedad.php';
-    include 'html/header.html';
+    include 'includes/header.html';
     $estados = listarEstados();
     $tipos = listarTipos();
     $barrios = listarBarrios();
@@ -236,6 +236,6 @@
         </div>
     </main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>
 

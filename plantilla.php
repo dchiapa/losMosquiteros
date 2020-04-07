@@ -2,7 +2,7 @@
 	require 'funciones/conexion.php';
 	require 'funciones/tipo.php';
 	require 'funciones/estado.php';
-	include 'html/header.html';
+	include 'includes/header.html';
 	$tipos = listarTipos();
 	$estados = listarEstados();
 ?>
@@ -22,5 +22,5 @@
 
 	</main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

@@ -4,7 +4,7 @@
     require 'funciones/usuarios.php';
     autenticarAdmin();
     require 'funciones/barrio.php';
-    include 'html/header.html';
+    include 'includes/header.html';
     $barrios = listarBarrios();
 ?>
 <body>
@@ -60,5 +60,5 @@
         </div>
     </main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

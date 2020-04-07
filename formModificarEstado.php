@@ -1,7 +1,7 @@
 <?php
     require 'funciones/conexion.php';
     require 'funciones/Estado.php';
-    include 'html/header.html';
+    include 'includes/header.html';
     $estado = verEstadoPorID();
 ?>
 <body>
@@ -29,6 +29,6 @@
         </div>
     </main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>
 

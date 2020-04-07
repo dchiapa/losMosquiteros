@@ -1,7 +1,7 @@
 <?php
 	require 'funciones/conexion.php';
     require 'funciones/tipo.php';
-    include 'html/header.html';
+    include 'includes/header.html';
     $chequeo = eliminarTipo();
 ?>
 <body>
@@ -57,5 +57,5 @@
 ?>
 </main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

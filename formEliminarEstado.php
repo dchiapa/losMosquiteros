@@ -1,7 +1,7 @@
 <?php
     require 'funciones/conexion.php';
     require 'funciones/estado.php';
-    include 'html/header.html';
+    include 'includes/header.html';
     $check = estadoEnUso();
     if ($check == 0 ){
         $estado = verEstadoPorID();
@@ -45,5 +45,5 @@
         </div>
     </main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

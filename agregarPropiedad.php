@@ -1,7 +1,7 @@
 <?php
 	require 'funciones/conexion.php';
 	require 'funciones/propiedad.php';
-    include 'html/header.html';
+    include 'includes/header.html';
     $chequeo = agregarPropiedad();
 
 ?>
@@ -59,5 +59,5 @@
 ?>
 	</main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

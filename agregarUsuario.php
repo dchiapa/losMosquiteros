@@ -1,7 +1,7 @@
 <?php
 	require 'funciones/conexion.php';
 	require 'funciones/usuarios.php';
-	include 'html/header.html';
+	include 'includes/header.html';
 	$existe = verUsuarioPorValor();
 	if ($existe == null ){
         $chequeo = agregarUsuario();
@@ -80,5 +80,5 @@
 ?>
 	</main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

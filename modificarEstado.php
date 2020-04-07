@@ -1,7 +1,7 @@
 <?php
 	require 'funciones/conexion.php';
     require 'funciones/estado.php';
-    include 'html/header.html';
+    include 'includes/header.html';
     $existe = verEstadoPorValor();
     if ($existe == null ){
           $chequeo = modificarEstado();
@@ -79,5 +79,5 @@
 ?>
 	</main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

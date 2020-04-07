@@ -1,7 +1,7 @@
 <?php
 	require 'funciones/conexion.php';
 	require 'funciones/tipo.php';
-	include 'html/header.html';
+	include 'includes/header.html';
 	$existe = verTipoPorValor();
 	if ($existe == null ){
         $chequeo = agregarTipo();
@@ -80,5 +80,5 @@
 ?>
 	</main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

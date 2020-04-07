@@ -3,7 +3,7 @@
     require 'config/config.php';
     require 'funciones/usuarios.php';
     autenticarAdmin();
-    include 'html/header.html';
+    include 'includes/header.html';
     $usuarios = listarUsuarios();
 ?>
 <body>
@@ -67,5 +67,5 @@
         </div>
     </main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

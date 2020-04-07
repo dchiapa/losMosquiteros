@@ -2,8 +2,7 @@
 	require 'config/config.php';
 	require 'funciones/usuarios.php';
 	$usuario = autenticarInvitado();
-	
-	include 'html/header.html';
+	include 'includes/header.html';
 ?>
 <body>
 	<main id="admin">
@@ -38,5 +37,5 @@
 		</div>
 	</main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

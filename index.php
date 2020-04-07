@@ -6,7 +6,7 @@
 	$tipos = listarTipos();
 	$estados = listarEstados();
 	$barrios = listarBarrios();
-	include 'html/header.html';
+	include 'includes/header.html';
 ?>
 <body>
 	<main id="ppal">
@@ -65,5 +65,5 @@
 		<script src="js/estado.js"></script>
 	</main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>

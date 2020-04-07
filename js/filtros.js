@@ -1,15 +1,20 @@
 document.getElementById('btnLimpiar').addEventListener('click', limpiarFiltros);
-document.getElementById('ub-btn').addEventListener('click', extender);
+let filtros = document.getElementsByClassName('desFiltro');
 let botones = document.getElementsByClassName('btnFiltro');
 let valores = '';
-let boton, padre;
+let boton, filtro , padre;
 let url;
 
 for (let i = 0; i < botones.length; i++) {
-    boton = botones[i].addEventListener('click', botonApretado);
+    boton = botones[i].addEventListener('click', seleccionarFiltro);
     
 }
-function botonApretado(e) {
+for (let i = 0; i < filtros.length; i++) {
+    filtro = filtros[i].addEventListener('click', extenderFiltros);
+    
+}
+
+function seleccionarFiltro(e) {
     boton = e.target;
     boton.value = 0;
     if((botones[0] !== undefined) && (botones[1] !== undefined) && (botones[2] !== undefined))
@@ -30,7 +35,7 @@ function limpiarFiltros(){
     url = 'listadoDePropiedades.php?idBarrio=0&idEstado=0&idTipo=0';
     location.href = url;
 }
-function extender(e){
+function extenderFiltros(e){
     padre = e.target.parentNode
     if(e.target.textContent == '▼'){
         e.target.textContent = '▲';

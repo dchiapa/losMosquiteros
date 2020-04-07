@@ -5,10 +5,13 @@
 	require 'funciones/barrio.php';
 	require 'funciones/propiedad.php';
 	require 'funciones/imagen.php';
-	include 'html/header.html';
+	include 'includes/header.html';
 	$tipo = verTipoPorID();
 	$estado = verEstadoPorID();
 	$barrio = verBarrioPorID();
+	$tipos = listarTipos();
+	$estados = listarEstados();
+	$barrios = listarBarrios();
 	$propiedades = buscarPropiedades();
 ?>
 <body>
@@ -25,45 +28,9 @@
 			</nav>
 		</header>
         <div class="row mx-auto pt-2">
-            <aside class="col-3 mx-auto">
-                <div class=" card px-4 mx-auto shadow">
-					<div class="filtrosActivos">
-						<h2 class="text-center">Filtros activos</h2>
 <?php
-	if($barrio != ''){
+	include 'includes/filtros.php';
 ?>
-						<button class=" btnFiltro btn btn-primary my-2 w-100" id="idBarrio" value="<?= $barrio['idBarrio'] ?>"><?= $barrio['valorBarrio'] ?></button>
-<?php
-	}
-	if($estado != ''){
-?>
-						<button class=" btnFiltro btn btn-primary my-2 w-100" id="idEstado" value="<?= $estado['idEstado'] ?>"><?= $estado['valorEstado'] ?></button>
-<?php
-}
-	if($tipo != ''){
-?>
-						<button class=" btnFiltro btn btn-primary my-2 w-100" id="idTipo" value="<?= $tipo['idTipo'] ?>"><?= $tipo['valorTipo'] ?></button>
-<?php
-}
-?>
-                    	<button class=" btn btn-danger my-2 w-100" id="btnLimpiar">Limpiar</button>
-                	</div>
-					<hr>
-					<div id="filtros">
-						<div id="ub">
-							<h5 class="ub-tit d-inline mr-5 cerrado">Ubicación</h5>
-							<p id="ub-btn" class=" d-inline ml-5 " value="0"> ▼ </p>
-							<div id="ud-opciones" class="d-none">
-								<ul>
-									<li>item 1</li>
-									<li>item 2</li>
-									<li>item 3</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</aside>
 			<section class="col-9">
 <?php
 	while ($propiedad = mysqli_fetch_assoc($propiedades)) {
@@ -115,5 +82,5 @@
 		<script src="js/filtros.js"></script>
 	</main>
 <?php
-	include 'html/footer.html';
+	include 'includes/footer.html';
 ?>
