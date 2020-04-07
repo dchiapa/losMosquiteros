@@ -1,5 +1,8 @@
 <?php
 	require 'funciones/conexion.php';
+	require 'config/config.php';
+	require 'funciones/usuarios.php';
+	$usuario = autenticarAdmin();
     require 'funciones/barrio.php';
     include 'html/header.html';
     $chequeo = eliminarBarrio();
