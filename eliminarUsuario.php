@@ -2,12 +2,8 @@
     require 'funciones/conexion.php';
     require 'config/config.php';
     require 'funciones/usuarios.php';
-<<<<<<< HEAD
     include 'includes/header.html';
-=======
     $usuario = autenticarAdmin();
-    include 'html/header.html';
->>>>>>> 0cef1384cabd14c1120646e45b3af54b0b3b1629
     $chequeo = eliminarUsuario();
 ?>
 <body>

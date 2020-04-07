@@ -1,14 +1,10 @@
 <?php
     require 'funciones/conexion.php';
-<<<<<<< HEAD
+    require 'funciones/usuarios.php';
+    require 'config/config.php';
     require 'funciones/usuarios.php';
     include 'includes/header.html';
-=======
-    require 'config/config.php';
-	require 'funciones/usuarios.php';
 	$usuario = autenticarAdmin();
-    include 'html/header.html';
->>>>>>> 0cef1384cabd14c1120646e45b3af54b0b3b1629
     $barrios = listarUsuarios();
 ?>
 <body>
