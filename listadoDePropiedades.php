@@ -1,4 +1,5 @@
 <?php
+require 'config/config.php';
 	require 'funciones/conexion.php';
 	require 'funciones/tipo.php';
 	require 'funciones/estado.php';
@@ -13,9 +14,12 @@
 	$estados = listarEstados();
 	$barrios = listarBarrios();
 	$ambientes = listarAmbientes();
+	$baños = listarBaños();
+	$dormitorios = listarDormitorios();
 	$propiedades = buscarPropiedades();
 ?>
 <body>
+	
 	<main id="listaProp">
 		<header class="card-header border-0">
 			<img src="img/logo2.jpeg" alt="Logo de Los mosquiteros">
@@ -75,11 +79,26 @@
 
 <?php
 	}
+	if (mysqli_num_rows($propiedades) == 0) {
 ?>
-
-
+				<script>
+					Swal.fire({
+            			title: 'Busqueda sin resultados',
+            	  		type: 'error',
+            	  		showCancelButton: false,
+            	  		confirmButtonColor: '#d33',
+            	  		confirmButtonText: 'Volver a inicio'
+            		}).then((result) => {
+            	  	if (result.value) {
+            	    	window.location = 'index.php'
+            	  	}
+            	})
+		 		</script>
+<?php
+	}
+?>
 			</section>
-        </div>
+		</div>
 		<script src="js/filtros.js"></script>
 	</main>
 <?php

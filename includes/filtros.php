@@ -86,6 +86,36 @@
 				<input type="hidden" id="ambientes" name="ambientes" value="0">
 			</div>
 			<hr>
+			<div>
+				<label>Baños:</label>
+				<br>
+<?php
+	while ($baño = mysqli_fetch_assoc($baños)) {
+?>					
+				<div class="d-inline mx-2">
+					<label class="baños btn btn-secondary  mx"><?= $baño['proBaños'] ?></label>	
+				</div>
+<?php
+	}
+?>				
+				<input type="hidden" id="proBaños" name="proBaños" value="0">
+			</div>
+			<hr>
+			<div>
+				<label>Dormitorios:</label>
+				<br>
+<?php
+	while ($dormitorio = mysqli_fetch_assoc($dormitorios)) {
+?>					
+				<div class="d-inline mx-2">
+					<label class="dormitorios btn btn-secondary  mx"><?= $dormitorio['proDormitorios'] ?></label>	
+				</div>
+<?php
+	}
+?>				
+				<input type="hidden" id="proDormitorios" name="proDormitorios" value="0">
+			</div>
+			<hr>
 			<button class="btn btn-danger w-100">Buscar</button>
 		</form>
 	</div>

@@ -29,28 +29,65 @@
         $idBarrio = $_GET['idBarrio'];
         $idEstado = $_GET['idEstado'];
         $idTipo = $_GET['idTipo'];
-        $buscar = "WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idBarrio =  $idBarrio AND p.idEstado = $idEstado AND p.idTipo = $idTipo ";
-        if ($idBarrio == 0) {
-            $buscar = "WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idEstado = $idEstado AND p.idTipo = $idTipo ";
+        $ambientes = $_GET['ambientes'];
+        $baños = $_GET['proBaños'];
+        $dormitorios = $_GET['proDormitorios'];    
+        $buscar = "";
+        switch ($idBarrio) {
+            case 0:
+                $buscar = $buscar."";
+                break;
+ 
+            default:
+                $buscar = $buscar." AND p.idBarrio =  $idBarrio";
+                break;
         }
-        if ($idEstado == 0) {
-            $buscar = " WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idBarrio = $idBarrio AND p.idTipo = $idTipo ";
+        switch ($idEstado) {
+            case '0':
+                $buscar = $buscar."";
+                break;
+            
+            default:
+                $buscar = $buscar." AND p.idEstado =  $idEstado";
+                break;
         }
-        if ($idTipo == 0) {
-            $buscar = " WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idBarrio = $idBarrio AND p.idEstado = $idEstado ";
+        switch ($idTipo) {
+            case '0':
+                $buscar = $buscar."";
+                break;
+            
+            default:
+                $buscar = $buscar." AND p.idTipo =  $idTipo";
+                break;
         }
-        if ($idBarrio == 0 && $idEstado == 0 ){
-            $buscar = " WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idTipo = $idTipo ";
+        switch ($ambientes) {
+            case '0':
+                $buscar = $buscar."";
+                break;
+            
+            default:
+                $buscar = $buscar." AND p.ambientes =  $ambientes";
+                break;
         }
-        if( $idEstado == 0 && $idTipo == 0 ){
-            $buscar = " WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idBarrio = $idBarrio";
+        switch ($baños) {
+            case '0':
+                $buscar = $buscar."";
+                break;
+            
+            default:
+                $buscar = $buscar." AND p.proBaños =  $baños";
+                break;
         }
-        if( $idBarrio == 0 && $idTipo == 0 ){
-            $buscar = " WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo AND p.idEstado = $idEstado";
+        switch ($dormitorios) {
+            case '0':
+                $buscar = $buscar."";
+                break;
+            
+            default:
+                $buscar = $buscar." AND p.proDormitorios =  $dormitorios";
+                break;
         }
-        if($idBarrio == 0 && $idEstado == 0 && $idTipo == 0 ){
-            $buscar = 'WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo ';
-        }
+        
         $link = conectar();
         $sql = "SELECT idPropiedad, p.idBarrio, b.valorBarrio,
 		            p.idEstado, e.valorEstado, p.idTipo, t.valorTipo,
@@ -61,8 +98,8 @@
                     proQuincho,proParrilla, proJardin, proLuzEle,
                     proAguaCorriente,proAguaPozo, proGasNatural,
                     proGasEmbasado,proCloacas
-                FROM propiedades p, barrio b, estado e, tipo t ".$buscar."
-         ORDER BY b.valorBarrio ASC";
+                FROM propiedades p, barrio b, estado e, tipo t WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo ".$buscar."
+                ORDER BY b.valorBarrio ASC";
         $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
         return $resultado;
     }
@@ -311,6 +348,22 @@
     {
         $link = conectar();
         $sql = "SELECT DISTINCT ambientes FROM propiedades ORDER BY ambientes ASC";
+        $resultado = mysqli_query($link, $sql)
+					or die(mysqli_error($link));
+		return $resultado;
+    }
+    function listarBaños()
+    {
+        $link = conectar();
+        $sql = "SELECT DISTINCT proBaños FROM propiedades ORDER BY proBaños ASC";
+        $resultado = mysqli_query($link, $sql)
+					or die(mysqli_error($link));
+		return $resultado;
+    }
+    function listarDormitorios()
+    {
+        $link = conectar();
+        $sql = "SELECT DISTINCT proDormitorios FROM propiedades ORDER BY proDormitorios ASC";
         $resultado = mysqli_query($link, $sql)
 					or die(mysqli_error($link));
 		return $resultado;
