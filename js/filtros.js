@@ -33,7 +33,7 @@ function seleccionAmbientes(e) {
 }
 
 function seleccionBaños(e) {
-    input = document.getElementById('Baños');
+    input = document.getElementById('proBaños');
     baño = e.target;
     if (baño.classList.contains('activo')) {
         baño.classList.replace('btn-success', 'btn-secondary');
@@ -51,7 +51,7 @@ function seleccionBaños(e) {
 }
 
 function seleccionDormitorios(e) {
-    input = document.getElementById('dormitorios');
+    input = document.getElementById('proDormitorios');
     dormitorio = e.target;
     if (dormitorio.classList.contains('activo')) {
         dormitorio.classList.replace('btn-success', 'btn-secondary');
