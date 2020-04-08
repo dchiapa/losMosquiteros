@@ -58,7 +58,9 @@
 				</select>
 				<input type="hidden" id="idEstado" name="idEstado" value="0">
 				<input type="hidden" id="ambientes" name="ambientes" value="0">
+				<input type="hidden" id="antiguedad" name="proAntiguedad" value="0">
 				<input type="hidden" id="baños" name="proBaños" value="0">
+				<input type="hidden" id="cocheras" name="proCocheras" value="0">				
 				<input type="hidden" id="dormitorios" name="proDormitorios" value="0">
 				<button class="btn btn-info col-2">Buscar</button>
 				<div class="col-2"></div>

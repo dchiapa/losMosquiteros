@@ -112,6 +112,39 @@
 				<input type="hidden" id="proDormitorios" name="proDormitorios" value="0">
 			</div>
 			<hr>
+			<div>
+				<label>Antiguedad:</label>
+				<br>				
+				<div class="d-inline mx-auto">
+					<button type="button" class="antiguedad btn btn-secondary my-2 w-100" value="<10">Hasta 10 años</button>	
+				</div>	
+				<div class="d-inline mx-auto">
+					<button type="button" class="antiguedad btn btn-secondary my-2 w-100" value="<30">Entre 10 y 30 años</button>	
+				</div>
+				<div class="d-inline mx-auto">
+					<button type="button" class="antiguedad btn btn-secondary my-2 w-100" value="<50">Entre 30 y 50 años</button>	
+				</div>	
+				<div class="d-inline mx-auto">
+					<button type="button" class="antiguedad btn btn-secondary my-2 w-100" value=">50">Más de 50 años</button>	
+				</div>	
+				<input type="hidden" id="proAntiguedad" name="proAntiguedad" value="0">
+			</div>
+			<hr>
+			<div>
+				<label>Coheras:</label>
+				<br>
+<?php
+	while ($cochera = mysqli_fetch_assoc($cocheras)) {
+?>					
+				<div class="d-inline mx-2">
+					<button type="button" class="cocheras btn btn-secondary" value="<?= $cochera['proCocheras'] ?>"><?= $cochera['proCocheras'] ?></button>	
+				</div>
+<?php
+	}
+?>				
+				<input type="hidden" id="proCocheras" name="proCocheras" value="0">
+			</div>
+			<hr>
 			<button class="btn btn-danger w-100">Buscar</button>
 		</form>
 	</div>

@@ -14,7 +14,9 @@ require 'config/config.php';
 	$estados = listarEstados();
 	$barrios = listarBarrios();
 	$ambientes = listarAmbientes();
+	$antiguedades = listarAntiguedades();
 	$baños = listarBaños();
+	$cocheras = listarCocheras();
 	$dormitorios = listarDormitorios();
 	$propiedades = buscarPropiedades();
 ?>
@@ -90,7 +92,7 @@ require 'config/config.php';
             	  		confirmButtonText: 'Volver a inicio'
             		}).then((result) => {
             	  	if (result.value) {
-            	    	window.location = 'listadoDePropiedades.php?idBarrio=0&idEstado=0&idTipo=0&ambientes=0&proBaños=0&proDormitorios=0'
+            	    	window.location = 'listadoDePropiedades.php?idBarrio=0&idEstado=0&idTipo=0&ambientes=0&proAntiguedad=0&proBaños=0&proCocheras=0&proDormitorios=0'
             	  	}
             	})
 		 		</script>

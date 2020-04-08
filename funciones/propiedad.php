@@ -30,7 +30,9 @@
         $idEstado = $_GET['idEstado'];
         $idTipo = $_GET['idTipo'];
         $ambientes = $_GET['ambientes'];
+        $antiguedad = $_GET['proAntiguedad'];
         $baños = $_GET['proBaños'];
+        $cocheras = $_GET['proCocheras'];
         $dormitorios = $_GET['proDormitorios'];    
         $buscar = "";
         switch ($idBarrio) {
@@ -69,6 +71,23 @@
                 $buscar = $buscar." AND p.ambientes =  $ambientes";
                 break;
         }
+        switch ($antiguedad) {
+            case '0':
+                $buscar = $buscar."";
+                break;
+            case '<10':
+                $buscar = $buscar. " AND p.proAntiguedad < 10";
+                break;
+            case '<30':
+                $buscar = $buscar. " AND p.proAntiguedad > 10 AND p.proAntiguedad < 30";
+                break;
+            case '<50':
+                $buscar = $buscar. " AND p.proAntiguedad > 30 AND p.proAntiguedad < 50";
+                break;
+            case '>50':
+                $buscar = $buscar. " AND p.proAntiguedad > 50";
+                break;
+        }
         switch ($baños) {
             case '0':
                 $buscar = $buscar."";
@@ -76,6 +95,15 @@
             
             default:
                 $buscar = $buscar." AND p.proBaños =  $baños";
+                break;
+        }
+        switch ($cocheras) {
+            case '0':
+                $buscar = $buscar."";
+                break;
+            
+            default:
+                $buscar = $buscar." AND p.proCocheras =  $cocheras";
                 break;
         }
         switch ($dormitorios) {
@@ -344,6 +372,8 @@
 
     ###################################
     ###########   FILTROS   ###########
+
+
     function listarAmbientes()
     {
         $link = conectar();
@@ -352,10 +382,26 @@
 					or die(mysqli_error($link));
 		return $resultado;
     }
+    function listarAntiguedades()
+    {
+        $link = conectar();
+        $sql = "SELECT DISTINCT proAntiguedad FROM propiedades ORDER BY proAntiguedad ASC";
+        $resultado = mysqli_query($link, $sql)
+					or die(mysqli_error($link));
+		return $resultado;
+    }
     function listarBaños()
     {
         $link = conectar();
         $sql = "SELECT DISTINCT proBaños FROM propiedades ORDER BY proBaños ASC";
+        $resultado = mysqli_query($link, $sql)
+					or die(mysqli_error($link));
+		return $resultado;
+    }
+    function listarCocheras()
+    {
+        $link = conectar();
+        $sql = "SELECT DISTINCT proCocheras FROM propiedades ORDER BY proCocheras ASC";
         $resultado = mysqli_query($link, $sql)
 					or die(mysqli_error($link));
 		return $resultado;
