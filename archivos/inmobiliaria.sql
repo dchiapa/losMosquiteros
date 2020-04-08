@@ -71,7 +71,7 @@ CREATE TABLE `propiedades`(
          `proGasNatural` tinyint(1) DEFAULT '0',
          `proGasEmbasado` tinyint(1) DEFAULT '0',
          `proCloacas` tinyint(1) DEFAULT '0',
-         `idImagenPrincipal` int (20)
+         `idImagenPrincipal` tinytext
          );
          
          
@@ -139,8 +139,8 @@ ALTER TABLE `propiedades`
   ADD CONSTRAINT `fk_tipo` FOREIGN KEY (`idTipo`) REFERENCES `tipo` (`idTipo`) ,
   ADD CONSTRAINT `fk_barrio` FOREIGN KEY (`idBarrio`) REFERENCES `barrio` (`idBarrio`) ;
  
- ALTER TABLE `imagenes`
-  ADD CONSTRAINT `fk_imgPropiedad` FOREIGN KEY (`idPropiedad`) REFERENCES `propiedades` (`idPropiedad`) ;
+ /*ALTER TABLE `imagenes`
+  ADD CONSTRAINT `fk_imgPropiedad` FOREIGN KEY (`idPropiedad`) REFERENCES `propiedades` (`idPropiedad`) ;*/
 
 
 		
