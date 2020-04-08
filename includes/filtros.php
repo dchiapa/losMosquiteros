@@ -10,11 +10,10 @@
 ?>
 					<option value="<?= $barrio['idBarrio'] ?>"><?= $barrio['valorBarrio'] ?></option>
 <?php
-	}else{
+	}
 ?>
 					<option value="0">Seleccione una opcion</option>
-<?php
-	}	
+<?php	
 	while($barrio = mysqli_fetch_assoc($barrios)){
 ?>
 		
@@ -33,11 +32,9 @@
 ?>
 					<option value="<?= $estado['idEstado'] ?>"><?= $estado['valorEstado'] ?></option>
 <?php
-	}else{
-?>
+	}?>
 					<option value="0">Seleccione una opcion</option>
 <?php
-	}	
 	while($estado = mysqli_fetch_assoc($estados)){
 ?>
 		
@@ -56,11 +53,10 @@
 ?>
 					<option value="<?= $tipo['idTipo'] ?>"><?= $tipo['valorTipo'] ?></option>
 <?php
-	}else{
+	}
 ?>
 					<option value="0">Seleccione una opcion</option>
 <?php
-	}	
 	while($tipo = mysqli_fetch_assoc($tipos)){
 ?>
 		

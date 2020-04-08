@@ -90,7 +90,7 @@ require 'config/config.php';
             	  		confirmButtonText: 'Volver a inicio'
             		}).then((result) => {
             	  	if (result.value) {
-            	    	window.location = 'index.php'
+            	    	window.location = 'listadoDePropiedades.php'
             	  	}
             	})
 		 		</script>
