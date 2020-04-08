@@ -16,34 +16,63 @@ for (let i = 0; i < dormitorios.length; i++) {
 
 function seleccionAmbientes(e) {
     input = document.getElementById('ambientes');
-    for (let i = 0; i < ambientes.length; i++) {
-        ambientes[i].classList.replace('btn-success', 'btn-secondary');
-    }
     ambiente = e.target;
-    ambiente.classList.replace('btn-secondary', 'btn-success');
-    input.value = ambiente.firstChild.data;
-    console.log(input);
+    if (ambiente.classList.contains('activo')) {
+        ambiente.classList.replace('btn-success', 'btn-secondary');
+        ambiente.classList.remove('activo');
+        input.value = 0;
+    } else {
+        for (let i = 0; i < ambientes.length; i++) {
+            ambientes[i].classList.replace('btn-success', 'btn-secondary');
+            ambientes[i].classList.remove('activo');
+        }
+        ambiente.classList.add('activo');
+        ambiente.classList.replace('btn-secondary', 'btn-success' );
+        input.value = ambiente.value;
+    }
 }
+
 function seleccionBaños(e) {
-    input = document.getElementById('proBaños');
-    for (let i = 0; i < baños.length; i++) {
-        baños[i].classList.replace('btn-success', 'btn-secondary');
-        
-        
-    }
+    input = document.getElementById('Baños');
     baño = e.target;
-    baño.classList.replace('btn-secondary', 'btn-success');
-    input.value = baño.firstChild.data;
-    console.log(input);
-}
-function seleccionDormitorios(e) {
-    input = document.getElementById('proDormitorios');
-    for (let i = 0; i < dormitorios.length; i++) {
-        dormitorios[i].classList.replace('btn-success', 'btn-secondary');
+    if (baño.classList.contains('activo')) {
+        baño.classList.replace('btn-success', 'btn-secondary');
+        baño.classList.remove('activo');
+        input.value = 0;
+    } else {
+        for (let i = 0; i < Baños.length; i++) {
+            Baños[i].classList.replace('btn-success', 'btn-secondary');
+            Baños[i].classList.remove('activo');
+        }
+        baño.classList.add('activo');
+        baño.classList.replace('btn-secondary', 'btn-success' );
+        input.value = baño.value;
     }
-    dormitorio = e.target;
-    dormitorio.classList.replace('btn-secondary', 'btn-success');
-    input.value = dormitorio.firstChild.data;
-    console.log(input);
 }
+
+function seleccionDormitorios(e) {
+    input = document.getElementById('dormitorios');
+    dormitorio = e.target;
+    if (dormitorio.classList.contains('activo')) {
+        dormitorio.classList.replace('btn-success', 'btn-secondary');
+        dormitorio.classList.remove('activo');
+        input.value = 0;
+    } else {
+        for (let i = 0; i < dormitorios.length; i++) {
+            dormitorios[i].classList.replace('btn-success', 'btn-secondary');
+            dormitorios[i].classList.remove('activo');
+        }
+        dormitorio.classList.add('activo');
+        dormitorio.classList.replace('btn-secondary', 'btn-success' );
+        input.value = dormitorio.value;
+    }
+}
+
+
+
+
+
+
+
+
 

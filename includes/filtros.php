@@ -1,7 +1,7 @@
 <aside class="col-3 mx-auto">
     <div class=" card mx-auto p-4 shadow">
     	<h2 class="text-center">Filtros</h2>
-		<form action="listadoDePropiedades.php" method="get">
+		<form action="listadoDePropiedades.php" method="get" class="container">
 			<div>
 				<label for="idBarrio">Barrio:</label>
 				<select name="idBarrio" id="idBarrio" class="w-100">
@@ -74,7 +74,7 @@
 	while ($ambiente = mysqli_fetch_assoc($ambientes)) {
 ?>					
 				<div class="d-inline mx-2">
-					<label class="ambientes btn btn-secondary  mx"data-amb="<?= $ambiente['ambientes'] ?>"><?= $ambiente['ambientes'] ?></label>	
+					<button type="button" class="ambientes btn btn-secondary" value="<?= $ambiente['ambientes'] ?>"><?= $ambiente['ambientes'] ?></button>	
 				</div>
 <?php
 	}
@@ -89,7 +89,7 @@
 	while ($baño = mysqli_fetch_assoc($baños)) {
 ?>					
 				<div class="d-inline mx-2">
-					<label class="baños btn btn-secondary  mx"><?= $baño['proBaños'] ?></label>	
+					<button type="button" class="baños btn btn-secondary" value="<?= $baño['proBaños'] ?>"><?= $baño['proBaños'] ?></button>	
 				</div>
 <?php
 	}
@@ -104,7 +104,7 @@
 	while ($dormitorio = mysqli_fetch_assoc($dormitorios)) {
 ?>					
 				<div class="d-inline mx-2">
-					<label class="dormitorios btn btn-secondary  mx"><?= $dormitorio['proDormitorios'] ?></label>	
+					<button type="button" class="dormitorios btn btn-secondary" value="<?= $dormitorio['proDormitorios'] ?>"><?= $dormitorio['proDormitorios'] ?></button>	
 				</div>
 <?php
 	}
