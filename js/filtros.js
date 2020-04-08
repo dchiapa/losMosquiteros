@@ -27,10 +27,12 @@ function seleccionAmbientes(e) {
 function seleccionBaños(e) {
     input = document.getElementById('proBaños');
     for (let i = 0; i < baños.length; i++) {
-        baños[i].classList.replace('btn-success', 'btn-secondary');
+        baños[i].classList.replace('btn-secondary', 'btn-success');
+        
+        
     }
     baño = e.target;
-    baño.classList.replace('btn-secondary', 'btn-success');
+    baño.classList.replace('btn-success', 'btn-secondary');
     input.value = baño.firstChild.data;
     console.log(input);
 }
