@@ -8,26 +8,37 @@ require 'funciones/config.php';
 ?>
 
 <?php
+
+
+
   
 
 	function subirArchivo()
 {
 
 
-	$archivos = $_FILES['prdImagen']['error'];
+	$cantidadArchivos = count($_FILES['prdImagen']['error']);
+    
+    $archivos= array();
 
-    foreach ($archivos as $elementos) {
-    	if ($archivos[$elementos] == 0 ){ 
+    for ($i = 0; $i<$cantidadArchivos; $i++){
 
-			$ruta = 'productos/'; // ruta final del archivo
-			$prdImagen = $_FILES['prdImagen']['name'][$elementos]; // para que suba con el nombre del archivo
-			$temp = $_FILES['prdImagen']['tmp_name'][$elementos];  // archivo en la carpeta temporal
-			move_uploaded_file($temp, $ruta.$prdImagen);  // trae el archivo de temp lo envia a la ruta ycambia nombre por $prdimage
-		}
-		return $prdImagen; 
-  
+   		if ($_FILES['prdImagen']['error'][$i] == 0  ){ 
+
+   			$ruta = 'productos/';
+            $prdImagen = $_FILES['prdImagen']['name'][$i];
+            $temp = $_FILES['prdImagen']['tmp_name'][$i];
+            move_uploaded_file($temp, $ruta.$prdImagen );
+
+          $archivos[]=$prdImagen = $_FILES['prdImagen']['name'][$i]; //cargo el nombre en una celda del array $archivos
+      }
+    }
+
+    return $archivos; 
+ 
 }
 
-subirArchivo();
+$archivos= subirArchivo();
 
+print_r($archivos);
 	 
