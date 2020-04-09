@@ -7,7 +7,7 @@
 	$estados = listarEstados();
 ?>
 <body>
-	<main id="ppal">
+	<main id="propiedad">
 		<header class="card-header border-0">
 			<img src="img/logo2.jpeg" alt="Logo de Los mosquiteros">
 			<h1 class="d-none">Los Mosquiteros</h1>
