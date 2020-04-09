@@ -73,7 +73,7 @@
 <?php
 	while ($ambiente = mysqli_fetch_assoc($ambientes)) {
 ?>					
-				<div class="d-inline mx-2">
+				<div class="d-inline m-1">
 					<button type="button" class="ambientes btn btn-secondary" value="<?= $ambiente['ambientes'] ?>"><?= $ambiente['ambientes'] ?></button>	
 				</div>
 <?php
@@ -88,7 +88,7 @@
 <?php
 	while ($baño = mysqli_fetch_assoc($baños)) {
 ?>					
-				<div class="d-inline mx-2">
+				<div class="d-inline m-1">
 					<button type="button" class="baños btn btn-secondary" value="<?= $baño['proBaños'] ?>"><?= $baño['proBaños'] ?></button>	
 				</div>
 <?php
@@ -103,7 +103,7 @@
 <?php
 	while ($dormitorio = mysqli_fetch_assoc($dormitorios)) {
 ?>					
-				<div class="d-inline mx-2">
+				<div class="d-inline m-1">
 					<button type="button" class="dormitorios btn btn-secondary" value="<?= $dormitorio['proDormitorios'] ?>"><?= $dormitorio['proDormitorios'] ?></button>	
 				</div>
 <?php
@@ -136,7 +136,7 @@
 <?php
 	while ($cochera = mysqli_fetch_assoc($cocheras)) {
 ?>					
-				<div class="d-inline mx-2">
+				<div class="d-inline m-1">
 					<button type="button" class="cocheras btn btn-secondary" value="<?= $cochera['proCocheras'] ?>"><?= $cochera['proCocheras'] ?></button>	
 				</div>
 <?php

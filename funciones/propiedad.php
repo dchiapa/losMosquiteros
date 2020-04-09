@@ -120,12 +120,8 @@
         $sql = "SELECT idPropiedad, p.idBarrio, b.valorBarrio,
 		            p.idEstado, e.valorEstado, p.idTipo, t.valorTipo,
                     ambientes, proTitulo,  proDireccion, proPrecio,
-                    proDescripcion, proDormitorios, proBaños,
-                    proSupTotal, proSupCubierta, proSupSemi,
-                    proAntiguedad, proCocheras, proPileta,
-                    proQuincho,proParrilla, proJardin, proLuzEle,
-                    proAguaCorriente,proAguaPozo, proGasNatural,
-                    proGasEmbasado,proCloacas
+                    proDescripcion, proBaños,
+                    proSupTotal, proSupCubierta, proCocheras
                 FROM propiedades p, barrio b, estado e, tipo t WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo ".$buscar."
                 ORDER BY b.valorBarrio ASC";
         $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));
@@ -237,8 +233,8 @@
     {
         $idPropiedad =$_GET['idPropiedad'];
         $link = conectar();
-        $sql = "SELECT idPropiedad, p.idEstado, valorEstado,
-                    p.idTipo, valorTipo, p.idBarrio, valorBarrio,
+        $sql = "SELECT idPropiedad, p.idEstado, e.valorEstado,
+                    p.idTipo, t.valorTipo, p.idBarrio, b.valorBarrio,
                     ambientes, proTitulo,  proDireccion, proPrecio,
                     proDescripcion, proDormitorios, proBaños,
                     proSupTotal, proSupCubierta, proSupSemi,

@@ -25,6 +25,7 @@ body {
 }
 
 #listaProp,
+#propiedad,
 .agregar,
 .eliminar,
 .modificar,
@@ -56,6 +57,7 @@ header {
 #adminPropiedades header,
 #listaProp header,
 #login header,
+#propiedad header,
 .formAgregar header,
 .formEliminar header,
 .agregar header,
