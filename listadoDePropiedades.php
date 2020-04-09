@@ -75,8 +75,18 @@ require 'config/config.php';
 							<p>Superficie total: <?= $propiedad['proSupTotal']?>  - Superficie cubierta: <?= $propiedad['proSupCubierta']?> - Ambientes: <?= $propiedad['ambientes']?> - Baños: <?= $propiedad['proBaños']?> - Cocheras: <?= $propiedad['proCocheras']?></p>
 						</div>
 					</div>
-					<p >$ <?= $propiedad['proPrecio']?></p>
-					<a href="#" class="btn btn-info my-2">Ver propiedad</a>
+<?php
+    if ($propiedad['valorEstado'] == 'venta') {
+?>                    
+                    <h2>U$D<?= $propiedad['proPrecio']?></h2>
+<?php
+    }else{
+?>
+                    <h2>$<?= $propiedad['proPrecio']?></h2>
+<?php
+    }
+?>
+					<a href="vistaPropiedad.php?idPropiedad=<?= $propiedad['idPropiedad']?>" class="btn btn-info my-2">Ver propiedad</a>
 				</div>
 
 <?php
