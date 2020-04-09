@@ -25,34 +25,29 @@
         </header>
         <h1 class="text-center"><?= $propiedad['proTitulo']?></h1>
         <div class="row mx-auto pt-2">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
+            <div id="carouselExampleControls" class="carousel slide col-8" data-ride="carousel">
+                <div id="carousel-inner" class="carousel-inner">
 <?php
     while ($imagen = mysqli_fetch_assoc($imagenes)) {
 ?>   
-                    <div class="carousel-item active">
-                        <img src="img/<?= $imagen['imgNoimbre'] ?>" class="d-block w-100" alt="Imagen de propiedad">
+                    <div class="carousel-item">
+                        <img src="img/<?= $imagen['imgNombre'] ?>" class="imagen" alt="Imagen de propiedad">
                     </div>
 <?php
      }
 ?>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Anterior</span>
+                    <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Siguiente</span>
+                    <span class="sr-only">Next</span>
                 </a>
             </div>
             <div class="col-3">
-                <div class="card">
+                <div class="card shadow">
 <?php
     if ($propiedad['valorEstado'] == 'venta') {
 ?>                    
@@ -63,10 +58,12 @@
                     <h2 class="text-center"><?= $propiedad['valorEstado']?>: $<?= $propiedad['proPrecio']?></h2>
 <?php
     }
-?>
+?> 
+
                 </div>
             </div>
         </div>
+        <script src="js/carrusel.js"></script>
     </main>
 <?php
 	include 'includes/footer.html';
