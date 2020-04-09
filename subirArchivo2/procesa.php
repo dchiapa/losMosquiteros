@@ -9,6 +9,7 @@ require 'funciones/config.php';
 
 <?php
 
+
 	function subirArchivo()
 {
 
@@ -22,20 +23,27 @@ require 'funciones/config.php';
 
    		if ($_FILES['prdImagen']['error'][$i] == 0  ){ 
 
-   			    if(getimagesize($_FILES['prdImagen']['tmp_name'][$i]) && $tamañoArchivo[$i] < 204800 ){
+        $hash = sha1_file($_FILES['prdImagen']['tmp_name'][$i]);
 
-              $ruta = 'productos/';
-              $prdImagen = $_FILES['prdImagen']['name'][$i];
-              $temp = $_FILES['prdImagen']['tmp_name'][$i];
-              move_uploaded_file($temp, $ruta.$prdImagen );
+        if (file_exists('productos/'.$hash)) {
+          echo "el archivo ya se encuentra en la bibloteca";
 
-              $archivos[]=$prdImagen = $_FILES['prdImagen']['name'][$i]; //cargo el nombre en una celda del array $archivos
-            } else {
-              $prdImagen = $_FILES['prdImagen']['name'][$i];
-              echo "El formato o tamaño del archivo '".$prdImagen."' no es valido <br>";
-              
-              }
-      
+        } else {
+
+     			    if(getimagesize($_FILES['prdImagen']['tmp_name'][$i]) && $tamañoArchivo[$i] < 204800 ){
+
+                $ruta = 'productos/';
+                $prdImagen = $_FILES['prdImagen']['name'][$i];
+                $temp = $_FILES['prdImagen']['tmp_name'][$i];
+                move_uploaded_file($temp, $ruta.$prdImagen );
+
+                $archivos[]=$prdImagen = $_FILES['prdImagen']['name'][$i]; //cargo el nombre en una celda del array $archivos
+              } else {
+                $prdImagen = $_FILES['prdImagen']['name'][$i];
+                echo "El formato o tamaño del archivo '".$prdImagen."' no es valido <br>";
+                
+                }
+          }
       }
 
     }
