@@ -25,18 +25,18 @@
         </header>
         <h1 class="text-center"><?= $propiedad['proTitulo']?></h1>
         <div class="row mx-auto pt-2">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-  				<div class="carousel-inner">
+            <div id="carouselExampleControls" class="carousel slide col-8" data-ride="carousel">
+                <div id="carousel-inner" class="carousel-inner">
 <?php
     while ($imagen = mysqli_fetch_assoc($imagenes)) {
 ?>   
                     <div class="carousel-item">
-                        <img src="img/<?= $imagen['imgNombre'] ?>" class="d-block" alt="Imagen de propiedad">
+                        <img src="img/<?= $imagen['imgNombre'] ?>" class="imagen" alt="Imagen de propiedad">
                     </div>
 <?php
      }
 ?>
-			    </div>
+                </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>

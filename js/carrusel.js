@@ -11,5 +11,3 @@ for (let i = 0; i < imagenes.length; i++) {
 if (cuenta == 0) {
     contenedor.firstChild.nextSibling.classList.add('active');
 }
-console.log(cuenta);
-
