@@ -21,5 +21,56 @@
 					or die(mysqli_error($link));
 		return $resultado;
 	}
+    function subirArchivos()
+    {
 
+        $cantidadArchivos = count($_FILES['prdImagen']['error']);
+        $tamañoArchivo = $_FILES['prdImagen']['size'];
+        $archivos = array();
+        for ($i = 0; $i<$cantidadArchivos; $i++){
+            if ($_FILES['prdImagen']['error'][$i] == 0  ){ 
+            $hash = sha1_file($_FILES['prdImagen']['tmp_name'][$i]);
+            if (file_exists('productos/'.$hash)) {
+            echo "el archivo ya se encuentra en la bibloteca";
+            } else {
+            $prdImagen = $_FILES['prdImagen']['name'][$i];
+                    if(getimagesize($_FILES['prdImagen']['tmp_name'][$i]) && $tamañoArchivo[$i] < 204800 ){
+                $ruta = 'img/';
+                $temp = $_FILES['prdImagen']['tmp_name'][$i];
+                move_uploaded_file($temp, $ruta.$prdImagen );
+                $archivos[] = $prdImagen; //cargo el nombre en una celda del array $archivos
+            } else {
+                echo "El formato o tamaño del archivo '".$prdImagen."' no es valido <br>";
+            }
+            }
+        }
+        }
+    return $archivos; 
+    }
+
+    function agregarImagenes()
+    {
+        $idPropiedad =$_POST['idPropiedad'];
+        
+        $imgNombre = subirArchivos() ; // array de los nombres de los archivos.
+        $cantidad = count($imgNombre);
+        
+
+        for($i = 0; $i<$cantidad; $i++){
+            $prdImagen = $imgNombre[$i];    
+            $link = conectar();
+            $sql = $sql = "INSERT INTO imagenes (idPropiedad, imgNombre)
+                        
+                VALUES (".$idPropiedad.", '".$prdImagen."')";
+            
+            $resultado = mysqli_query($link, $sql)
+            or die(mysqli_error($link));
+            return $resultado;
+        }
+
+
+
+       
+    }
 ?>
+

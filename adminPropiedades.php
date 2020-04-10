@@ -40,6 +40,7 @@
         	                	<th colspan="3">
         	                		<a href="formAgregarPropiedad.php" class="btn btn-secondary">Agregar</a>
         	            		</th>
+                                <th class=" text-center"></th>
         	            	</tr>
                         </thead>
                         <tbody>
@@ -56,7 +57,9 @@
                                 <td class=" text-center"><?= $propiedad['proDireccion'] ?></td>
 
 
-
+                                <td>
+	    		            		<a href="adminImagenes.php?idPropiedad=<?= $propiedad['idPropiedad'] ?>" class="btn btn-outline-secondary ">Imagenes </a>
+                                </td>
                                 <td>
 	    		            		<a href="verFichaPropiedad.php?idPropiedad=<?= $propiedad['idPropiedad'] ?>" class="btn btn-outline-secondary ">Ficha </a>
                                 </td>
