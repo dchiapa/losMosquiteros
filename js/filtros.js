@@ -66,9 +66,9 @@ function seleccionBaños(e) {
         baño.classList.remove('activo');
         input.value = 0;
     } else {
-        for (let i = 0; i < Baños.length; i++) {
-            Baños[i].classList.replace('btn-success', 'btn-secondary');
-            Baños[i].classList.remove('activo');
+        for (let i = 0; i < baños.length; i++) {
+            baños[i].classList.replace('btn-success', 'btn-secondary');
+            baños[i].classList.remove('activo');
         }
         baño.classList.add('activo');
         baño.classList.replace('btn-secondary', 'btn-success' );
