@@ -20,6 +20,16 @@
 		$resultado = mysqli_query($link, $sql)
 					or die(mysqli_error($link));
 		return $resultado;
+    }
+    function buscarImagenPrincipal($idImagenPrincipal)
+    {
+        $link = conectar();
+        $sql = "SELECT imgNombre FROM imagenes
+                WHERE idImagen = $idImagenPrincipal";
+		$resultado = mysqli_query($link, $sql)
+                    or die(mysqli_error($link));
+        $imagen = mysqli_fetch_assoc($resultado);
+		return $imagen;
 	}
     function subirArchivos()
     {

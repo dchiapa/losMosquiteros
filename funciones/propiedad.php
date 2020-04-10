@@ -121,7 +121,7 @@
 		            p.idEstado, e.valorEstado, p.idTipo, t.valorTipo,
                     ambientes, proTitulo,  proDireccion, proPrecio,
                     proDescripcion, proBaños,
-                    proSupTotal, proSupCubierta, proCocheras
+                    proSupTotal, proSupCubierta, proCocheras, idImagenPrincipal
                 FROM propiedades p, barrio b, estado e, tipo t WHERE p.idBarrio = b.idBarrio AND p.idEstado = e.idEstado AND p.idTipo = t.idTipo ".$buscar."
                 ORDER BY b.valorBarrio ASC";
         $resultado = mysqli_query($link, $sql) or die(mysqli_error($link));

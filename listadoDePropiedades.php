@@ -18,6 +18,7 @@ require 'config/config.php';
 	$baños = listarBaños();
 	$cocheras = listarCocheras();
 	$dormitorios = listarDormitorios();
+
 	$propiedades = buscarPropiedades();
 ?>
 <body>
@@ -46,27 +47,10 @@ require 'config/config.php';
 					<h2 class="text-center"><?= $propiedad['proTitulo'] ?></h2>
 					<div class="contenido row">
 						<div class=" imagen col-4 card px-4 ">
-							<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-  								<div class="carousel-inner">
 <?php
-		// Ver como agregar imagenes
-?>
-  								  <div class="carousel-item active">
-  									<img src="img/01.jpg" class="d-block w-100" alt="<?= $tipo ?> en <?= $estado ?>">
-  								  </div>
-<?php
-
-?>
-								</div>
- 								<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-    								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    								<span class="sr-only">Previous</span>
-  								</a>
-  								<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-    								<span class="carousel-control-next-icon" aria-hidden="true"></span>
-    								<span class="sr-only">Next</span>
-  								</a>
-							</div>
+	$imagen = buscarImagenPrincipal($propiedad['idImagenPrincipal']);
+?>						
+							<img src="img/<?=$imagen['imgNombre']?>" alt="Imagen de Propiedad">
 						</div>
 						<div class="col-1"></div>
 						<div class=" datos col-7 card px-4 ">
