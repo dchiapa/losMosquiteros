@@ -25,13 +25,15 @@
         </header>
         <h1 class="text-center"><?= $propiedad['proTitulo']?></h1>
         <div class="row mx-auto pt-2">
-            <div id="carouselExampleControls" class="carousel slide col-8" data-ride="carousel">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div id="carousel-inner" class="carousel-inner">
 <?php
     while ($imagen = mysqli_fetch_assoc($imagenes)) {
 ?>   
                     <div class="carousel-item">
-                        <img src="img/<?= $imagen['imgNombre'] ?>" class="imagen" alt="Imagen de propiedad">
+                        <a href="img/<?= $imagen['imgNombre'] ?>" target="_blank">
+                            <img src="img/<?= $imagen['imgNombre'] ?>" class="carousel-img" alt="Imagen de propiedad">
+                        </a>
                     </div>
 <?php
      }

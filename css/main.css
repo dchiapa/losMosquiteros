@@ -111,8 +111,10 @@ header nav ul li {
 #ppal form #idBarrio {
     width: 400px;
 }
-
-.propiedad>p {
+#propiedad{
+    min-height: 670px;
+}
+.propiedad p {
     font-size: 26px;
     font-weight: bold;
 }
@@ -137,3 +139,27 @@ header nav ul li {
 .saludo{
     font-family:monospace ;
 }
+.carousel, .carousel-inner{
+    background-color: lightslategray;
+    height: 400px !important;
+    width: 400px !important;
+    
+}
+.carousel-inner{
+    display: flex;
+}
+.carousel-item{
+    height: 400px;
+    width: 400px;
+}
+.img1 {
+    max-height: 400px !important;
+    width: auto;
+}
+.img2 {
+    height: auto;
+    max-width: 400px !important;
+}
+.carousel-control-prev, .carousel-control-next{
+    max-height: 500px;
+}    
