@@ -46,14 +46,14 @@ require 'config/config.php';
 				<div class="propiedad card px-4 mb-4 shadow">
 					<h2 class="text-center"><?= $propiedad['proTitulo'] ?></h2>
 					<div class="contenido row">
-						<div class=" imagen col-4 card px-4 ">
+						<div class="imagen col-3 card px-4 ">
 <?php
 	$imagen = buscarImagenPrincipal($propiedad['idImagenPrincipal']);
 ?>						
 							<img src="img/<?=$imagen['imgNombre']?>" alt="Imagen de Propiedad">
 						</div>
 						<div class="col-1"></div>
-						<div class=" datos col-7 card px-4 ">
+						<div class=" datos col-8 card px-4 ">
 							<p><?= $propiedad['proDireccion']?>  - <?= $propiedad['valorBarrio']?></p>
 							<p><?= $propiedad['proDescripcion']?></p>
 							<p>Superficie total: <?= $propiedad['proSupTotal']?>  - Superficie cubierta: <?= $propiedad['proSupCubierta']?> - Ambientes: <?= $propiedad['ambientes']?> - Baños: <?= $propiedad['proBaños']?> - Cocheras: <?= $propiedad['proCocheras']?></p>

@@ -163,3 +163,10 @@ header nav ul li {
 .carousel-control-prev, .carousel-control-next{
     max-height: 500px;
 }    
+.imagen{
+    align-items: center;
+}
+.imagen img{
+    width: auto;
+    height: 200px;
+}
