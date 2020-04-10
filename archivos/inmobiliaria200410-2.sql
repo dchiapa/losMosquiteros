@@ -77,7 +77,7 @@ DROP TABLE IF EXISTS `imagenes`;
 CREATE TABLE `imagenes` (
   `idImagen` int(20) NOT NULL AUTO_INCREMENT,
   `idPropiedad` int(20) NOT NULL,
-  `nombreImagen` varchar(45) NOT NULL,
+  `imgNombre` varchar(45) NOT NULL,
   PRIMARY KEY (`idImagen`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -211,4 +211,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-10 17:51:21
+-- Dump completed on 2020-04-10 17:53:56
