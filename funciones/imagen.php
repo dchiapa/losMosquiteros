@@ -30,7 +30,22 @@
                     or die(mysqli_error($link));
         $imagen = mysqli_fetch_assoc($resultado);
 		return $imagen;
-	}
+    }
+    function cargarImagenPrincipal($idPropiedad){
+        $link = conectar();
+        $sql = "SELECT idImagen FROM imagenes WHERE idPropiedad = $idPropiedad Limit 1";
+        $resultado = mysqli_query($link, $sql)
+                    or die(mysqli_error($link));
+        $imagen = mysqli_fetch_assoc($resultado);
+        $idImagen = $imagen['idImagen'];
+        if (count($imagen) != 0) {
+            $sql = "UPDATE propiedades SET idImagenPrincipal = $idImagen
+                WHERE idPropiedad = $idPropiedad";
+            $resultado = mysqli_query($link, $sql)
+                or die(mysqli_error($link));
+        }
+        return $resultado;            
+    }
     function subirArchivos()
     {
 
@@ -67,10 +82,11 @@
         for($i = 0; $i<$cantidad; $i++){
             $sql = $sql = "INSERT INTO imagenes (idPropiedad, imgNombre)
                             VALUES (".$idPropiedad.", '".$imgNombre[$i]."')";
-            $resultado = mysqli_query($link, $sql)
+            $resultadoPrincipal = mysqli_query($link, $sql)
                         or die(mysqli_error($link));
         }
-        return $resultado;
+        cargarImagenPrincipal($idPropiedad);
+        return $resultadoPrincipal;
     }
 ?>
 

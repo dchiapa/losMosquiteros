@@ -189,7 +189,7 @@
         if( isset( $_POST['proCloacas'] ) ){
             $proCloacas = $_POST['proCloacas'];
         }
-        $idImagenPrincipal = 'noDisponible.jpg';
+        $idImagenPrincipal = 0;
 
 
 		$link = conectar();
