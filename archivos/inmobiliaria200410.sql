@@ -187,7 +187,8 @@ CREATE TABLE `usuarios` (
   `usuApellido` varchar(30) NOT NULL,
   `usuEmail` varchar(30) NOT NULL,
   `usuPass` varchar(30) NOT NULL,
-  `usuEstado` tinyint(1) DEFAULT 0,
+  `usuEstado` tinyint(1) NOT NULL DEFAULT 0,
+  `usutipo` varchar(45) NOT NULL DEFAULT 'invitado',
   PRIMARY KEY (`idUsuario`),
   UNIQUE KEY `usuEmail` (`usuEmail`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
@@ -199,7 +200,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'fernando','pereyra','ferfit16@gmail.com','nohayclave',1),(2,'gustavo','magliano','gustmag@yahoo.com','1234',1),(3,'diego','chiapa','diegochiapa@gmail.com','abcd',1);
+INSERT INTO `usuarios` VALUES (1,'fernando','pereyra','ferfit16@gmail.com','nohayclave',1,'admin'),(2,'gustavo','magliano','gustmag@yahoo.com','1234',1,'invitado'),(3,'diego','chiapa','diegochiapa@gmail.com','abcd',1,'admin');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -212,4 +213,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-09 23:56:08
+-- Dump completed on 2020-04-10 10:51:49
