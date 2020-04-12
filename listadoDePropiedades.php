@@ -46,11 +46,11 @@ require 'config/config.php';
 				<div class="propiedad card px-4 mb-4 shadow">
 					<h2 class="text-center"><?= $propiedad['proTitulo'] ?></h2>
 					<div class="contenido row">
-						<div class="imagen col-3 card px-4 ">
+						<div class="col-3 card px-4 ">
 <?php
 	$imagen = buscarImagenPrincipal($propiedad['idImagenPrincipal']);
 ?>						
-							<img src="img/<?=$imagen['imgNombre']?>" alt="Imagen de Propiedad">
+							<img class="imgPpal" src="img/<?=$imagen['imgNombre']?>" alt="Imagen de Propiedad">
 						</div>
 						<div class="col-1"></div>
 						<div class=" datos col-8 card px-4 ">
@@ -95,6 +95,7 @@ require 'config/config.php';
 ?>
 			</section>
 		</div>
+		<script src="js/imgPpal.js"></script>
 		<script src="js/filtros.js"></script>
 	</main>
 <?php

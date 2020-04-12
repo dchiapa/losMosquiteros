@@ -160,6 +160,14 @@ header nav ul li {
     height: auto;
     max-width: 400px !important;
 }
+.img3 {
+    max-height: 200px !important;
+    width: auto;
+}
+.img4 {
+    height: auto;
+    max-width: 200px !important;
+}
 .carousel-control-prev, .carousel-control-next{
     max-height: 500px;
 }    
