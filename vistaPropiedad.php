@@ -24,7 +24,7 @@
 			</nav>
         </header>
         <h1 class="text-center"><?= $propiedad['proTitulo']?></h1>
-        <div class="row mx-auto pt-2">
+        <div class="row mx-2 pt-2">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div id="carousel-inner" class="carousel-inner">
 <?php
@@ -48,8 +48,8 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-            <div class="col-3">
-                <div class="card shadow">
+            <div class="col-8">
+                <div class="card col-5 mb-2 shadow">
 <?php
     if ($propiedad['valorEstado'] == 'venta') {
 ?>                    
@@ -62,6 +62,83 @@
     }
 ?> 
 
+                </div>
+                <div class="card shadow p-3">
+                    <p>Dirección: <?=$propiedad['proDireccion']?></p>
+                    <p>Descripción: <?=$propiedad['proDescripcion']?></p>
+                    <p>Superficie total: <?=$propiedad['proSupTotal']?>; Superficie cubierta: <?=$propiedad['proSupCubierta']?>; Superficie Semicubierta: <?=$propiedad['proSupSemi']?>; 
+<?php
+    if(is_numeric($propiedad['proAntiguedad'])){
+?>
+                    Antiguedad: <?=$propiedad['proAntiguedad']?> Años</p>
+<?php   
+    }else{
+?>
+                    Antiguedad: <?=$propiedad['proAntiguedad']?></p>
+<?php   
+    }
+?>
+                    <p>Ambientes: <?=$propiedad['ambientes']?>; Dormitorios: <?=$propiedad['proDormitorios']?>; Baños: <?=$propiedad['proBaños']?>; Cocheras: <?=$propiedad['proCocheras']?>
+<?php
+    if($propiedad['proQuincho'] == 1){
+?>
+; Quincho
+<?php   
+    }
+    if($propiedad['proPileta'] == 1){
+?>
+; Pileta
+<?php   
+    }
+    if($propiedad['proParrilla'] == 1){
+?>
+; Parrilla
+<?php
+    }
+    if($propiedad['proParrilla'] == 1){
+?>
+; Jardin
+<?php
+    }
+?>                    
+                    </p>
+                    <p>Servicios:
+<?php
+    if($propiedad['proLuzEle'] == 1){
+?>
+Luz eléctrica; 
+<?php   
+    }
+    if($propiedad['proAguaCorriente'] == 1){
+?>
+Agua corriente; 
+<?php   
+    }
+    if($propiedad['proAguaPozo'] == 1){
+?>     
+Agua de pozo;  
+<?php   
+    }
+    if($propiedad['proGasNatural'] == 1){
+?>     
+Gas natural;
+<?php   
+    }
+    if($propiedad['proGasEmbasado'] == 1){
+?>     
+Gas Embasado;                  
+<?php   
+    }
+    if($propiedad['proCloacas'] == 1){
+?>     
+Cloacas
+<?php
+    }
+?>        
+                    </p>
+                </div>
+                <div class="row">
+                    <a href="#" class="btn btn-primary col-4 mx-auto my-4">Contacto</a>
                 </div>
             </div>
         </div>

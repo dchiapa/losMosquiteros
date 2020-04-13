@@ -70,7 +70,7 @@ require 'config/config.php';
 <?php
     }
 ?>
-					<a href="vistaPropiedad.php?idPropiedad=<?= $propiedad['idPropiedad']?>" class="btn btn-info my-2">Ver propiedad</a>
+					<a href="vistaPropiedad.php?idPropiedad=<?= $propiedad['idPropiedad']?>" class="btn btn-info my-2" target="_blank">Ver propiedad</a>
 				</div>
 
 <?php
