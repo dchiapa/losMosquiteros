@@ -46,7 +46,7 @@ require 'config/config.php';
 				<div class="propiedad card px-4 mb-4 shadow">
 					<h2 class="text-center"><?= $propiedad['proTitulo'] ?></h2>
 					<div class="contenido row">
-						<div class="col-3 card px-4 ">
+						<div class="col-3 card p-4">
 <?php
 	$imagen = buscarImagenPrincipal($propiedad['idImagenPrincipal']);
 ?>						
