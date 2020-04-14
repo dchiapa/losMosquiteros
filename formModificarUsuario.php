@@ -2,7 +2,6 @@
     require 'funciones/conexion.php';
     require 'funciones/usuarios.php';
     require 'config/config.php';
-    require 'funciones/usuarios.php';
     include 'includes/header.html';
 	$usuario = autenticarAdmin();
     $usuario = verUsuarioPorID();
