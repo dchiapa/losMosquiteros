@@ -1,7 +1,7 @@
 /*   Imagenes en el listado de propiedades   */
 let ppalImagenes = document.getElementsByClassName('imgPpal');
 
-for (let i = 0; i < imagenes.length; i++) {
+for (let i = 0; i < ppalImagenes.length; i++) {
     alto = ppalImagenes[i].naturalHeight;
     ancho = ppalImagenes[i].naturalWidth;
     if (alto < ancho) {
