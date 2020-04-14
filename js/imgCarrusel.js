@@ -1,3 +1,5 @@
+/*   Imagenes del carrusel en la vista de propiedad   */
+
 let contenedor = document.getElementById('carousel-inner');
 let items = document.getElementsByClassName('carousel-item');
 let imagenes = document.getElementsByClassName('carousel-img');
@@ -7,14 +9,13 @@ let alto, ancho;
 for (let i = 0; i < items.length; i++) {
     if (items[i].classList.contains('active') == true) {
         cuenta++;
-        
     }
 }
-
 
 if (cuenta == 0) {
     contenedor.firstChild.nextSibling.classList.add('active');
 }
+
 for (let i = 0; i < imagenes.length; i++) {
     alto = imagenes[i].naturalHeight;
     ancho = imagenes[i].naturalWidth;
@@ -26,5 +27,5 @@ for (let i = 0; i < imagenes.length; i++) {
         imagenes[i].classList.remove('img2');
     }
 }
-console.log(alto);
-console.log(ancho);
+    
+/*   -Imagenes del carrusel en la vista de propiedad-   */

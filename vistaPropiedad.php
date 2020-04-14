@@ -142,7 +142,7 @@ Cloacas
                 </div>
             </div>
         </div>
-        <script src="js/carrusel.js"></script>
+        <script src="js/imgCarrusel.js"></script>
     </main>
 <?php
 	include 'includes/footer.html';
