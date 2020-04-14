@@ -64,7 +64,7 @@
 ?>
 			<script>
 				Swal.fire({
-            	  title: 'Estado no modificado',
+            	  title: 'No se modificó el estado',
             	  type: 'error',
             	  showCancelButton: false,
             	  confirmButtonColor: '#d33',

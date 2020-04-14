@@ -3,7 +3,7 @@
     require 'config/config.php';
 	require 'funciones/usuarios.php';
 	$usuario = autenticarAdmin();
-    require 'funciones/Estado.php';
+    require 'funciones/estado.php';
     include 'includes/header.html';
     $estado = verEstadoPorID();
 ?>

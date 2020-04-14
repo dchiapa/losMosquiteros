@@ -64,7 +64,7 @@
 ?>
 			<script>
 				Swal.fire({
-            	  title: 'Tipo no modificado',
+            	  title: 'No se modificó el tipo',
             	  type: 'error',
             	  showCancelButton: false,
             	  confirmButtonColor: '#d33',

@@ -24,7 +24,7 @@
 ?>
             <script>
                 Swal.fire({
-                  title: 'Propiedad modificado',
+                  title: 'Propiedad modificada',
                   type: 'success',
                   showCancelButton: false,
                   confirmButtonColor: '#9ee87f',
@@ -40,7 +40,7 @@
 ?>
             <script>
                 Swal.fire({
-                  title: 'Propiedad no modificado',
+                  title: 'No se modificó la propiedad',
                   type: 'error',
                   showCancelButton: false,
                   confirmButtonColor: '#d33',

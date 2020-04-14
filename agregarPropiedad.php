@@ -43,7 +43,7 @@
 ?>
 			<script>
 				Swal.fire({
-            	  title: 'Propiedad no agregado',
+            	  title: 'No se agregó la propiedad',
             	  type: 'error',
             	  showCancelButton: false,
             	  confirmButtonColor: '#d33',

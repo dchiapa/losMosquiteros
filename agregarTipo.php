@@ -65,7 +65,7 @@
 ?>
 			<script>
 				Swal.fire({
-            	  title: 'Tipo no agregado',
+            	  title: 'No se agregó el tipo',
             	  type: 'error',
             	  showCancelButton: false,
             	  confirmButtonColor: '#d33',

@@ -65,7 +65,7 @@
 ?>
 			<script>
 				Swal.fire({
-            	  title: 'Barrio no modificado',
+            	  title: 'No se modificó el Barrio',
             	  type: 'error',
             	  showCancelButton: false,
             	  confirmButtonColor: '#d33',

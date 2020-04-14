@@ -64,7 +64,7 @@
 ?>
 			<script>
 				Swal.fire({
-            	  title: 'Usuario no agregado',
+            	  title: 'No se agregó el usuario',
             	  type: 'error',
             	  showCancelButton: false,
             	  confirmButtonColor: '#d33',

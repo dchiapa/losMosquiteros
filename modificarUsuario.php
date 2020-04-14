@@ -4,7 +4,10 @@
     require 'funciones/usuarios.php';
     $usuario = autenticarAdmin();
     include 'includes/header.html';
-    $chequeo = modificarUsuario();
+    $existe = verUsuarioPorValor();
+    if ($existe == null ){
+          $chequeo = modificarUsuario();
+      }
 ?>
 <body>
 <main class="modificar">
@@ -22,6 +25,23 @@
 	    <div class="col-6 mx-auto text-center">
             <h1 class="d-block text-center my-5">Modificación de usuario</h1>
 <?php
+	if ($existe != null){
+?>
+			<script>
+				Swal.fire({
+            	  title: 'Ya existe el usuario',
+            	  type: 'error',
+            	  showCancelButton: false,
+            	  confirmButtonColor: '#d33',
+            	  confirmButtonText: 'Volver al panel'
+            	}).then((result) => {
+            	  if (result.value) {
+            	    window.location = 'adminUsuarios.php'
+            	  }
+            	})
+			</script>
+<?php
+	}else{
     if ($chequeo){
 ?>
             <script>
@@ -55,6 +75,7 @@
             </script>
 <?php
     }
+  }
 ?>
 		</div>
 	</main>
