@@ -31,7 +31,7 @@ require 'config/config.php';
 			    <ul>
 			        <li class="d-inline"><a href="index.php" class="btn btn-outline-light py-2 px-5">Inicio</a></li>
 			        <li class="d-inline"><a href="" class="btn btn-outline-light py-2 px-5">Publicar</a></li>
-			        <li class="d-inline"><a href="admin.php" class="btn btn-outline-light py-2 px-5">LogIn</a></li>
+			        <li class="d-inline"><a href="formLogin.php" class="btn btn-outline-light py-2 px-5">LogIn</a></li>
 			    </ul>
 			</nav>
 		</header>
